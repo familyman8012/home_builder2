@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+//일반 글자크기
+$tit_txt       : 3rem;
+$tit_small_txt : 2.8rem;
+$tit_sub_txt   : 2.4rem;
+$cont_txt      : 1.6rem;
+$cont_small_txt: 1.4rem;
+$cont_big_txt : 2rem;
+$btn_txt       : 2rem;
+$tit_big_txt   : 4.4rem;
+$tit_big_txt2  : 4.8rem;
+$cont_tit_txt  : 2.6rem;
+
+//팝업 글자크기
+$pop_head_txt: 1.6rem;
+$pop_cont_txt: 1.4rem;
+$pop_sub_txt : 1.3rem;
+
+$component_sub_txt: 2rem;
+
+//SHOP 글자크기
+$shop_tit : 3.6rem;
+$shop_sub_tit: 2rem;
+
+//빌더 대표 글꼴
+$font_r: '본고딕';
+$font_m: notoSans-M;
+$font_b: notoSans-b;
+$font_d: notoSans-D;
+
+//대표 색상
+$blue: #29abe2;
+$pink: #e07272;
+$watermelon: #ff4e60;
+
+
+@mixin bg($width, $height, $url) {
+	width: $width;
+	height: $height;
+	background: url($url) no-repeat left top;
+	background-size: $width $height;
+}
+
+@mixin btn($color, $fontsize:1.6rem, $radius:4px) {
+	display: inline-block;
+	border-radius: $radius;
+	background: $color;
+	letter-spacing: -0.9px;
+	font-family: $font_m;
+	text-align: center;
+	color: #fff;
+	font-size: $fontsize;
+	line-height: 1;
+	cursor: pointer;
+	
+}
+
+@mixin check_custom1($width,$height,$border,$padding:28px) { //좌측 기준
+	display: inline-block;
+	position: relative;
+	padding-left: $padding;
+	cursor: pointer;
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+	
+	input {position: absolute; height: 0; width: 0; opacity: 0; cursor: pointer}
+	.checkmark {position: absolute; top: 0; left: 0; height: $height; width: $width; border: $border;}
+}
+
+@mixin check_custom2($width,$height,$border,$padding:28px) { //우측 기준
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+	
+	input {position: absolute; height: 0; width: 0; opacity: 0; cursor: pointer;
+	}
+	.checkmark {position: absolute; top: 0; right: 0; height: $height; width: $width; border: $border;}
+}
+
+@mixin checkmark {
+	input:checked + .checkmark:after {
+		display: block;
+		width: 7px; height: 12px;
+		position: absolute;
+		left: 5px;
+		top: 0;
+		border: solid $pink;
+		border-width: 0 3px 3px 0; transform: rotate(45deg);
+		content: '';
+	}
+}
+
+@mixin radiomark {
+	input:checked + .checkmark:after {
+		display: block;
+		width: 12px; height: 12px;
+		position: absolute;
+		left: 4px;
+		top: 4px;
+		background: $blue;
+		border-radius: 50%;
+		content: '';
+	}
+}
+
+
+@mixin upload_custom {
+	label {
+		display: block;
+		cursor: pointer;
+		margin-bottom: 0;
+	}
+	input {display: none;}
+}
+
+@mixin custom_tt($top:-83px,$width:330px,$height:127px,$ml:-165px) {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	margin-left: 6px;
+	vertical-align: 1px;
+	
+	.mark_tooltip {
+		display: inline-block;
+		position: relative;
+		width: 21px; height: 21px;
+		border-radius: 50%;
+		font-size: $pop_cont_txt;
+		font-family: $font_r;
+		text-align: center;
+		line-height: 21px;
+		vertical-align: top;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		
+		&:hover {cursor: pointer;}
+		
+		&:hover ~ .tooltip_note {display: block;}
+	}
+	
+	.tooltip_note {
+		display: none;
+		position: absolute;
+		left: 50%;
+		margin-left: $ml;
+		top: $top;
+		padding: 30px 27px 0;
+		@include bg($width, $height, '../images/bg_tooltip1.svg');
+		box-sizing: border-box;
+		
+		p {
+			font-size: $pop_cont_txt;
+			font-family: $font_r;
+			line-height: 1.4;
+			letter-spacing: -0.8px;
+			padding-bottom: 15px;
+			
+			&:last-child {padding-bottom: 0;}
+		}
+	}
+}
+
+@mixin mediaquery($hd) { //미디어쿼리
+	@if $hd == mobile { //저해상도 태블릿, 모바일(가로)
+		@media (max-width: 767px) {@content;}
+	} @else if $hd == tablet { //Device = 태블릿, 아이패드
+		@media (min-width: 768px) and (max-width: 1024px) { @content; }
+	} @else if $hd == pc { //Device = 랩탑, 데스크탑
+		@media (min-width: 1025px) and (max-width: 1280px) { @content; }
+	}
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대시보드</title>
+  <link rel=" stylesheet" href="../css/font.css">
+  <link rel=" stylesheet" href="../css/normalize.css">
+  <link rel=" stylesheet" href="../css/user_admin.css">
+  <script src="../js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+  <div class="pb_header">
+    <h1 class="logo_pb">
+      <a href="/main.php">
+        <img src="../images/playblock_logo1.png" alt="playblock 로고">
+        <span class="blind">playblock 로고</span>
+      </a>
+    </h1>
+    <h2 class="logo_pk">
+      <a href="/index.php">
+        <img src="../images/playkok_logo1.png" alt="playkok 로고">
+        <span class="blind">playkok 로고</span>
+      </a>
+    </h2>
+
+    <div class="my_profileimg"><img src="https://www.play-kok.com/storage/profile/main/1586164451_35.png" alt="프로필 사진"
+        onclick="location.href='/sns/sns_main.php'"></div>
+
+    <div class="pb_menu">
+      <div class="user_hello">
+        <span class="name_txt">홍길동</span>님 안녕하세요
+        <i class="btn_arrow"><span class="blind">화살표 아이콘</span></i>
+      </div>
+      <div class="pb_menu_cont">
+        <div class="hold_lv">
+          <div class="my_level lv_bronze">브론즈</div>
+          <dl class="hold_kong">
+            <dt>콕콩</dt>
+            <dd>
+              콩
+              <span class="btn_kong_charge">충전하기</span>
+            </dd>
+          </dl>
+          <dl class="hold_point">
+            <dt>콕포인트</dt>
+            <dd>P</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <a href="./account/hb_logout.php" class="btn_logout">로그아웃</a>
+  </div><!-- // pb_header -->
+
+  <nav class="lnb_wrap mCustomScrollbar">
+    <ul class="lnb_depth">
+      <li class="depth1_li lnb_mysites">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_other_mysite">
+            <i class="icon_home"><span class="blind">사이트 아이콘</span></i>
+            <span class="menu_txt">oooo사이트명</span>
+            <i class="icon_arrow"><span class="blind">하위메뉴 보기 아이콘</span></i>
+          </span>
+        </a>
+        <ul class="list_depth2">
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">사이트1</span>
+            </a>
+          </li>
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">사이트2</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1_li">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_dashboard">
+            <i class="icon_watch"><span class="blind">대시보드 아이콘</span></i>
+            <span class="menu_txt">대시보드</span>
+          </span>
+        </a>
+      </li>
+      <li class="depth1_li">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_pbcreator">
+            <i class="icon_roller"><span class="blind">크리에디터 아이콘</span></i>
+            <span class="menu_txt">플레이블록 크리에이터</span>
+          </span>
+        </a>
+      </li>
+      <li class="depth1_li on">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_manage_mb">
+            <i class="icon_mbcircle"><span class="blind">회원관리 아이콘</span></i>
+            <span class="menu_txt">회원관리</span>
+          </span>
+        </a>
+      </li>
+      <li class="depth1_li lnb_statistics">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_statistic">
+            <i class="icon_statistics"><span class="blind">통계 아이콘</span></i>
+            <span class="menu_txt">통계</span>
+            <i class="icon_arrow"></i>
+          </span>
+        </a>
+        <ul class="list_depth2">
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">개요</span>
+            </a>
+          </li>
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">방문자 현황</span>
+            </a>
+          </li>
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">방문한 페이지</span>
+            </a>
+          </li>
+          <li class="depth2_li">
+            <a href="#" class="li_wrap">
+              <span class="menu2_txt">기간 분석</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1_li">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_mapapi">
+            <i class="icon_airplane"><span class="blind">지도 아이콘</span></i>
+            <span class="menu_txt">지도 API</span>
+          </span>
+        </a>
+      </li>
+      <li class="depth1_li">
+        <a href="#" class="box_depth2">
+          <span class="wrap_menu menu_set_opt">
+            <i class="icon_tobni"><span class="blind">환경설정 아이콘</span></i>
+            <span class="menu_txt">환경설정</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav> <!-- // lnb_wrap -->
+
+  <div class="pb_user_admin mCustomScrollbar">
+    <div class="page_container">
+      <main class="main_panel">
+        <div class="user_admin_cont">
+          <h3 class="admin_tit">회원 관리</h3>
+          <div class="managemb_container">
+            <div class="tbl_head">
+              <dl class="mysite_member_info">
+                <dt>총 회원 수</dt>
+                <dd class="mb_count">123,444,000명</dd>
+              </dl>
+              <div class="search_area">
+                <form action="" method="" id="" name="">
+                  <fieldset>
+                    <legend class="screen_out">닉네임 계정 검색</legend>
+                    <div class="search_go_inp">
+                      <input type="text" id="searchInput" name="searchInput" value="" class="inp" placeholder="닉네임 계정 검색">
+                      <button type="submit" class="btn_sch">
+                          <span class="blind">검색 아이콘</span>
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="mysite_mb_tbl">
+              <table>
+                <colgroup>
+                  <col width="238px"/>
+                  <col width="310px" />
+                  <col width="380px" />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">회원번호</th>
+                    <th class="nick_th" scope="col">닉네임</th>
+                    <th scope="col">계정</th>
+                    <th scope="col">가입일</th>
+                    <th scope="col">관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong<span class="badge_new">N</span></td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong<span class="badge_new">N</span></td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong<span class="badge_new">N</span></td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong<span class="badge_new">N</span></td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong</td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong</td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong</td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong</td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">hong</td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mbnb_td">15621</td>
+                    <td class="mbnick_td">huliza <span class="badge_me">소유자</span></td>
+                    <td class="mbacnt_td">kyh817000@gmail.com</td>
+                    <td class="mb_joindate_td">2020-02-03</td>
+                    <td class="mb_detail_td"><span class="btn_mbinfo">보기</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="page_list">
+              <table class="pager">
+                <tbody>
+                  <tr>
+                    <td class="prev">
+                      PREV
+                    </td>
+                    <td class="current_page"><span class="txt_page">1</span></td>
+                    <td><span class="txt_page">2</span></td>
+                    <td><span class="txt_page">3</span></td>
+                    <td><span class="txt_page">4</span></td>
+                    <td>5</td>
+                    <td class="next">
+                      NEXT
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div> <!-- // wrap_content-->
+      </main>
+    </div> <!-- // page_container-->
+  </div> <!-- // pb_user_admin-->
+  <script>
+    $(document).on('click', '.lnb_depth .box_depth2', function (e) {
+      if ($(this).next('.list_depth2')) {
+        $(this).next('.list_depth2').toggleClass('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+@charset "utf-8";
+@import "_common";
+
+.inp_box {
+	display: flex;
+	position: relative;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	
+	input {
+		height: 100%;
+		padding: 6px 1px;
+		box-sizing: border-box;
+		line-height: 1;
+	}
+	
+	.btn_getauth {
+		position: absolute;
+		right: 0; top: 0;
+		@include btn(#4e4e4e);
+		width:100px;
+		height: 30px;
+		line-height: 30px;
+	}
+}
+
+
+.wrap_findac_pop {
+	width: 480px;
+	margin-top: 10px;
+	padding: 15px 15px 0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: #f7f7f7;
+	box-sizing: border-box;
+	line-height: 1;
+	
+	// ET2 공통 ~
+	.head_area { //로그인 팝 공통 헤드
+		.btn_box {
+			text-align: right;
+			
+			.btn_close {
+				display: inline-block;
+				@include bg(21px, 21px, '../images/btn_close.svg');
+				background-size: 20px;
+			}
+		}
+		
+		.logo_area {
+			padding-bottom: 19px;
+			line-height: 1;
+			text-align: center;
+			
+			.site_logo {
+				font-family: $font_b;
+				font-size: 2rem;
+				color: #242424;
+			}
+			
+			.icon_cross {
+				display: inline-block;
+				margin: 0 10px;
+				@include bg(18px, 18px, '../images/icon_cross.svg');
+			}
+			
+			.logo_playkok {
+				display: inline-block;
+				@include bg(101px, 22px, '../images/playblock_logo1.png');
+			}
+		}
+		
+		.pop_tit {
+			padding-bottom: 20px;
+			font-family: $font_r;
+			font-size: $tit_txt;
+			text-align: center;
+			color: #4e4e4e
+		}
+	}
+	
+	.cont_area {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		background: #fff;
+		
+		.getauth_area {
+			.inp_box {
+				display: flex;
+				align-items: center;
+				
+				.auth_num {
+					display: inline-block;
+					width: 200px;
+					height: 32px;
+					padding: 7px 4px;
+					box-sizing: border-box;
+					font-size: $pop_head_txt;
+				}
+				
+				.cnt_down_txt {
+					margin-left: auto;
+					margin-right: 9px;
+					font-size: $pop_head_txt;
+					color: #ff0000;
+				}
+				
+				.btn_auth {
+					@include btn($blue, 100px, 30px);
+					font-family: $font_m;
+				}
+			}
+		}
+		
+		.auth_comp_area { //계정찾기1-2, 비밀번호 찾기 2-3
+			
+			.icon_check {
+				display: block;
+				@include bg(48px, 48px, '../images/icon_check1.svg');
+				background-position: top center;
+			}
+			
+			p {
+				padding-top: 18px;
+				font-size: $pop_head_txt;
+				text-align: center;
+				letter-spacing: -0.9px;
+			}
+		}
+	}
+	
+	.bottom_area {
+		margin-top: 15px;
+		
+		.btn_login {
+			@include btn(#ddd, 100%, 60px);
+			font-size: $btn_txt;
+			
+			&.on {background: $blue;}
+		}
+		
+		.link_area {
+			margin-top: 25px;
+			
+			.btn_join_bck, .btn_findpw_bck {
+				font-size: $cont_txt;
+				font-family: $font_m;
+				text-decoration: underline;
+				letter-spacing: -0.8px;
+				color: $blue;
+			}
+		}
+	}
+	
+	// ~ ET2 공통
+	
+	&.findid { //계정 찾기
+		
+		.cont_area {
+			padding-right: 15px; padding-left: 12px;
+			
+			.find_tbl { //계정찾기1
+				margin-bottom: 14px;
+				
+				tr:first-child {
+					th {padding-top: 34px;}
+					
+					td {
+						padding-top: 28px;
+						
+						.inp_box {height: 28px;}
+					}
+				}
+				
+				tr:last-child {
+					th {padding-top: 47px;}
+					
+					td {padding-top: 38px;}
+				}
+				
+				th {
+					padding-right: 13px;
+					text-align: right;
+					vertical-align: top;
+					
+					label {
+						position: relative;
+						padding-left: 9px;
+						font-family: $font_r;
+						font-size: $cont_txt;
+						line-height: 1;
+						color: #4e4e4e;
+						
+						&:before {
+							display: inline-block;
+							width: 6px;
+							height: 6px;
+							position: absolute;
+							left: 0;
+							top: 7px;
+							border-radius: 50%;
+							background: #ff0000;
+							content: '';
+						}
+					}
+				}
+				
+				td {
+					vertical-align: top;
+					
+					&.phn_auth_box {
+						.inp_box {
+							height: 34px;
+							
+							input {width: 180px;}
+						}
+						
+						.getauth_area {
+							padding-top: 48px;
+						}
+					}
+					
+					.inp_box {
+						position: relative;
+						width: 347px;
+						padding-bottom: 1px;
+						border-bottom: 1px solid #ddd;
+						box-sizing: border-box;
+						
+						input {
+							width: 100%;
+							height: 100%;
+							padding: 6px 1px;
+							box-sizing: border-box;
+							font-family: $font_r;
+							font-size: $cont_txt;
+							line-height: 1;
+						}
+						
+						.btn_getauth {
+							position: absolute;
+							right: 0; top: 0;
+							@include btn(#4e4e4e);
+							width:100px;
+							height: 30px;
+							line-height: 30px;
+		
+						}
+					}
+				}
+			}
+			
+			.auth_comp_area { //계정찾기1-2
+				padding-bottom: 60px;
+				
+				.icon_check {
+					margin: 27px auto 0;
+				}
+			}
+			
+			.rst_tbl {
+				margin-bottom: 14px;
+				color: #424242;
+				font-size: $pop_head_txt;
+				
+				tr:first-child {
+					th, td {padding-bottom: 40px;}
+				}
+				
+				th { padding-right: 15px; letter-spacing: -0.9px;
+					text-align: right;}
+				
+				.rst_find {
+					.inp_box {
+						width: 357px;
+						padding: 4px 3px;
+						box-sizing: border-box;
+						border-bottom: 1px solid #ddd;
+					}
+				}
+			}
+			
+			.auth_fail_area { //계정찾기 1-2-1
+				.icon_ex {
+					display: block;
+					margin: 27px auto 0;
+					@include bg(48px, 48px, '../images/icon_x1.svg');
+					background-position: top center;
+				}
+				
+				p {
+					padding-top: 18px;
+					padding-bottom: 46px;
+					font-size: $pop_head_txt;
+					letter-spacing: -0.9px;
+					text-align: center;
+				}
+			}
+		}
+		
+		.bottom_area {
+			.link_area {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 23px;
+				text-align: center;
+				
+				.btn_join_bck {margin-bottom: 20px;}
+			}
+			
+			.btn_reauth {
+				margin-bottom: 15px;
+				@include btn($watermelon, $btn_txt);
+				width:100%;
+				height:60px;
+				line-height: 60px;
+			}
+		}
+	}
+	
+	&.findpw { //비밀번호찾기2
+		
+		.cont_area {
+			padding: 25px 15px 0;
+			
+			.account_inp_area {
+				font-size: $pop_head_txt;
+				
+				input {
+					width: 320px;
+					padding: 9px 0 6px;
+				}
+				
+				.btn_start_find {
+					position: absolute;
+					right: 0;
+					bottom: 1px;
+					@include btn(#4e4e4e);
+					width:100px;
+					height: 30px;
+					line-height: 30px;
+					font-weight: 500;
+					
+					&.off {display: none;}
+				}
+			}
+			
+			.auth_select_area {
+				.wrap_phn_auth {
+					padding-top: 20px;
+				}
+				
+				.wrap_mail_auth {
+					padding-top: 30px;
+					
+					.getauth_area {
+						margin-bottom: 15px;
+					}
+				}
+				
+				.wrap_phn_auth, .wrap_mail_auth {
+					
+					.getauth_area {
+						padding-left: 78px;
+						padding-top: 20px;
+						
+						.cnt_down_txt {
+							color: #ff0000;
+							font-family: $font_r;
+							font-size: $pop_head_txt;
+						}
+					}
+					
+					
+					.phn_auth, .mail_auth {
+						display: flex;
+						align-items: center;
+						
+						.radio_contain {
+							@include check_custom1(13px, 13px, 1px solid #757575, 26px);
+							font-size: $pop_head_txt;
+							letter-spacing: -0.9px;
+							color: #242424;
+							
+							.checkmark {
+								top: 2px;
+								border-radius: 50%;
+								box-sizing: border-box;
+							}
+							
+							input:checked ~ .checkmark {
+								border-color: #ff0000;
+								
+								&:after {
+									display: block;
+									width: 7px; height: 7px;
+									position: absolute;
+									left: 2px; top: 2px;
+									background: #ff0000; border-radius: 50%;
+									content: '';
+								}
+							}
+							
+							.space {padding: 2px 5px;}
+						}
+						
+						.get_num {
+							
+							margin-left: auto;
+							@include btn(#ddd);
+							width:100px;
+							height: 30px;
+							line-height: 30px;
+							font-weight: 500;
+						}
+					}
+					
+					&.active {
+						.get_num {background-color: #4e4e4e;}
+					}
+				}
+			}
+			
+			.rst_id_box { //비밀번호 찾기 2-3
+				
+				padding: 4px 1px;
+				border-bottom: 1px solid #ddd;
+				font-family: $font_r;
+				font-size: $pop_head_txt;
+				color: #242424
+			}
+			
+			.auth_comp_area { //비밀번호 찾기 2-3
+				padding-bottom: 26px;
+				
+				.icon_check {
+					margin: 20px auto 0;
+				}
+			}
+		}
+		
+		.bottom_area {
+			padding-bottom: 15px;
+			
+			.link_area {
+				margin-bottom: 8px;
+				text-align: center;
+			}
+		}
+	}
+	
+	&.reset_pw { //비밀번호 재설정
+		.cont_area {
+			padding: 0 15px 15px 7px;
+			
+			
+			.resetpw_tbl {
+				font-family: $font_r;
+				font-size: $cont_txt;
+				box-sizing: border-box;
+				
+				th {
+					padding-right: 14px;
+					text-align: right;
+					letter-spacing: -1px;
+				}
+				
+				.inp_box {
+					width: 295px;
+					border-bottom: 1px solid #ddd;
+					input {width: 100%;}
+				}
+				
+				tr:first-child {
+					th {padding-top: 28px;}
+					
+					td {padding-top: 23px;}
+				}
+				
+				tr:last-child {
+					th {padding-top: 41px;}
+					
+					td {padding-top: 36px;}
+				}
+			}
+		}
+		
+		.bottom_area {
+			padding-bottom: 15px;
+			
+			.btn_pwchg {
+				@include btn($blue, $btn_txt);
+				width:100%;
+				height: 60px;
+				line-height: 60px;
+			}
+		}
+		
+	}
+}

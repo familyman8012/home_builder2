@@ -1,0 +1,688 @@
+@charset "utf-8";
+@import "_common";
+
+//템플릿 2 - 풀페이지
+.section {
+  position          : relative;
+  width             : 100%;
+  overflow          : hidden;
+  height            : 100vh;
+  // height         : auto !important;
+  background-size   : cover !important;
+
+  .fp_inner {
+    display: table-cell;
+    width  : 100vw;
+    height : 100vh;
+
+    &.sty2 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width:auto;
+      height:100%;
+    }
+
+    @include mediaquery(mobile) {
+      padding-top: 60px;
+    }
+  }
+
+  .btn_scroll_effect {
+    display    : inline-block;
+    position   : absolute;
+    left       : 50%;
+    bottom     : 50px;
+    margin-left: -25px;
+  }
+
+  .btn_scroll_effect a {
+    display    : block;
+    font-size  : 14px;
+    color      : #ffffff;
+    text-align : center;
+    padding-top: 90px;
+    background : url('../images/btn_scroll.png') no-repeat center top;
+  }
+
+
+  .main_tit {
+
+    position  : relative;
+    transition: 0.7s;
+    opacity   : 0;
+
+    h3 {
+      margin-bottom: 15px;
+      font-size    : 6rem;
+      color        : #fff;
+      text-align   : center;
+      font-family  : $font_b;
+
+      @include mediaquery(mobile) {
+        line-height: 1;
+        font-size  : 4rem;
+      }
+    }
+
+    p {
+      margin     : 15px 0 0;
+      font-size  : 3.6rem;
+      font-family: $font_m;
+      text-align : center;
+      color      : #fff;
+
+      @include mediaquery(mobile) {
+        line-height: 1;
+        font-size  : 2.6rem;
+
+      }
+    }
+
+    .txt {
+      margin     : 15px 0;
+      color      : #fff;
+      display    : block;
+      text-align : center;
+      font-size  : 2.4rem;
+      line-height: 1.5;
+    }
+  }
+
+
+  &.footer {
+    padding: 0;
+  }
+}
+
+#section1 {
+
+  .main_notice .list>li {
+    //		height       : 391px;
+    padding      : 15px 0 0 0;
+    background   : rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-sizing   : border-box;
+
+    @include mediaquery(mobile) {
+      padding: 0;
+    }
+
+    .wrap_txt_area {
+      height: 276px;
+
+      @include mediaquery(tablet) {
+        height: auto
+      }
+
+      @include mediaquery(mobile) {
+        height: auto
+      }
+
+
+    }
+
+    strong {
+      display    : block;
+      padding    : 15px;
+      font-weight: 300;
+      line-height: 1;
+      font-family: $font_m;
+      font-size  : 3rem;
+      color      : #fff;
+
+      @include mediaquery(tablet) {
+        font-size: 1.5rem;
+        margin   : 0;
+        padding  : 15px 15px 7px;
+      }
+
+      @include mediaquery(mobile) {
+        font-size: 1.5rem;
+        margin   : 0;
+        padding  : 15px 15px 7px;
+      }
+    }
+
+    .txt {
+      display       : block;
+      font-size     : 2rem;
+      padding       : 15px 10px;
+      line-height   : 1.5;
+      color         : #fff;
+      letter-spacing: -0.9px;
+
+      @include mediaquery(tablet) {
+        padding  : 7px 10px 15px;
+        font-size: 1.2rem;
+      }
+
+      @include mediaquery(mobile) {
+        padding  : 7px 10px 10px;
+        font-size: 1.2rem;
+
+      }
+    }
+
+
+    .btn_area {
+      padding: 0;
+    }
+
+    .btn_click {
+      display                : block;
+      height                 : 100px;
+      line-height            : 100px;
+      background             : #e82100;
+      border-radius          : 10px;
+      color                  : #fff;
+      font-family            : $font_m;
+      font-size              : 3rem;
+      border-top-left-radius : 0;
+      border-top-right-radius: 0;
+
+      @include mediaquery(tablet) {
+        height     : 50px;
+        line-height: 50px;
+        font-size  : 1.5rem;
+      }
+
+      @include mediaquery(mobile) {
+        height     : 30px;
+        line-height: 30px;
+        font-size  : 1.5rem;
+
+      }
+    }
+
+  }
+
+
+}
+
+/*active*/
+#section1,
+#section2 {
+  &.active .main_notice .list li {
+    bottom : 0;
+    opacity: 1;
+  }
+
+}
+
+
+#section2 {
+
+  &.active {
+
+    &:before {
+      left   : 0%;
+      opacity: 1;
+    }
+
+    &:after {
+      right  : 0%;
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+.wrap_visual_txt {
+  .main_notice .list {
+    display        : flex;
+    flex-wrap      : wrap;
+    max-width      : auto;
+    justify-content: space-around;
+    padding        : 0 30px;
+    margin         : 50px auto 0;
+
+    @include mediaquery(mobile) {
+      margin-top: 0;
+    }
+
+    >li {
+      max-width: 360px;
+
+      @include mediaquery(tablet) {
+        min-width: 320px
+      }
+
+      &:nth-child(2) {
+        margin: 0 0.5%;
+
+        @include mediaquery(mobile) {
+          margin: 8px auto;
+        }
+      }
+
+
+      @include mediaquery(mobile) {
+        min-width: 100px;
+        width    : 51%;
+        padding  : 0;
+      }
+    }
+
+    .txt_area {
+      padding: 0;
+    }
+  }
+}
+
+.wrap_visual_imgtxt {
+
+  .main_notice {
+    .txt {
+      padding   : 15px;
+      margin-top: 60px;
+
+      @include mediaquery(tablet) {
+        margin-top: 40px;
+      }
+    }
+
+    .two_div {
+      display  : flex;
+      width    : 100%;
+      max-width: 1280px;
+      margin   : 15px auto 0;
+
+
+      >li:last-child {
+        background: url(../images/visual_rectangle_bg2.png) no-repeat;
+      }
+
+
+      >li {
+        width    : 47%;
+        max-width: 610px;
+
+        &:first-child {
+          background  : url(../images/visual_rectangle_bg1.png) no-repeat;
+          margin-right: 5%;
+
+          @include mediaquery(tablet) {
+            margin-right: 1.5%;
+          }
+        }
+
+        .img_area {
+          position: relative;
+          top     : -10px;
+          left    : -10px;
+          padding : 0;
+        }
+      }
+
+    }
+  }
+
+}
+
+
+.wrap_visual_txtbtn {
+  .list {
+    display        : flex;
+    width          : 100%;
+    max-width      : 870px;
+    justify-content: center;
+    flex-wrap      : wrap;
+    margin         : 100px auto 0;
+
+    @include mediaquery(mobile) {
+      margin-top: 40px;
+    }
+
+    >li {
+      width: 33%;
+
+      &:nth-child(2) {
+        margin: 0 0.5%;
+      }
+
+      @include mediaquery(mobile) {
+        width: 100%;
+      }
+    }
+
+    .txt_area {
+      padding   : 15px 0;
+      text-align: center;
+    }
+    .txt {
+      font-size: 3rem;
+      color    : #fff;
+    }
+
+    .btn_click {
+      display    : block;
+      width      : 161px;
+      height     : 51px;
+      line-height: 51px;
+      border     : 1px solid #e82100;
+      color      : #e82100;
+      font-size  : 2rem;
+      font-family: $font_m;
+      text-align : center;
+    }
+
+
+  }
+
+}
+
+
+
+.fp-section>[class^='wrap_']:not(.wrap_footer) {
+  display: table-cell;
+  width  : 100vw;
+  height : 100vh;
+
+}
+
+.fp-section .main_visual {
+  .owl-carousel {
+    height: 100%;
+  }
+
+  .wrap_txt {
+    height: 100vh;
+  }
+
+}
+
+
+/* visual theme nav */
+#fp-nav {
+
+  @include mediaquery(pc) {
+    display: none;
+  }
+
+  @include mediaquery(tablet) {
+    display: none;
+  }
+
+  @include mediaquery(mobile) {
+    display: none;
+  }
+
+  &.fp-right {
+    right: 2.6%;
+  }
+
+
+}
+
+/* nav */
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  height    : 34px;
+  width     : auto;
+  min-width : 100px;
+  text-align: left;
+
+}
+
+/*#fp-nav ul li:last-of-type,
+	.fp-slidesNav ul li:last-of-type{display:none;}*/
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #fff !important;
+  font-size : 0 !important;
+}
+
+#fp-nav.bg ul li a span,
+.fp-slidesNav.bg ul li a span {
+  background: #eee !important;
+}
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+  display        : block;
+  position       : relative;
+  z-index        : 50;
+  width          : 100%;
+  height         : 100%;
+  cursor         : pointer;
+  text-decoration: none;
+  box-sizing     : border-box;
+  position       : absolute !important;
+}
+
+#fp-nav ul li a.active,
+.fp-slidesNav ul li a.active {
+  /* border:2px solid #fff; */
+  border-radius: 100px;
+}
+
+#fp-nav ul li .fp-tooltip {
+  font-size  : 0 !important;
+  color      : #ccc !important;
+  width      : auto !important;
+  left       : 68px !important;
+  font-family: 'Lato', sans-serif !important;
+  line-height: 34px !important;
+  top        : 0px !important;
+  opacity    : 1 !important;
+}
+
+#fp-nav ul li .active+.fp-tooltip {
+  color: #fff !important;
+}
+
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active+.fp-tooltip {
+  opacity: 1;
+  color  : #fff;
+}
+
+#fp-nav.bg ul li .active+.fp-tooltip {
+  color: #fff !important;
+}
+
+#fp-nav.bg ul li:hover .fp-tooltip,
+#fp-nav.bg.fp-show-active a.active+.fp-tooltip {
+  color: #fff;
+}
+
+#fp-nav ul li a:after {
+  content      : "";
+  display      : block;
+  font-size    : 2rem;
+  color        : #fafafa;
+  width        : 100px;
+  left         : 0;
+  padding-right: 58px;
+  top          : 0px;
+  opacity      : 1;
+  text-align   : right;
+
+}
+
+#fp-nav.bg ul li a:after {
+  color: #eee;
+}
+
+#fp-nav ul li:nth-of-type(1) a:after {
+  content: "Main";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(2) a:after {
+  content: "02";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(3) a:after {
+  content: "03";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(4) a:after {
+  content: "04";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(5) a:after {
+  content: "05";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(6) a:after {
+  content: "06";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(7) a:after {
+  content: "07";
+  display: block;
+}
+
+#fp-nav ul li:nth-of-type(8) a:after {
+  content: "08";
+  display: block;
+}
+
+/*active*/
+#section1.active:before {
+  left   : 0%;
+  opacity: 1;
+}
+
+#section1.active:after {
+  right  : 0%;
+  opacity: 1;
+}
+
+#section1.active .main_service {
+  bottom : 0%;
+  opacity: 1;
+}
+
+.active .main_tit {
+  top    : 0px;
+  opacity: 1;
+}
+
+#section1.active .main_notice .list>li {
+  bottom : 0;
+  opacity: 1;
+}
+
+#section1.active .main_review {
+  bottom : 0px;
+  opacity: 1;
+}
+
+
+#fp-nav ul li a.active:before,
+.fp-slidesNav ul li a.active:before {
+  content      : "";
+  display      : block;
+  width        : 40px;
+  height       : 40px;
+  border       : 2px solid #fff;
+  border-radius: 50%;
+  position     : absolute;
+  right        : 0px;
+  top          : 0px;
+}
+
+#fp-nav.bg ul li a.active:before,
+.fp-slidesNav.bg ul li a.active:before {
+  border: 2px solid #fff;
+}
+
+#fp-nav ul li a.active:after,
+.fp-slidesNav ul li a.active:after {
+  color: #fff !important;
+}
+
+#fp-nav.bg ul li a.active:after,
+.fp-slidesNav.bg ul li a.active:after {
+  color: #fff !important;
+}
+
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width        : 6px !important;
+  height       : 6px !important;
+  background   : #fff !important;
+  border-radius: 100px;
+  margin       : 0px 0px 0px -2px !important;
+}
+
+#fp-nav ul li a span {
+  left : auto;
+  right: 18px
+}
+
+#fp-nav.bg ul li a.active span,
+.fp-slidesNav.bg ul li a.active span,
+#fp-nav.bg ul li:hover a.active span,
+.fp-slidesNav.bg ul li:hover a.active span {
+  background: #fff !important;
+}
+
+
+.main_slide {
+  width:100%;
+
+  .vod_box {
+    @include mediaquery(mobile) {
+      height: 200px;
+    } 
+
+    .slick-slide {
+      background-repeat           : no-repeat;
+      background-position         : center;
+      margin                      : 0 80px;
+      position                    : relative;
+      //width                     : 1100px;
+      height                      : 450px;
+      transition-timing-function  : ease-in-out;
+      box-sizing                  : border-box;
+      transition                  : width 1s, height 1s, -webkit-transform 1s;
+      transition                  : 0.5s;
+      transition-delay            : 0s;
+      vertical-align              : middle;
+    
+    
+      @include mediaquery(mobile) {
+        margin: 0 20px;
+        width : 260px;
+        height: 180px;
+    
+        &.slick-center {
+          //width: 260px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+// builder 에 포함시켜야 할 것
+.edit-mode.wrap_fullpage {
+.header {top:50px;}
+  
+}
+
+.wrap_fullpage .fp-section {
+  
+  .inner_section {width:100%}
+  
+  &.footer,
+  .wrap_footer {
+    height: auto !important;
+  }
+}

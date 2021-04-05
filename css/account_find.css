@@ -1,0 +1,432 @@
+@charset "UTF-8";
+.inp_box {
+  display: flex;
+  position: relative;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box; }
+  .inp_box input {
+    height: 100%;
+    padding: 6px 1px;
+    box-sizing: border-box;
+    line-height: 1; }
+  .inp_box .btn_getauth {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    border-radius: 4px;
+    background: #4e4e4e;
+    letter-spacing: -0.9px;
+    font-family: notoSans-M;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    line-height: 30px; }
+
+.wrap_findac_pop {
+  width: 480px;
+  margin-top: 10px;
+  padding: 15px 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  line-height: 1; }
+  .wrap_findac_pop .head_area .btn_box {
+    text-align: right; }
+    .wrap_findac_pop .head_area .btn_box .btn_close {
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      background: url("../images/btn_close.svg") no-repeat left top;
+      background-size: 21px 21px;
+      background-size: 20px; }
+  .wrap_findac_pop .head_area .logo_area {
+    padding-bottom: 19px;
+    line-height: 1;
+    text-align: center; }
+    .wrap_findac_pop .head_area .logo_area .site_logo {
+      font-family: notoSans-b;
+      font-size: 2rem;
+      color: #242424; }
+    .wrap_findac_pop .head_area .logo_area .icon_cross {
+      display: inline-block;
+      margin: 0 10px;
+      width: 18px;
+      height: 18px;
+      background: url("../images/icon_cross.svg") no-repeat left top;
+      background-size: 18px 18px; }
+    .wrap_findac_pop .head_area .logo_area .logo_playkok {
+      display: inline-block;
+      width: 101px;
+      height: 22px;
+      background: url("../images/playblock_logo1.png") no-repeat left top;
+      background-size: 101px 22px; }
+  .wrap_findac_pop .head_area .pop_tit {
+    padding-bottom: 20px;
+    font-family: "본고딕";
+    font-size: 3rem;
+    text-align: center;
+    color: #4e4e4e; }
+  .wrap_findac_pop .cont_area {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff; }
+    .wrap_findac_pop .cont_area .getauth_area .inp_box {
+      display: flex;
+      align-items: center; }
+      .wrap_findac_pop .cont_area .getauth_area .inp_box .auth_num {
+        display: inline-block;
+        width: 200px;
+        height: 32px;
+        padding: 7px 4px;
+        box-sizing: border-box;
+        font-size: 1.6rem; }
+      .wrap_findac_pop .cont_area .getauth_area .inp_box .cnt_down_txt {
+        margin-left: auto;
+        margin-right: 9px;
+        font-size: 1.6rem;
+        color: #ff0000; }
+      .wrap_findac_pop .cont_area .getauth_area .inp_box .btn_auth {
+        display: inline-block;
+        border-radius: 30px;
+        background: #29abe2;
+        letter-spacing: -0.9px;
+        font-family: notoSans-M;
+        text-align: center;
+        color: #fff;
+        font-size: 100px;
+        line-height: 1;
+        cursor: pointer;
+        font-family: notoSans-M; }
+    .wrap_findac_pop .cont_area .auth_comp_area .icon_check {
+      display: block;
+      width: 48px;
+      height: 48px;
+      background: url("../images/icon_check1.svg") no-repeat left top;
+      background-size: 48px 48px;
+      background-position: top center; }
+    .wrap_findac_pop .cont_area .auth_comp_area p {
+      padding-top: 18px;
+      font-size: 1.6rem;
+      text-align: center;
+      letter-spacing: -0.9px; }
+  .wrap_findac_pop .bottom_area {
+    margin-top: 15px; }
+    .wrap_findac_pop .bottom_area .btn_login {
+      display: inline-block;
+      border-radius: 60px;
+      background: #ddd;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 100%;
+      line-height: 1;
+      cursor: pointer;
+      font-size: 2rem; }
+      .wrap_findac_pop .bottom_area .btn_login.on {
+        background: #29abe2; }
+    .wrap_findac_pop .bottom_area .link_area {
+      margin-top: 25px; }
+      .wrap_findac_pop .bottom_area .link_area .btn_join_bck, .wrap_findac_pop .bottom_area .link_area .btn_findpw_bck {
+        font-size: 1.6rem;
+        font-family: notoSans-M;
+        text-decoration: underline;
+        letter-spacing: -0.8px;
+        color: #29abe2; }
+  .wrap_findac_pop.findid .cont_area {
+    padding-right: 15px;
+    padding-left: 12px; }
+    .wrap_findac_pop.findid .cont_area .find_tbl {
+      margin-bottom: 14px; }
+      .wrap_findac_pop.findid .cont_area .find_tbl tr:first-child th {
+        padding-top: 34px; }
+      .wrap_findac_pop.findid .cont_area .find_tbl tr:first-child td {
+        padding-top: 28px; }
+        .wrap_findac_pop.findid .cont_area .find_tbl tr:first-child td .inp_box {
+          height: 28px; }
+      .wrap_findac_pop.findid .cont_area .find_tbl tr:last-child th {
+        padding-top: 47px; }
+      .wrap_findac_pop.findid .cont_area .find_tbl tr:last-child td {
+        padding-top: 38px; }
+      .wrap_findac_pop.findid .cont_area .find_tbl th {
+        padding-right: 13px;
+        text-align: right;
+        vertical-align: top; }
+        .wrap_findac_pop.findid .cont_area .find_tbl th label {
+          position: relative;
+          padding-left: 9px;
+          font-family: "본고딕";
+          font-size: 1.6rem;
+          line-height: 1;
+          color: #4e4e4e; }
+          .wrap_findac_pop.findid .cont_area .find_tbl th label:before {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            border-radius: 50%;
+            background: #ff0000;
+            content: ''; }
+      .wrap_findac_pop.findid .cont_area .find_tbl td {
+        vertical-align: top; }
+        .wrap_findac_pop.findid .cont_area .find_tbl td.phn_auth_box .inp_box {
+          height: 34px; }
+          .wrap_findac_pop.findid .cont_area .find_tbl td.phn_auth_box .inp_box input {
+            width: 180px; }
+        .wrap_findac_pop.findid .cont_area .find_tbl td.phn_auth_box .getauth_area {
+          padding-top: 48px; }
+        .wrap_findac_pop.findid .cont_area .find_tbl td .inp_box {
+          position: relative;
+          width: 347px;
+          padding-bottom: 1px;
+          border-bottom: 1px solid #ddd;
+          box-sizing: border-box; }
+          .wrap_findac_pop.findid .cont_area .find_tbl td .inp_box input {
+            width: 100%;
+            height: 100%;
+            padding: 6px 1px;
+            box-sizing: border-box;
+            font-family: "본고딕";
+            font-size: 1.6rem;
+            line-height: 1; }
+          .wrap_findac_pop.findid .cont_area .find_tbl td .inp_box .btn_getauth {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: inline-block;
+            border-radius: 4px;
+            background: #4e4e4e;
+            letter-spacing: -0.9px;
+            font-family: notoSans-M;
+            text-align: center;
+            color: #fff;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            line-height: 30px; }
+    .wrap_findac_pop.findid .cont_area .auth_comp_area {
+      padding-bottom: 60px; }
+      .wrap_findac_pop.findid .cont_area .auth_comp_area .icon_check {
+        margin: 27px auto 0; }
+    .wrap_findac_pop.findid .cont_area .rst_tbl {
+      margin-bottom: 14px;
+      color: #424242;
+      font-size: 1.6rem; }
+      .wrap_findac_pop.findid .cont_area .rst_tbl tr:first-child th, .wrap_findac_pop.findid .cont_area .rst_tbl tr:first-child td {
+        padding-bottom: 40px; }
+      .wrap_findac_pop.findid .cont_area .rst_tbl th {
+        padding-right: 15px;
+        letter-spacing: -0.9px;
+        text-align: right; }
+      .wrap_findac_pop.findid .cont_area .rst_tbl .rst_find .inp_box {
+        width: 357px;
+        padding: 4px 3px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ddd; }
+    .wrap_findac_pop.findid .cont_area .auth_fail_area .icon_ex {
+      display: block;
+      margin: 27px auto 0;
+      width: 48px;
+      height: 48px;
+      background: url("../images/icon_x1.svg") no-repeat left top;
+      background-size: 48px 48px;
+      background-position: top center; }
+    .wrap_findac_pop.findid .cont_area .auth_fail_area p {
+      padding-top: 18px;
+      padding-bottom: 46px;
+      font-size: 1.6rem;
+      letter-spacing: -0.9px;
+      text-align: center; }
+  .wrap_findac_pop.findid .bottom_area .link_area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+    text-align: center; }
+    .wrap_findac_pop.findid .bottom_area .link_area .btn_join_bck {
+      margin-bottom: 20px; }
+  .wrap_findac_pop.findid .bottom_area .btn_reauth {
+    margin-bottom: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    background: #ff4e60;
+    letter-spacing: -0.9px;
+    font-family: notoSans-M;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    line-height: 60px; }
+  .wrap_findac_pop.findpw .cont_area {
+    padding: 25px 15px 0; }
+    .wrap_findac_pop.findpw .cont_area .account_inp_area {
+      font-size: 1.6rem; }
+      .wrap_findac_pop.findpw .cont_area .account_inp_area input {
+        width: 320px;
+        padding: 9px 0 6px; }
+      .wrap_findac_pop.findpw .cont_area .account_inp_area .btn_start_find {
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        display: inline-block;
+        border-radius: 4px;
+        background: #4e4e4e;
+        letter-spacing: -0.9px;
+        font-family: notoSans-M;
+        text-align: center;
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: 500; }
+        .wrap_findac_pop.findpw .cont_area .account_inp_area .btn_start_find.off {
+          display: none; }
+    .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth {
+      padding-top: 20px; }
+    .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth {
+      padding-top: 30px; }
+      .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .getauth_area {
+        margin-bottom: 15px; }
+    .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .getauth_area, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .getauth_area {
+      padding-left: 78px;
+      padding-top: 20px; }
+      .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .getauth_area .cnt_down_txt, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .getauth_area .cnt_down_txt {
+        color: #ff0000;
+        font-family: "본고딕";
+        font-size: 1.6rem; }
+    .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth {
+      display: flex;
+      align-items: center; }
+      .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain {
+        display: inline-block;
+        position: relative;
+        padding-left: 26px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 1.6rem;
+        letter-spacing: -0.9px;
+        color: #242424; }
+        .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain input, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain input, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain input, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain input {
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+          cursor: pointer; }
+        .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 13px;
+          width: 13px;
+          border: 1px solid #757575; }
+        .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain .checkmark {
+          top: 2px;
+          border-radius: 50%;
+          box-sizing: border-box; }
+        .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain input:checked ~ .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain input:checked ~ .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain input:checked ~ .checkmark, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain input:checked ~ .checkmark {
+          border-color: #ff0000; }
+          .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain input:checked ~ .checkmark:after, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain input:checked ~ .checkmark:after, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain input:checked ~ .checkmark:after, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain input:checked ~ .checkmark:after {
+            display: block;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            background: #ff0000;
+            border-radius: 50%;
+            content: ''; }
+        .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .radio_contain .space, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .radio_contain .space, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .radio_contain .space, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .radio_contain .space {
+          padding: 2px 5px; }
+      .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .phn_auth .get_num, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth .mail_auth .get_num, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .phn_auth .get_num, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth .mail_auth .get_num {
+        margin-left: auto;
+        display: inline-block;
+        border-radius: 4px;
+        background: #ddd;
+        letter-spacing: -0.9px;
+        font-family: notoSans-M;
+        text-align: center;
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: 500; }
+    .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_phn_auth.active .get_num, .wrap_findac_pop.findpw .cont_area .auth_select_area .wrap_mail_auth.active .get_num {
+      background-color: #4e4e4e; }
+    .wrap_findac_pop.findpw .cont_area .rst_id_box {
+      padding: 4px 1px;
+      border-bottom: 1px solid #ddd;
+      font-family: "본고딕";
+      font-size: 1.6rem;
+      color: #242424; }
+    .wrap_findac_pop.findpw .cont_area .auth_comp_area {
+      padding-bottom: 26px; }
+      .wrap_findac_pop.findpw .cont_area .auth_comp_area .icon_check {
+        margin: 20px auto 0; }
+  .wrap_findac_pop.findpw .bottom_area {
+    padding-bottom: 15px; }
+    .wrap_findac_pop.findpw .bottom_area .link_area {
+      margin-bottom: 8px;
+      text-align: center; }
+  .wrap_findac_pop.reset_pw .cont_area {
+    padding: 0 15px 15px 7px; }
+    .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl {
+      font-family: "본고딕";
+      font-size: 1.6rem;
+      box-sizing: border-box; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl th {
+        padding-right: 14px;
+        text-align: right;
+        letter-spacing: -1px; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl .inp_box {
+        width: 295px;
+        border-bottom: 1px solid #ddd; }
+        .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl .inp_box input {
+          width: 100%; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl tr:first-child th {
+        padding-top: 28px; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl tr:first-child td {
+        padding-top: 23px; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl tr:last-child th {
+        padding-top: 41px; }
+      .wrap_findac_pop.reset_pw .cont_area .resetpw_tbl tr:last-child td {
+        padding-top: 36px; }
+  .wrap_findac_pop.reset_pw .bottom_area {
+    padding-bottom: 15px; }
+    .wrap_findac_pop.reset_pw .bottom_area .btn_pwchg {
+      display: inline-block;
+      border-radius: 4px;
+      background: #29abe2;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      width: 100%;
+      height: 60px;
+      line-height: 60px; }
+
+/*# sourceMappingURL=account_find.css.map */

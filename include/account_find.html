@@ -1,0 +1,275 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<title>popup</title>-->
+    <!--<script src="https://www.play-kok.com/js/jquery-3.3.1.min.js"></script>-->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel=" stylesheet" href="css/builder.css">-->
+    <!--<link rel=" stylesheet" href="css/account_find.css">-->
+<!--</head>-->
+<!--<body style="padding-left: 10px;">-->
+<!--ET.2 계정찾기 팝업 모음 -->
+
+<div style="position:absolute;top:0;left:0;width:100vw;height:100vh;background:#000000;opacity:0.5;z-index:-1;"></div>
+
+<!--비밀번호 재설정-->
+<div class="wrap_findac_pop reset_pw">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">비밀번호재설정 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">비밀번호 재설정</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <table class="resetpw_tbl">
+                <tr>
+                    <th scope="row"><label for="newpw1">새 비밀번호</label></th>
+                    <td>
+                        <div class="inp_box">
+                            <input type="text" id="newpw1" name="newpw1"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="newpw2">새 비밀번호 확인</label></th>
+                    <td>
+                        <div class="inp_box">
+                            <input type="text" id="newpw2" name="newpw2"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_pwchg">비밀번호 변경</span>
+    </div>
+</div>
+
+
+<!--비밀번호찾기2-3 -->
+<div class="wrap_findac_pop findpw">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">비밀번호찾기 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">비밀번호 찾기</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="rst_id_box">
+                huliza80@gmail.com
+            </div>
+            <div class="auth_comp_area">
+                <span class="icon_check"><i class="blind">체크 아이콘</i></span>
+                <p>인증되었습니다.</p>
+            </div>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_login on">비밀번호 재설정</span>
+    </div>
+</div>
+
+
+<!--비밀번호찾기2, 2-1 ~ 2-2 -->
+<div class="wrap_findac_pop findpw">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">비밀번호찾기 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">비밀번호 찾기</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="account_inp_area">
+                <div class="inp_box">
+                    <input type="text" id="pb_ac" name="pb_ac" placeholder="계정을 입력해주세요."/>
+                    <span class="btn_start_find">확인</span>
+                    <!--<span class="btn_start_find off">확인</span>-->
+                </div>
+            </div>
+            <div class="auth_select_area">
+                <div class="wrap_phn_auth active">
+                    <p class="phn_auth">
+                        <label class="radio_contain">연락처로 인증<b><span class="space">(</span>010-****-4144<span
+                                class="space">)</span></b>
+                            <input type="radio" name="auth_how" id="auth_how" value="phone" checked="">
+                            <span class="checkmark"></span>
+                        </label>
+                        <span class="get_num">인증번호받기</span>
+                    </p>
+                    <div class="getauth_area">
+                        <div class="inp_box">
+                            <input class="auth_num" type="text" placeholder="인증번호를 입력하세요."/>
+                            <span class="cnt_down_txt">04:59</span>
+                            <span class="btn_auth">인증하기</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_mail_auth">
+                    <p class="mail_auth">
+                        <label class="radio_contain">계정 이메일로 인증
+                            <input type="radio" name="auth_how" id="auth_how" value="mail" checked="">
+                            <span class="checkmark"></span>
+                        </label>
+                        <span class="get_num">인증번호받기</span>
+                    </p>
+                    <div class="getauth_area">
+                        <div class="inp_box">
+                            <input class="auth_num" type="text" placeholder="인증번호를 입력하세요."/>
+                            <span class="cnt_down_txt">04:59</span>
+                            <span class="btn_auth">인증하기</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_login">비밀번호 재설정</span>
+        <div class="link_area">
+            <span class="btn_join_bck">계정을 잊으셨나요?</span>
+        </div>
+    </div>
+</div>
+
+
+<!--계정찾기1-->
+<div class="wrap_findac_pop findid">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">계정찾기 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">계정 찾기</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <table class="find_tbl">
+                <tr>
+                    <th scope="row"><label for="name">이름</label></th>
+                    <td>
+                        <div class="inp_box">
+                            <input type="text" id="name" name="name"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="phn">연락처</label></th>
+                    <td class="phn_auth_box">
+                        <div class="inp_box">
+                            <input type="text" id="phn" name="phn"/>
+                            <span class="btn_getauth">인증번호받기</span>
+                        </div>
+                        <div class="getauth_area">
+                            <div class="inp_box">
+                                <input class="auth_num" type="text" placeholder="인증번호를 입력하세요."/>
+                                <span class="cnt_down_txt">04:59</span>
+                                <span class="btn_auth">인증하기</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_login">로그인</span>
+        <div class="link_area">
+            <span class="btn_join_bck">회원가입</span>
+            <span class="btn_findpw_bck">내 비밀번호 찾기</span>
+        </div>
+    </div>
+</div>
+
+<!--계정찾기 1-2-->
+<div class="wrap_findac_pop findid">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">계정찾기 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">계정 찾기</h4>
+    </div>
+    <div class="cont_area">
+        <div class="auth_comp_area">
+            <span class="icon_check"><i class="blind">체크 아이콘</i></span>
+            <p>인증되었습니다.</p>
+        </div>
+        <form>
+            <table class="rst_tbl">
+                <tr>
+                    <th scope="row">계정</th>
+                    <td class="rst_find">
+                        <div class="inp_box">huliza80@gmail.com</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">가입일</th>
+                    <td class="rst_find">
+                        <div class="inp_box">2020-06-30</div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_login on">로그인</span>
+        <div class="link_area">
+            <span class="btn_findpw_bck">내 비밀번호 찾기</span>
+        </div>
+    </div>
+</div>
+
+<!--계정 찾기 1-2-1-->
+<div class="wrap_findac_pop findid">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">계정찾기 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">계정 찾기</h4>
+    </div>
+    <div class="cont_area">
+        <div class="auth_fail_area">
+            <span class="icon_ex"><i class="blind">엑스 아이콘</i></span>
+            <p>인증번호가 일치하지 않습니다.</p>
+        </div>
+    </div>
+    <div class="bottom_area">
+        <span class="btn_reauth">다시 인증하기</span>
+    </div>
+</div>
+
+
+<!--</body>-->
+<!--</html>-->

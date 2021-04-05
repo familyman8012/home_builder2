@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'nanum';
+  font-style : normal;
+  font-weight: normal;
+  src: local('NanumGothic');
+  src        :
+    url('../fonts/NanumGothic.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NanumGothic.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NanumGothic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'nanum';
+  font-style : normal;
+  font-weight: bold;
+  src: local('NanumGothicBold');
+  src        :
+    url('../fonts/NanumGothicBold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NanumGothicBold.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NanumGothicBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'nanum';
+  font-style : normal;
+  font-weight: 400;
+  src: local('NanumGothicLight');
+  src        :
+    url('../fonts/NanumGothicLight.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NanumGothicLight.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NanumGothicLight.otf') format('truetype');
+}
+
+* {font-family: 'nanum';}

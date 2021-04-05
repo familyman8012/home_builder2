@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>비주얼</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<!--플러그인 // -->
+	<link rel="stylesheet" href="./css/croppie.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<script src="./js/owl.carousel.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	<!-- <link href="https://www.play-kok.com/css/video-js.min.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" type="text/css"
+		href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<link rel="stylesheet" href="./css/jquery.minicolors.css">
+	<script src="./js/jquery.minicolors.min.js"></script>
+	<link rel="Stylesheet" type="text/css" href="./css/wSelect.css" />
+	<script type="text/javascript" src="./js/wSelect.min.js"></script>
+	<link rel="stylesheet" href="./css/calendar.css">
+	<script type="text/javascript" src="./js/calendar.js"></script>
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css" />
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--    <script type="text/javascript" src="https://github.com/malihu/malihu-custom-scrollbar-plugin/blob/master/jquery.mCustomScrollbar.concat.min.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css" />
+	<script src="./js/jquery.fullpage.js"></script>
+	<link rel="stylesheet" type="text/css" href="//kenwheeler.github.io/slick/slick/slick.css">
+	<script src="//kenwheeler.github.io/slick/slick/slick.js"></script>
+	<!-- // 플러그인-->
+
+	<link rel=" stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/builder.css">
+	<link rel="stylesheet" href="./css/component.css">
+	<link rel="stylesheet" href="./css/board.css">
+	<link rel="stylesheet" href="./css/gallery.css">
+	<link rel="stylesheet" href="./css/layer_setting_popup.css">
+	<link rel="stylesheet" type="text/css" href="css/skin.css" />
+	<link rel="stylesheet" type="text/css" href="css/visual.css" />
+
+	<!-- <script src="http://dart32r.dartplus.kr/data/skin/default/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+	<!-- <script src="http://dart32r.dartplus.kr/data/skin/default/js/modernizr.custom.js"></script> -->
+</head>
+
+
+<body class="edit-mode wrap_fullpage">
+
+	<div class="manage_option_page">
+		<div class="wrap_page_opt">
+			<div class="btn_all_menu">
+				<span>메뉴 관리</span>
+			</div>
+			<div class="btn_return">
+				<span class="icon_return"><i class="blind">이전으로 돌리기</i></span>
+			</div>
+			<div class="btn_this_menu">
+				<span class="this_menu_name">HOME</span>
+				<span class="icon_i"><i class="blind">현재 메뉴 관리하기</i></span>
+			</div>
+			<div class="btn_common_opt">
+				<span class="icon_common_opt"><i class="blind">공통 설정하기</i></span>
+			</div>
+			<!--div class="btn_preview_page_area">
+				<span class="btn_preview"><i class="blind">수정 화면 미리보기</i></span>
+			</div-->
+			<div class="btn_work_area">
+				<span class="btn_save">저장</span>
+				<span class="btn_upload">게시완료</span>
+				<span class="btn_close">나가기</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="mask">
+		<span class="btn_close"><i class="icon_close"><span class="blind">크게 보기 닫기</span></i></span>
+	</div>
+	<header class="header center sty2 over">
+		<div class="inner">
+			<div class="wrap_gnb">
+				<h1 class="logo header_logo">
+					<img src="./images/playblock_logo2.png" class="logoimg" alt="playblock" />
+					<span class="txt" style="display:none;">플레이콕</span>
+					<div class="hiddenfile" style="position:absolute;top:0;left:0;opacity:0;">
+						<input type="file" name="file" class="sel_logo" value="" />
+					</div>
+				</h1>
+				<nav class="gnb">
+					<div class="inner">
+						<ul class="list list_depth1">
+							<li class="depth1_li on" data-href="index.html" data-name="HOME">
+								<a href="index.html" target="" class="txt box_add_depth2"><span class="wrap_menu"><em
+											class="menu_name">HOME</em><i class="btn_add"><span class="blind">하위 메뉴추가
+												버튼</span></i></span></span></a>
+								<ul class="list_depth2">
+									<li class="depth2_li"><a href="index12312.html" class="txt2"><span class="wrap_menu"><em
+													class="menu_name">서브메뉴1</em></span></a></li>
+									<li class="depth2_li"><a href="index12312.html" class="txt2"><span class="wrap_menu"><em
+													class="menu_name">서브메뉴2</em></span></a></li>
+								</ul>
+							</li>
+							<li class="depth1_li" data-href="index_about.html" data-name="ABOUT">
+								<a href="shop.html" class="txt box_add_depth2"><span class="wrap_menu"><em class="menu_name">SHOP</em><i
+											class="btn_add"><span class="blind">하위 메뉴추가
+												버튼</span></i></span></a>
+								<ul class="list_depth2">
+									<li class="depth2_li"><a href="index12312.html" class="txt2"><span class="wrap_menu"><em
+													class="menu_name">BEAN</em></span></a></li>
+								</ul>
+							</li>
+							<li class="depth1_li" data-href="index_service.html" data-name="SERVICE">
+								<a href="index_service.html" data-href="index_service.html" class="txt box_add_depth2"><span
+										class="wrap_menu"><em class="menu_name">SERVICE</em><i class="btn_add"><span class="blind">하위 메뉴추가
+												버튼</span></i></span></a>
+								<ul class="list_depth2"></ul>
+							</li>
+							<li class="depth1_li" data-href="index_project.html" data-name="PROJECT">
+								<a href="index_project.html" class="txt box_add_depth2"><span class="wrap_menu"><em
+											class="menu_name">PROJECT</em><i class="btn_add"><span class="blind">하위 메뉴추가
+												버튼</span></i></span></a>
+								<ul class="list_depth2"></ul>
+							</li>
+							<li class="depth1_li" data-href="index_contact.html" data-name="CONTACT">
+								<a href="index_contact.html" class="txt box_add_depth2"><span class="wrap_menu"><em
+											class="menu_name">CONTACT</em><i class="btn_add"><span class="blind">하위 메뉴추가
+												버튼</span></i></span></a>
+								<ul class="list_depth2"></ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<!--로그인 하기 전에 생깁니다. <div class="login_area">
+					<span class="btn_login">LOGIN</span>
+					<span class="btn_join">회원가입</span>
+				</div> -->
+				<!--로그인 했을 때 생깁니다. div class="wrap_login_tool">
+                    <div class="user_info_box">
+                        <img class="login_user_prfl_img" src="./images/basic_picture.svg" alt="프로필 사진" />
+                        <b class="name_txt">관리자</b>
+                        <span class="account_email">playblock123@playkok.com</span>
+                        <span class="btn_logout">LOGOUT</span>
+                    </div>
+                </div -->
+
+				<!-- DB요소 추가될 때 생깁니다. <div class="wrap_search on">
+					<div class="inp_box">
+						<input class="inp_sch_txt" type="text" />
+						<i class="search_area"><span class="blind">검색아이콘</span></i>
+					</div>
+				</div> -->
+				<ul class="page_terms_wrap">
+					<li><a href="">개인정보 처리방침</a></li>
+					<li><a href="">이용 약관</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</header>
+
+
+	<!-- //메인 이미지 슬라이드 -->
+	<main role="main">
+		<div id="list1" class="wrap_fullpage">
+			<div id="fullpage">
+				<!-- <span class="btn_add"
+					style="position:fixed;top:300px;font-size:20px;border:1px solid;padding:10px;color:#fff;z-index:1;">섹션추가</span> -->
+
+				<section class="section" id="section0" style="background-image: url(./images/fullpage1.png);">
+					<div class="main_notice fp_inner" >
+						<div class="inner_section">
+							<div class="main_tit wrap_txt_area">
+								<div class="txt_area">
+									<h3>NEUNG E SOFT</h3>
+									<P>Neung E Soft grows with changes.</P>
+									<span class="txt">A partner who can satisfy you among countless agencies in space.<br>
+										Neungisoft is constantly moving toward its goals.</span>
+								</div>
+							</div>
+							<div class="btn_scroll_effect"><a href="#">Scroll Down</a></div>
+						</div>
+					</div>
+					<div class="component_add top"><span class="btn_add"></span></div>
+					<div class="component_add bottom"><span class="btn_add"></span></div>
+				</section>
+
+				<section class="section wrap_visual_txt" id="section1" style="background-image: url(./images/fullpage2.png);">
+					<div class="main_notice fp_inner">
+						<div class="main_tit wrap_txt_area">
+							<div class="inner_section">
+								<div class="txt_area">
+									<h3>What We Do?</h3>
+									<p>Homepage & App</p>
+								</div>
+							</div>
+						</div>
+						<ul class="list">
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt txt_area">
+										<strong>Homepage Production</strong>
+										<span class="txt">Homepage, blog, shopping mall,
+											entertainment, fan page (celebrity),
+											community, etc.</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">Contact</a>
+								</div>
+							</li>
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt txt_area">
+										<strong>App Development</strong>
+										<span class="txt">SNS, camera, alarm, diary,
+											shopping mall, delivery, chat, music,
+											broadcast, location-based service,
+											hotel reservation, finance,
+											travel, utilities, and newspapers,
+											e-books, news, etc.</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">Contact</a>
+								</div>
+							</li>
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt txt_area">
+										<strong>Hosting & Maintenance</strong>
+										<span class="txt">Even various services
+											such as Domain / SMS / Hosting
+											/ Email can be maintained
+											at reasonable cost.</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">Contact</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="component_add top"><span class="btn_add"></span></div>
+					<div class="component_add bottom"><span class="btn_add"></span></div>
+				</section>
+
+				<section class="section wrap_visual_imgtxt" id="section2" style="background-image: url(./images/fullpage3.png);">
+					<div class="main_notice fp_inner">
+						<div class="main_tit wrap_txt_area">
+							<div class="inner_section">
+								<div class="txt_area">
+									<h3>Our Service</h3>
+									<p>Planning Service</p>
+									<span class="txt">Neung E Soft plans new possibilities to maximize the strategy and core competencies that<br>
+										meet the customer's goals through objective and compelling market research.</span>
+								</div>
+							</div>
+						</div>
+						<ul class="two_div list">
+							<li>
+								<div class="img_area">
+									<a href="#" class="url_edited">
+										<img src="images/visual_txt_img1.jpg" class="changedimg">
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="img_area">
+									<a href="#" class="url_edited">
+										<img src="images/visual_txt_img2.jpg" class="changedimg" alt="" />
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+						<div class="component_add top"><span class="btn_add"></span></div>
+						<div class="component_add bottom"><span class="btn_add"></span></div>
+						</section>
+
+				<section class="section wrap_visual_txtbtn" id="section3" style="background-image: url(./images/fullpage4.png);">
+					<div class="main_comm main_com_tit fp_inner">
+						<div class="main_tit wrap_txt_area">
+							<div class="inner_section">
+								<div class="txt_area">
+									<h3>Creative Service</h3>
+									<p>Neung E Soft</p>
+								</div>
+							</div>
+						</div>
+						<ul class="list">
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt_area">
+										<span class="txt">Optimized Strategy</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">BUTTON</a>
+								</div>
+							</li>
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt_area">
+										<span class="txt">Clients concept</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">BUTTON</a>
+								</div>
+							</li>
+							<li>
+								<div class="wrap_txt_area">
+									<div class="txt_area">
+										<span  class="txt">Production Process</span>
+									</div>
+								</div>
+								<div class="btn_area">
+									<a href="#" class="btn_click">BUTTON</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="component_add top"><span class="btn_add"></span></div>
+					<div class="component_add bottom"><span class="btn_add"></span></div>
+					</section>
+
+
+				<section class="section" id="section4" style="background-image: url(./images/fullpage5.png);">
+					<div class="fp_inner sty2">
+						<div class="inner_section main_tit">
+							<div class="wrap_txt_area">
+								<div class="txt_area">
+									<h3>Technology Service</h3>
+								</div>
+							</div>
+						</div>
+						<div class="main_cont main_slide">
+							<div class="vod_box">
+								<div class="vod01">
+									<div class="img_area">
+										<a href="#" class="url_edited">
+											<img src="images/visual_slide_img1.jpg" class="changedimg" />
+										</a>
+									</div>
+								</div>
+								<div class="vod02">
+									<div class="img_area">
+										<a href="#" class="url_edited">
+											<img src="images/visual_slide_img2.jpg" class="changedimg" />
+										</a>
+									</div>
+								</div>
+								<div class="vod03">
+									<div class="img_area">
+										<a href="#" class="url_edited">
+											<img src="images/visual_slide_img3.jpg" class="changedimg" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="component_add top"><span class="btn_add"></span></div>
+					<div class="component_add bottom"><span class="btn_add"></span></div>
+				</section>
+
+				<footer class="footer layoutsty2 fp-auto-height section" id="section5">
+					<!-- sty2 layoutsty2 -->
+					<div class="wrap_footer">
+						<div class="right_area">
+							<strong class="logo">
+								<img src="./images/playblock_logo1.png" class="logoimg" alt="playkok">
+								<span class="txt" style="display:none;">플레이콕</span>
+								<div class="hiddenfile" style="position:absolute;top:0;left:0;opacity:0;">
+									<input type="file" name="file" class="sel_logo" value="">
+								</div>
+							</strong>
+							<div class="sns_icon_area">
+								<a href="#" class="icon-sns1"><i class="blind">플레이콕으로 공유하기</i></a>
+								<a href="#" class="icon-sns2"><i class="blind">페이스북으로 공유하기</i></a>
+								<a href="#" class="icon-sns3"><i class="blind">네이버 블로그로 공유하기</i></a>
+								<a href="#" class="icon-sns4"><i class="blind">유튜브로 공유하기</i></a>
+							</div>
+						</div>
+						<div class="left_area">
+							<div class="site_info_area">
+								<div class="wrap_txt_area">
+									<div class="txt_area">
+										<p class="playkok_name">(주)플레이콕</p>
+										<p class="site_name">site 명</p>
+										<address class="site_basic_info">
+											<p class="represent"><span class="name">회사명</span><span class="address">경기도 000시 길
+													00000-00</span>
+											</p>
+											<div class="contact_number">
+												<span class="phone_num">Tel : 070-0000-1111</span>
+												<span class="fax_num">Fax : 8813-068-9000</span>
+												<span>Email : mmmm@playkok.com</span>
+											</div>
+										</address>
+									</div>
+								</div>
+								<ul class="page_terms_wrap">
+									<li><a href="">개인정보 처리방침</a></li>
+									<li><a href="">이용 약관</a></li>
+								</ul>
+								<copyright class="copyright_area">
+									<span>COPYRIGHT PLAYKOK Corp. ALL RIGHTS RESERVED.</span>
+								</copyright>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</main>
+	<div class="pop_area"></div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		$('.main_slide .vod_box').slick({
+				centerMode: true,
+				infinite: true,
+				speed: 500,
+				arrows: true,
+				dots: true,
+				centerPadding: '410px',
+				slidesToShow: 1,
+				auto: true,
+				easing: 'ease-in-out',
+				lazyLoad: 'progressive',
+				speed: '1100',
+				waitForAnimate: true,
+				responsive: [
+					{
+						breakpoint: 1501,
+						settings: {
+							centerPadding: '210px',
+						}
+					},
+					{
+						breakpoint: 1218,
+						settings: {
+							centerPadding: '120px',
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							centerPadding: '50px',
+						}
+					}
+				]
+			});
+
+
+			$('#fullpage').fullpage({
+				navigation: true,
+				navigationPosition: 'right',
+				verticalCentered: false
+			});
+
+
+			//메인 스크롤 아이콘 무빙
+			balloon_Moving();
+			function balloon_Moving() {
+				$(".btn_scroll_effect a")
+					.animate({ paddingTop: "55px" }, 1200, "", function () {
+						$(this)
+							.animate({ paddingTop: "69px" }, 1200, "", function () {
+								//자기 호출
+								balloon_Moving();
+							});
+					}).on('click', btn_scroll_click);
+
+					function btn_scroll_click() {
+						var btn_fp_nav = document.querySelector('#fp-nav');
+						$(btn_fp_nav).find('li').eq(1).find('a').trigger('click');
+					}
+			}
+
+		});//jQB
+
+	</script>
+	<!-- <script>
+		function initialization() {
+			var myFullpage = new fullpage('#fullpage', {
+				menu: '#menu',
+				navigation: true,
+				navigationPosition: 'right',
+			});
+		}
+
+		$('.btn_add').click(function () {
+			$('#section0').after('<div class="section" id="section6" style="height:100vh;">테스sdafsadsfdasdaf트</div>');
+			fullpage_api.destroy('all');
+			initialization()
+		});
+	</script> -->
+	<script src="./js/Sortable.js"></script>
+	<script src="./js/croppie.js"></script>
+	<!-- <script src="./js/video.min.js"></script> -->
+	<script src="./js/ui_common.js"></script>
+	<script src="./js/set_menu.js"></script>
+	<script src="./js/common_setting.js"></script>
+	<script src="./js/summernote-ext-addclass.js"></script>
+</body>
+</html>

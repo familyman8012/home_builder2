@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'notoSans-b';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/NotoSans-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/NotoSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/NotoSans-Bold.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/NotoSans-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'notoSans-M';
+    font-style: normal;
+    font-weight: 500;
+    src: local('NotoSans-Medium'), local('NotoSans-Medium');
+    src: url('../fonts/NotoSans-Medium.eot'), /* IE9 Compat Modes */
+    url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/NotoSans-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/NotoSans-Medium.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/NotoSans-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: '본고딕';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NotoSans-Regular'), local('NotoSans-Regular');
+    src: url('../fonts/NotoSans-Regular.eot'), /* IE9 Compat Modes */
+    url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/NotoSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/NotoSans-Regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/NotoSans-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'notoSans-D';
+    font-style : normal;
+    font-weight: 350;
+    src        : local('NotoSans-DemiLight'), local('NotoSans-DemiLight');
+    src        : url('../fonts/NotoSans-DemiLight.eot'),
+        /* IE9 Compat Modes */
+        url('../fonts/NotoSans-DemiLight.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/NotoSans-DemiLight.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/NotoSans-DemiLight.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: '티몬';
+  src        : url('../fonts/tmon.eot');
+  src        : local(※), url('../fonts/tmon.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/tmon.woff2') format('woff2'),
+    url('../fonts/tmon.woff') format('woff'),
+    url('../fonts/tmon.ttf') format('truetype');
+  font-weight : normal;
+  font-style  : normal;
+  font-display: swap;
+}
+
+@font-face {
+ font-family: '나눔스퀘어';
+font-weight:400;
+ src: url(../fonts/NanumSquareR.eot);
+ src: url(../fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumSquareR.woff) format('woff'),
+      url(../fonts/NanumSquareR.ttf) format('truetype');
+}

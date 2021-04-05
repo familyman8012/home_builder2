@@ -1,0 +1,7 @@
+@font-face {
+ font-family: 'pen';
+ src: url(../fonts/NanumPen.eot);
+ src: url(../fonts/NanumPen.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/NanumPen.woff) format('woff'),
+      url(../fonts/NanumPen.ttf) format('truetype');
+}

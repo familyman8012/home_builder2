@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+@import "common.scss";
+
+//새로운 사이트 CO.2-2
+.make_site_idx {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	
+	.wrap_naming_site {
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	h2 {
+		position: relative;
+		width: 1280px;
+		font-size: $tit_txt;
+		font-family: $font_r;
+		text-align: center;
+		color: #4d4d4d;
+		
+		.btn_close {
+			display: block;
+			position: absolute;
+			right: 15px;
+			top: -24px;
+			@include bg(25px, 25px, '../images/btn_close2.svg');
+		}
+	}
+	
+	.cont_make_site {
+		width: 400px;
+		margin: 102px auto 0;
+		
+		.area_site_name, .area_site_url {
+			display: flex;
+			align-items: center;
+			width: 400px;
+			height: 60px;
+			margin-bottom: 15px;
+			padding: 20px 14px;
+			border-radius: 4px;
+			background-color: rgba(221, 221, 221, 0.5);
+			box-sizing: border-box;
+			
+			input {
+				display: block;
+				width: 100%;
+				color: #4e4e4e;
+				font-size: 2rem;
+				font-family: $font_r;
+			}
+		}
+		
+		.area_select {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 30px;
+			
+			.check_box {
+				height: 20px;
+				line-height: 23px;
+				
+				@include check_custom1(20px, 20px, 1px solid #757575);
+				
+				.checkmark {
+					border-radius: 50%;
+					background: #fff;
+					box-sizing: border-box;
+				}
+				
+				@include radiomark;
+				
+				font-family: $font_r;
+				font-size: $btn_txt;
+				color: #4e4e4e;
+			}
+		}
+		
+		.area_btn_make_site {
+			margin-top: 49px;
+			margin-bottom: 30px;
+			border-radius: 4px;
+			background-color: $blue;
+			
+			span {
+				display: block;
+				width: 400px;
+				height: 60px;
+				line-height: 60px;
+				color: #fff;
+				font-size: 2.4rem;
+				font-family: $font_m;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+		
+		.add_notice {
+			color: #757575;
+			font-size: 1.4rem;
+			font-family: $font_r;
+			text-align: center;
+		}
+	}
+}
+
+//새로운 사이트 CO.2-2 알럿
+.site_info_alt {
+	width: 310px;
+	padding: 30px 30px 15px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background: #f7f7f7;
+	
+	.txt_alert {
+		margin-bottom: 40px;
+		font-size: 1.4rem;
+		font-family: $font_r;
+		line-height: 1.4;
+		color: #242424
+	}
+	
+	.btn_box {
+		display: flex;
+		
+		.btn_cnxl {
+			margin-right: auto;
+			@include btn(#757575);
+			width: 110px;
+			height: 32px;
+			line-height: 32px;
+		}
+		
+		.btn_cnfm {
+			@include btn($blue);
+			width: 110px;
+			height: 32px;
+			line-height: 32px;
+			margin-left: auto;
+		}
+	}
+}
+
+//내 사이트 목록 CO.1-0
+.my_site_list {
+	padding-top: 80px;
+	
+	.wrap_my_site {
+		width: 1280px;
+		margin: 0 auto;
+		
+		h2 {
+			padding-bottom: 49px;
+			font-size: 3rem;
+			font-family: $font_r;
+			text-align: center;
+			color: #4d4d4d;
+		}
+		
+		.cont_my_site {
+			.wrap_list {
+				display: flex;
+				flex-wrap: wrap;
+				
+				li {
+					padding: 0 15px 15px 15px;
+					
+					.list_head {
+						position: relative;
+						
+						img {width: 396px; height: 230px;}
+						
+						.btn_del {
+							position: absolute;
+							right: 13px; top: 13px;
+							@include bg(21px, 21px, '../images/btn_close.svg');
+							cursor: pointer;
+						}
+					}
+					
+					.list_main {
+						padding-top: 29px;
+						color: #4d4d4d;
+						
+						.site_tit {
+							padding-bottom: 15px;
+							font-size: $cont_big_txt;
+							font-family: $font_r;
+							
+							.lv_free, .lv_bronze, .lv_gold, .lv_silver {
+								display: inline-block;
+								padding-left: 5px;
+								font-size: $cont_small_txt;
+								vertical-align: 2px;
+							}
+							
+							.lv_free {
+								color: $watermelon;
+							}
+							
+							.lv_bronze {
+								color: #c05a36;
+							}
+							
+							.lv_gold {
+								color: #8d7542;
+							}
+							.lv_silver {color:#4d4d4d}
+							
+							.badge_bronze {
+								display: inline-block;
+								@include bg(21px, 21px, '../images/badge_bronze.png');
+								margin-right: 4px;
+								vertical-align: top;
+							}
+							
+							.badge_silver {
+								display: inline-block;
+								@include bg(21px, 21px, '../images/badge_silver.png');
+								margin-right: 4px;
+								vertical-align: top;
+							}
+							
+							.badge_gold {
+								display: inline-block;
+								@include bg(21px, 21px, '../images/badge_gold.png');
+								margin-right: 4px;
+								vertical-align: top;
+							}
+							
+						}
+						
+						.site_url {
+							padding-bottom: 8px;
+							font-family: $font_r;
+							font-size: $cont_txt;
+						}
+						
+						.expire_area {
+							.btn_upgr {
+								@include btn($pink);
+								width: 140px;
+								height: 30px;
+								line-height: 30px;
+							}
+						}
+					}
+					
+					.list_ft {
+						display: flex;
+						margin-top: 15px;
+						
+						span {
+							cursor: pointer;
+							
+							&.btn_mng {
+								@include btn(#4e4e4e);
+								width: 90px;
+								height: 30px;
+								line-height: 30px;
+							}
+							
+							&.btn_dsgn {
+								margin: 0 13px;
+								@include btn($blue);
+								width: 140px;
+								height: 30px;
+								line-height: 30px;
+							}
+							
+							&.btn_copy {
+								@include btn($blue);
+								width: 140px;
+								height: 30px;
+								line-height: 30px;
+							}
+						}
+					}
+					
+					&.deleted_site { //정지된 홈페이지
+						.list_head .wrap_reopen {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 230px;
+							padding: 40px 40px 0;
+							box-sizing: border-box;
+							background-color: rgba(221, 221, 221, 0.8);
+							text-align: center;
+							
+							.site_tit {
+								padding-bottom: 22px;
+								font-size: $cont_big_txt;
+								font-family: $font_m;
+								color: $watermelon;
+								text-align: left;
+							}
+							
+							dl {
+								padding-bottom: 37px;
+								color: #4e4e4e;
+								text-align: left;
+								
+								dt {
+									font-size: $cont_small_txt;
+									font-family: $font_m;
+								}
+								
+								dd {
+									padding-top: 9px;
+									font-size: $cont_txt;
+									font-family: $font_r;
+								}
+							}
+							
+							.btn_reopen {
+								@include btn($blue);
+								width: 150px;
+								height: 30px;
+								line-height: 30px;
+							}
+						}
+						
+						.list_ft {
+							.btn_mng, .btn_dsgn, .btn_copy {
+								background-color: #ddd;
+								cursor: default;
+							}
+						}
+					}
+				}
+			}
+			
+			.area_btn_make_site {
+				margin-top: 49px;
+				margin-bottom: 50px;
+				text-align: center;
+				
+				.btn_make_site {
+					@include btn(#fff, $radius: 10px);
+					border: 1px solid $blue;
+					width: 250px;
+					height: 70px;
+					line-height: 70px;
+					box-sizing: border-box;
+					font-size: 2.2rem;
+					color: $blue;
+				}
+			}
+		}
+		
+		
+	}
+}

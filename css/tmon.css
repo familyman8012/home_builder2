@@ -1,0 +1,12 @@
+@font-face {
+  font-family: '티몬';
+  src        : url('../fonts/tmon.eot');
+  src        : local(※), url('../fonts/tmon.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/tmon.woff2') format('woff2'),
+    url('../fonts/tmon.woff') format('woff'),
+    url('../fonts/tmon.ttf') format('truetype');
+  font-weight : normal;
+  font-style  : normal;
+  font-display: swap;
+}
+* {font-family: 티몬 !important;}

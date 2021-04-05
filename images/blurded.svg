@@ -1,0 +1,10 @@
+<svg width="230" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgBlur">
+
+  <filter id="svgBlurFilter">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
+
+
+  <image xlink:href="http://lorempixel.com/400/200" x="0" y="0" height="200" width="400" class="blurred" filter="url(#svgBlurFilter)" />
+
+</svg>

@@ -1,0 +1,354 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<title>popup</title>-->
+    <!--<script src="https://www.play-kok.com/js/jquery-3.3.1.min.js"></script>-->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel=" stylesheet" href="css/builder.css">-->
+    <!--<link rel=" stylesheet" href="css/login_join.css">-->
+<!--</head>-->
+<!--<body style="padding-left: 10px;">-->
+<!--ET.1 로그인 및 회원가입 팝업 -->
+
+<div style="position:absolute;top:0;left:0;width:100vw;height:100vh;background:#000000;opacity:0.5;z-index:-1;"></div>
+
+
+<!--로그인1-->
+<div class="wrap_logjn_pop login">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">로그인 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">로그인</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="wrap_mailpw">
+                <div class="inp_box">
+                    <input type="email" id="email" name="email" placeholder="이메일" required="">
+                </div>
+                <div class="inp_box">
+                    <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom_area">
+        <div class="wrap_atlogin">
+            <label class="check_contain">자동 로그인
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="btn_login_box">
+            <span>로그인</span>
+        </div>
+        <div class="btn_oth_act">
+            <span class="btn_join">회원가입</span>
+            <span class="btn_find_id">내 계정 찾기</span>
+            <span>내 비밀번호 찾기</span>
+        </div>
+    </div>
+</div>
+
+<!--로그인2-->
+<div class="wrap_logjn_pop login2">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">로그인 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">플레이콕 회원이신가요?</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="wrap_btn">
+                <span class="pk_mb_yes">예</span>
+                <span class="pk_mb_no">아니요</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--회원가입 플레이콕 회원-->
+<div class="wrap_logjn_pop pk_mb_join">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">회원가입 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">회원가입</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="wrap_mailpw">
+                <div class="inp_box">
+                    <input type="email" id="email" name="email" placeholder="이메일" required="">
+                </div>
+                <div class="inp_box">
+                    <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                </div>
+                <p>플레이콕 계정과 비밀번호로 회원가입하세요.</p>
+            </div>
+
+            <div class="wrap_terms">
+                <label class="check_contain">전체 동의
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="term_box">
+                    <label class="label_txt">서비스 이용 약관</label>
+                    <span class="btn_view_term">전문보기</span>
+                    <span class="checkmark"></span>
+                </div>
+                <div class="term_box">
+                    <label class="label_txt">개인정보 처리방침 약관</label>
+                    <span class="btn_view_term">전문보기</span>
+                    <span class="checkmark on"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="complete on">가입 완료</span>
+    </div>
+</div>
+
+
+<!-- 회원가입-플레이콕 비회원 -->
+<div class="wrap_logjn_pop pk_mb_join">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">회원가입 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">회원가입</h4>
+    </div>
+    <div class="cont_area">
+        <form>
+            <div class="wrap_terms">
+                <label class="check_contain">전체 동의
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="term_box">
+                    <label class="label_txt">서비스 이용 약관</label>
+                    <span class="btn_view_term">전문보기</span>
+                    <span class="checkmark"></span>
+                </div>
+                <div class="term_box">
+                    <label class="label_txt">개인정보 처리방침 약관</label>
+                    <span class="btn_view_term">전문보기</span>
+                    <span class="checkmark on"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bottom_area">
+        <span class="complete">가입 완료</span>
+    </div>
+</div>
+
+<!--플레이콕 sns 회원가입1-->
+<div class="wrap_logjn_pop pk_join">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">회원가입 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">회원가입</h4>
+        <div class="wrap_join_step">
+            <dl class="step_box">
+                <dt>
+                    <em>01</em>
+                </dt>
+                <dd>계정 생성</dd>
+            </dl>
+            <dl class="step_box">
+                <dt>
+                    <em>02</em>
+                </dt>
+                <dd>정보 입력</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="cont_area">
+        <div class="link_area">
+            <span class="aldy_pkmb">이미 계정이 있으신가요?</span>
+        </div>
+        <div class="join_inp_box">
+            <form>
+                <div class="wrap_phn_auth">
+                    <b>1.</b>
+                    <span class="btn_api_phnath">본인 인증</span>
+                </div>
+                <div class="wrap_make_ac">
+                    <b>2. 계정생성</b>
+                    <div class="inp_box">
+                        <input type="text" placeholder="메일 주소로 입력"/>
+                        <span class="btn_dup_chk">중복 확인</span>
+                    </div>
+                </div>
+                <div class="wrap_dup_info">
+                    <p class="true">사용 가능한 계정입니다.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bottom_area">
+        <span>다음</span>
+    </div>
+</div>
+
+<!--플레이콕 sns 회원가입2-->
+<div class="wrap_logjn_pop pk_join">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">회원가입 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">회원가입</h4>
+        <div class="wrap_join_step">
+            <dl class="step_box">
+                <dt>
+                    <em>01</em>
+                </dt>
+                <dd>계정 생성</dd>
+            </dl>
+            <dl class="step_box on">
+                <dt>
+                    <em>02</em>
+                </dt>
+                <dd>정보 입력</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="cont_area">
+        <div class="join_inp_box">
+            <form>
+                <table class="join_tbl">
+                    <tr>
+                        <th scope="row"><label for="nickname">닉네임</label></th>
+                        <td>
+                            <div class="inp_box">
+                                <input type="text" id="nickname" name="nickname"/>
+                                <span class="btn_dup_chk">중복 확인</span>
+                            </div>
+                            <p class="inf_rule">영문, 숫자, 언더바(_), 바(-), 마침표(.)로 최대 15자까지</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="pw1">비밀번호</label></th>
+                        <td>
+                            <div class="inp_box">
+                                <input type="text" id="pw1" name="pw1"/>
+                            </div>
+                            <p class="inf_rule">문자, 숫자, 특수문자 모두 포함 최소 6자 이상</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label for="pw2">비밀번호 확인</label></th>
+                        <td>
+                            <div class="inp_box">
+                                <input type="text" id="pw2" name="pw2"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="recom_box">
+            <ul class="notice_rule">
+                <li>*같은 명의의 닉네임은 추천이 불가합니다.</li>
+                <li>*추천인은 가입 후 입력, 변경이 불가합니다.</li>
+                <li class="impt_note">*추천인 입력 시 가입자에게 2,000 포인트, 추천인에게 500 포인트가 지급됩니다.</li>
+            </ul>
+            <div class="recom_inp_area">
+                <label for="recom">추천인 닉네임</label>
+                <div class="inp_box">
+                    <input type="text" id="recom" name="recom"/>
+                    <span class="btn_user_chk">추천인 확인</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom_area">
+        <span class="pk_join2">회원 가입</span>
+    </div>
+</div>
+
+<!--플레이콕 sns 비회원 가입 완료 -->
+<div class="wrap_logjn_pop pk_mb_join sty2">
+    <div class="head_area">
+        <div class="btn_box">
+            <i class="btn_close"><span class="blind">회원가입 창 닫기</span></i>
+        </div>
+        <h3 class="logo_area">
+            <b class="site_logo">LOGO</b>
+            <span class="icon_cross"><i class="blind">앤</i></span>
+            <span class="logo_playkok"><i class="blind">플레이콕 로고</i></span>
+        </h3>
+        <h4 class="pop_tit">회원가입</h4>
+    </div>
+    <div class="cont_area">
+        <div class="wrap_mailpw">
+            <div class="inp_box">
+                <input type="email" id="email" name="email" placeholder="이메일" required="">
+            </div>
+            <div class="inp_box">
+                <input type="password" id="pw" name="pw" placeholder="비밀번호">
+            </div>
+        </div>
+        <div class="wrap_terms">
+            <label class="check_contain">전체 동의
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <div class="term_box">
+                <label class="label_txt">서비스 이용 약관</label>
+                <span class="btn_view_term">전문보기</span>
+                <span class="checkmark"></span>
+            </div>
+            <div class="term_box">
+                <label class="label_txt">개인정보 처리방침 약관</label>
+                <span class="btn_view_term">전문보기</span>
+                <span class="checkmark on"></span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_area">
+        <span class="pk_join2"> 가입 완료</span>
+    </div>
+</div>
+
+<!--</body>-->
+<!--</html>-->

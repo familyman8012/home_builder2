@@ -1,0 +1,3118 @@
+@charset "utf-8";
+@import "common.scss";
+
+
+.wrap_pop,
+.wrap_alert {
+	border       : 1px solid #ddd;
+	border-radius: 4px;
+	background   : #f7f7f7;
+}
+
+.btn_apply {
+	//적용 버튼 공통
+	@include btn($blue);
+	width      : 110px;
+	height     : 32px;
+	line-height: 32px;
+}
+
+/* ---------------------------------------------------------------- 
+홈페이지 에디터 설정 팝업
+-------------------------------------------------------------------*/
+.wrap_pop {
+	&.edit_all_menu {
+		//CO.3 전체 메뉴 설정
+		width: 680px;
+
+		.wrap_pop_cont {
+			display: flex
+		}
+	}
+
+	&.edit_one_menu {
+		//CO.3 일반 메뉴 설정
+		width: 510px;
+
+		.bottom_area {
+			display: flex;
+		}
+	}
+
+	&.edit_all_menu,
+	&.edit_one_menu {
+
+		//CO.3 전체 메뉴 설정, 일반 메뉴 설정
+		.cont_area .inp_box input {
+			width         : 287px;
+			padding       : 3px 1px;
+			border-bottom : 1px solid #ddd;
+			box-sizing    : border-box;
+			vertical-align: top;
+		}
+
+		.bottom_area {
+			.btn_del {
+				margin-left   : 17px;
+				padding-left  : 27px;
+				font-size     : $pop_cont_txt;
+				line-height: 31px;
+				background    : url(../images/btn_del.svg) no-repeat left center;
+				cursor        : pointer;
+				padding-bottom: 1px;
+			}
+
+			.notice {
+				margin-left: 24px;
+				font-size  : 13px;
+				line-height: 31px;
+				color      : #757575
+			}
+
+			.btn_apply {
+				margin: 0 15px 0 auto;
+				@include btn($blue);
+				width      : 110px;
+				height     : 32px;
+				line-height: 32px;
+			}
+		}
+	}
+
+	&.com_set {
+		//CO.3 공통 설정
+		width: 390px;
+
+		.inp_box {
+			display: flex;
+
+			label {
+				width: 95px;
+			}
+
+			.inp_area,
+			.select_area {
+				width        : 169px;
+				border-bottom: 1px solid #ddd;
+			}
+
+			.inp_area {
+				input {
+					width  : 169px;
+					padding: 3px 1px;
+				}
+
+				.preview_color {
+					display         : inline-block;
+					float           : right;
+					width           : 15px;
+					height          : 15px;
+					background-color: #fff;
+					border-radius   : 50%;
+
+					&.sty1 {
+						border: 1px solid #ddd;
+					}
+				}
+			}
+
+			.select_contain {
+				display   : inline-block;
+				position  : relative;
+				height    : 20px;
+				background: url('../images/select_custom1.svg') right 1px bottom 2px/12px no-repeat;
+
+				label {
+					display    : block;
+					font-size  : 1.4rem;
+					font-family: $font_r;
+					color      : #242424;
+					top        : 3px;
+					left       : 1px;
+					text-align : left;
+				}
+
+				select {
+					position   : absolute;
+					left       : 0;
+					top        : 0;
+					width      : 100%;
+					height     : 20px;
+					line-height: 20px;
+					padding    : 0 1px;
+					opacity    : 0;
+					box-sizing : border-box;
+				}
+			}
+
+			.box_style {
+				.radio_contain1 {
+					width : 60px;
+					height: 20px;
+					@include check_custom1(60px, 20px, 0);
+
+					&.square {
+						margin-right: 10px;
+						border      : 1px solid #29abe2;
+					}
+
+					&.round {
+						margin-right : 10px;
+						border       : 1px solid #29abe2;
+						border-radius: 4px;
+					}
+
+					&.half_circle {
+						border       : 1px solid #29abe2;
+						border-radius: 10px;
+					}
+				}
+			}
+		}
+
+		.preview_btn_area {
+			padding         : 20px 0;
+			margin-bottom   : 28px;
+			background-color: #ddd;
+			font-size       : 0;
+			text-align      : center;
+
+			.btn_click {
+				display    : inline-block;
+				padding    : 7px 24px 8px;
+				font-size  : $cont_txt;
+				font-family: $font_m;
+				color      : #29abe2;
+				line-height: 1;
+				background : #fff;
+				border     : 1px solid #29abe2;
+			}
+		}
+
+		.bottom_area {
+			text-align: right;
+
+			.btn_apply {
+				margin-right: 15px;
+			}
+		}
+	}
+
+
+	&.set_header {
+		//상단설정 HP.1-1
+		width: 1340px;
+
+		.cont_area {
+			height          : 402px;
+			padding         : 30px;
+			box-sizing      : border-box;
+			background-color: #ddd;
+
+			.wrap_dsgn_list {
+				overflow: auto;
+
+
+				.header_dsgn li {
+					margin-bottom: 20px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					[class^='head'] {
+						display: block;
+						cursor : pointer;
+					}
+
+				}
+			}
+		}
+
+		.bottom_area {
+			padding   : 35px 15px 15px;
+			text-align: right;
+
+			.complete {
+				padding: 9px 40px;
+				@include btn($blue);
+				letter-spacing: 0;
+			}
+		}
+
+	}
+
+	&.pop_visual_setting {
+		//HP.1-2-1 메인비주얼 설정
+		width: 1020px;
+
+		.head_area {
+			.btn_add_slide {
+				position: absolute;
+				left    : 0;
+				top     : 0;
+				margin  : 9px 0 0 15px;
+				padding : 9px 10px;
+				@include upload_custom;
+				@include btn(#e07272, $fontsize: $pop_cont_txt);
+				letter-spacing                 : 0;
+			}
+		}
+
+		.pop_cont {
+
+			.edit_area,
+			.note-editing-area {
+				height: 402px;
+			}
+
+			.note-editor {
+				height : 445px;
+				padding: 0 15px;
+				border : 0;
+
+				.note-toolbar {
+					padding   : 0 0 5px;
+					background: transparent;
+				}
+
+				.note-editable {
+					height         : 418px;
+					background-size: cover;
+
+					.txt_area {
+						position: relative;
+						z-index : 10;
+					}
+				}
+			}
+
+			.add_slide_area {
+				display   : flex;
+				flex-wrap : wrap;
+				width     : 1020px;
+				height    : 117px;
+				padding   : 12px 15px 15px;
+				box-sizing: border-box;
+				background: #ddd;
+
+				.wrap_txt {
+					position           : relative;
+					width              : 90px;
+					height             : 90px;
+					background-position: center center !important;
+				}
+
+				.txt_area {
+					display: none;
+				}
+
+				.swiper-slide {
+					width       : auto;
+					margin-right: 10px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+
+				.btn_del {
+					position  : absolute;
+					z-index   : 10;
+					top       : 5px;
+					right     : 5px;
+					width     : 21px;
+					height    : 21px;
+					cursor    : pointer;
+					background: url(../images/btn_del_mainvisual.png) no-repeat left top;
+				}
+			}
+		}
+
+		.pop_bottom {
+			position: relative;
+
+			.wrap_left_inner {
+				display    : flex;
+				align-items: center;
+				padding    : 0 15px;
+			}
+
+			.setting_mask {
+				@include check_custom1(21px, 21px, 0);
+
+				width        : auto;
+				padding-left : 28px;
+				margin-left  : 70px;
+				border-radius: 50%;
+				font-size    : $pop_cont_txt;
+				text-align   : left;
+
+				input~.checkmark {
+					background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+					top       : 3px
+				}
+
+				input:checked~.checkmark {
+					background: url(../images/check_custom1_on.svg) no-repeat center/18px
+				}
+
+				.tip_area {
+					@include custom_tt($height: 157px, $top: -157px);
+					vertical-align            : 1px;
+
+					.tooltip_note p {
+						color: #242424;
+
+						&:first-child {
+							padding-bottom: 10px;
+						}
+					}
+				}
+
+			}
+
+			.wrap_right_inner {
+				display: flex;
+				padding: 15px;
+
+				.notice_txt {
+					font-family: $font_r;
+					font-size  : $pop_cont_txt;
+					color      : #757575
+				}
+
+				.btn_pop_mv {
+					margin-left: auto;
+					@include btn($blue);
+					padding       : 8px 40px;
+					letter-spacing: 1px;
+				}
+
+			}
+		}
+	}
+
+	&.pop_gallery {
+		//HP.1-6-4-2-1 갤러리설정
+		width: 1020px;
+
+		.head_area {
+			.btn_add_imgs {
+				height  : 50px;
+				position: absolute;
+				left    : 15px;
+				top     : 0;
+				@include upload_custom;
+				font-family: $font_m;
+				font-size  : $pop_cont_txt;
+				font-weight: normal;
+				line-height: 50px;
+				color      : #242424;
+				cursor     : pointer;
+
+				.icon_plus {
+					display     : inline-block;
+					margin-right: 5px;
+					@include bg(21px, 21px, '../images/btn_add.svg');
+				}
+			}
+		}
+
+		.pop_cont {
+			.add_imgs_area {
+				display    : flex;
+				flex-wrap  : wrap;
+				align-items: flex-start;
+				padding    : 12px 15px 15px;
+				box-sizing : border-box;
+				background : #ddd;
+				height     : 332px;
+
+				.grid-square {
+					margin-right : 20px;
+					margin-bottom: 20px;
+
+					video {
+						width : 90px;
+						height: 90px
+					}
+
+					.wrap_img_txt {
+						position           : relative;
+						width              : 90px;
+						height             : 90px;
+						background-position: center center !important;
+
+						img {
+							width : 100%;
+							height: 100%;
+						}
+
+						.txt_area {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.pop_bottom {
+			.wrap_opt {
+				display    : flex;
+				flex-wrap  : wrap;
+				padding-top: 45px;
+
+				.opt_tit_txt {
+					padding-left : 68px;
+					padding-right: 29px;
+					font-family  : $font_r;
+					font-size    : $pop_cont_txt;
+					color        : #242424;
+				}
+
+				.wrap_opt_tit {
+					//제목
+					display     : flex;
+					margin-right: 8px;
+
+					.wrap_inp_box {
+						.opt_tit {
+							display      : block;
+							width        : 287px;
+							padding      : 3px 0;
+							border-bottom: 1px solid #ddd;
+							font-size    : $pop_cont_txt;
+						}
+
+						.chk_lightbox {
+							@include check_custom1(21px, 21px, 0);
+							display      : block;
+							margin-top   : 11px;
+							padding-left : 28px;
+							border-radius: 50%;
+							font-size    : $pop_cont_txt;
+
+							input~.checkmark {
+								background: url(../images/check_custom1_off.svg) no-repeat center/23px;
+							}
+
+							input:checked~.checkmark {
+								background: url(../images/check_custom1_on.svg) no-repeat center/18px
+							}
+
+							.tip_area {
+								@include custom_tt($top: -167px, $height: 167px);
+							}
+						}
+					}
+				}
+			}
+
+			.wrap_opt_memo {
+
+				//내용
+				.opt_memo {
+					width        : 467px;
+					padding      : 3px 0;
+					border-bottom: 1px solid #ddd;
+					font-size    : $pop_cont_txt;
+				}
+			}
+
+
+			.wrap_opt_url {
+				//링크
+				display    : flex;
+				padding-top: 38px;
+
+				.inp_container {
+					position: relative;
+
+					.inp_area {
+						position  : relative;
+						width     : 287px;
+						background: url('../images/select_custom1.svg') right 1px bottom 4px/12px no-repeat;
+
+						.inp_btn_url {
+							width        : 287px;
+							padding      : 3px 0;
+							border-bottom: 1px solid #ddd;
+							font-size    : $pop_cont_txt;
+						}
+					}
+
+					.home_nav_url {
+						position  : absolute;
+						top       : 30px;
+						left      : 95px;
+						width     : 287px;
+						padding   : 0 10px;
+						box-sizing: border-box;
+						border    : 1px solid #ddd;
+						background: #fff;
+					}
+
+					.check_area {
+						margin-top: 11px;
+						@include check_custom1(21px, 21px, 0);
+						padding-left : 28px;
+						border-radius: 50%;
+						font-size    : $pop_cont_txt;
+
+						input~.checkmark {
+							background: url(../images/check_custom1_off.svg) no-repeat center/23px;
+						}
+
+						input:checked~.checkmark {
+							background: url(../images/check_custom1_on.svg) no-repeat center/18px
+						}
+					}
+				}
+			}
+
+			.btn_box {
+				padding-top   : 30px;
+				padding-right : 15px;
+				padding-bottom: 15px;
+				text-align    : right;
+
+				.btn_pop_mv {
+					padding: 9px 40px;
+					@include btn($blue);
+					letter-spacing: 0;
+				}
+			}
+		}
+
+
+	}
+
+
+	&.pop_img_edit {
+		//HP.1-4-1 이미지 설정
+		width        : 690PX;
+		border       : 1px solid #ddd;
+		border-radius: 4px;
+
+		.wrap_pop_cont {
+			position: relative;
+
+			.cr-boundary {
+				height: 426px;
+
+				.cr-viewport {
+					width : 396px;
+					height: 380px;
+					border: 1px solid #29abe2;
+
+				}
+			}
+
+			.cr-slider-wrap {
+				position: relative;
+				width   : auto;
+				margin  : 15px 174px 0;
+
+
+				.cr-slider {
+					padding: 0;
+				}
+
+				//input range 스타일
+				input[type=range]::-webkit-slider-runnable-track {
+					width     : 100%;
+					height    : 2px;
+					margin    : 10px 0;
+					cursor    : pointer;
+					box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 rgba(0, 0, 0, 0.41);
+				}
+
+				input[type=range]::-webkit-slider-thumb {
+					border-radius: 50%;
+					@include bg(36px, 36px, '../images/range_slider_thumb.svg');
+					background-position: top center;
+					cursor             : pointer;
+					-webkit-appearance : none;
+					margin-top         : -17px;
+				}
+
+				input[type=range]::-moz-range-track {
+					width     : 100%;
+					height    : 2px;
+					margin    : 10px 0;
+					cursor    : pointer;
+					box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 rgba(0, 0, 0, 0.41);
+				}
+
+				input[type=range]::-moz-range-thumb {
+					border-radius: 50%;
+					@include bg(36px, 36px, '../images/range_slider_thumb.svg');
+					background-position: top center;
+					cursor             : pointer;
+					-webkit-appearance : none;
+					margin-top         : -17px;
+				}
+
+				input[type=range]:focus {
+					outline: none;
+				}
+
+				input[type=range]::-ms-track {
+					width     : 100%;
+					height    : 2px;
+					margin    : 10px 0;
+					cursor    : pointer;
+					box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 rgba(0, 0, 0, 0.41);
+				}
+
+				input[type=range]::-ms-thumb {
+					border-radius: 50%;
+					@include bg(36px, 36px, '../images/range_slider_thumb.svg');
+					background-position: top center;
+					cursor             : pointer;
+					-webkit-appearance : none;
+					margin-top         : -17px;
+				}
+
+				&:before {
+					display : block;
+					content : '';
+					position: absolute;
+					left    : -27px;
+					top     : 10px;
+					@include bg(18px, 2px, '../images/range_slider_minus.png');
+				}
+
+				&:after {
+					display : block;
+					content : '';
+					position: absolute;
+					right   : -27px;
+					top     : 2px;
+					@include bg(18px, 18px, '../images/range_slider_plus.png');
+				}
+
+			}
+
+			.upload_contain {
+				position: absolute;
+				right   : 15px;
+				top     : 23px;
+				z-index : 2;
+
+				padding: 9px 15px;
+
+				@include upload_custom;
+				@include btn($pink);
+				font-size: $pop_cont_txt;
+
+				label {
+					color: #fff
+				}
+			}
+		}
+
+		.bottom_area {
+			display: block;
+			padding: 18px 15px 15px 69px;
+
+			label:first-of-type {
+				margin-right: 29px;
+				font-size   : 1.4rem;
+				font-family : $font_r;
+			}
+
+			.inp_box {
+				width        : 287px;
+				padding      : 4px 1px;
+				border-bottom: 1px solid #ddd;
+				background   : url('../images/select_custom1.svg') right 1px bottom 4px/12px no-repeat;
+
+				input {
+					font-size  : 1.4rem;
+					font-family: $font_r;
+					color      : #757575
+				}
+			}
+
+			.check_area {
+				margin-top: 10px;
+
+				.check_contain {
+					&.sty1 {
+						margin-left : 52px;
+						margin-right: 58px;
+					}
+
+					.tip_area {
+						@include custom_tt($height: 167px, $top: -167px);
+						vertical-align            : 1px;
+					}
+
+					@include check_custom1(21px, 21px, 0);
+					width        : auto;
+					padding-left : 28px;
+					border-radius: 50%;
+					font-size    : 14px;
+					text-align   : left;
+
+					input~.checkmark {
+						background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+					}
+
+					input:checked~.checkmark {
+						background: url(../images/check_custom1_on.svg) no-repeat center/18px
+					}
+
+					margin-left: 0;
+				}
+			}
+		}
+
+		.btn_box {
+			margin-top: 13px;
+			text-align: right;
+
+			.complete {
+				letter-spacing: 0;
+				padding       : 8px 40px;
+				@include btn($blue);
+			}
+		}
+
+
+		&.sty2 {
+
+			//HP.1-6-3
+			.bottom_area {
+				padding: 14px 15px 15px 14px;
+
+				.notice_txt {
+					font-size     : $pop_sub_txt;
+					font-family   : $font_r;
+					letter-spacing: -0.8px;
+					color         : #757575;
+				}
+
+				.wrap_effect_opt {
+					display     : flex;
+					padding-top : 23px;
+					padding-left: 68px;
+
+					.opt_tit {
+						font-size  : $pop_cont_txt;
+						font-family: $font_r;
+						color      : #242424;
+					}
+
+					.effect_box {
+						display: flex;
+
+						.check_contain {
+							@include check_custom1(21px, 21px, 0);
+							padding-left : 28px;
+							border-radius: 50%;
+							font-size    : $pop_cont_txt;
+
+							input~.checkmark {
+								background: url(../images/check_custom1_off.svg) no-repeat center/23px;
+							}
+
+							input:checked~.checkmark {
+								background: url(../images/check_custom1_on.svg) no-repeat center/18px
+							}
+
+							&.chk_fitimg .tip_area {
+								@include custom_tt($top: -107px, $height: 107px);
+							}
+
+							&.chk_lightbox {
+								margin-left : 29px;
+								margin-right: 55px;
+
+								.tip_area {
+									@include custom_tt($top: -167px, $height: 167px);
+
+									.tooltip_note p {
+										padding-top: 10px;
+									}
+								}
+							}
+						}
+
+					}
+				}
+
+				.wrap_link {
+					margin-top  : 32px;
+					padding-left: 68px;
+
+					.link_area {
+						display: flex;
+
+						input {
+							width: 90%;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	&.pop_section_bg,
+	&.pop_visual_setting {
+
+		//비주얼 이미지, 배경이미지 설정
+		.wrap_position {
+			//배경위치 설정 디자인
+			position: relative;
+
+			.box_position_ui {
+				align-items: center;
+
+				.txt {
+					margin-left: 18px;
+					font-family: $font_r;
+					font-size  : $pop_cont_txt;
+					line-height: 1;
+				}
+
+				.position_ui {
+					width : 32px;
+					cursor: pointer;
+
+					ul {
+						margin : 0;
+						padding: 0;
+
+						&:after {
+							content: '';
+							display: block;
+							clear  : both;
+						}
+
+						li {
+							list-style   : none;
+							float        : left;
+							border       : 1px solid #ddd;
+							width        : 9px;
+							height       : 9px;
+							margin-left  : -1px;
+							margin-top   : -1px;
+							margin-bottom: 3px;
+
+							&.active {
+								background  : #00B8FF;
+								border-color: #00B8FF;
+							}
+
+							&._tl {
+								border-radius: 2px 0 0 0;
+							}
+
+							&._tc,
+							&._mc,
+							&._bc {
+								margin-right: 2px;
+								margin-left : 2px;
+							}
+
+							&._tl,
+							&._ml,
+							&._bl {
+								margin-left: 0;
+							}
+
+							&._tl,
+							&._tc,
+							&._tr {
+								margin-top: 0;
+							}
+
+							&._tr {
+								border-radius: 0 2px 0 0;
+							}
+
+							&._bl {
+								border-radius: 0 0 0 2px;
+							}
+
+							&._br {
+								border-radius: 0 0 2px 0;
+							}
+
+							&._bl,
+							&._bc,
+							&._br {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+
+				.tip_area {
+					@include custom_tt($height: 107px, $top: -107px);
+
+					.tooltip_note p {
+						color: #242424
+					}
+				}
+			}
+
+			.position_ui_option {
+				display : none;
+				position: absolute;
+				top     : 0;
+				z-index : 999999 !important;
+
+
+				ul li {
+					&:first-child {
+						border-radius: 3px 0 0 0;
+					}
+
+					&:nth-child(1),
+					&:nth-child(4),
+					&:nth-child(7) {
+						margin-left: 0;
+					}
+
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3) {
+						margin-top: 0;
+					}
+
+					&:nth-child(3) {
+						border-radius: 0 3px 0 0;
+					}
+
+					&:nth-child(7) {
+						border-radius: 0 0 0 3px;
+					}
+
+					&:nth-child(9) {
+						border-radius: 0 0 3px 0;
+					}
+				}
+
+				ul.select_container {
+					margin : 0;
+					padding: 0;
+					width  : 72px;
+					height : 72px;
+
+					&:after {
+						content: '';
+						display: block;
+						clear  : both;
+					}
+
+					li {
+						list-style : none;
+						background : white;
+						border     : 1px solid #e0e0e0;
+						width      : 24px;
+						height     : 24px;
+						margin-left: -1px;
+						margin-top : -1px;
+						float      : left;
+						cursor     : pointer;
+
+						&:hover {
+							background: #eee;
+						}
+
+						&.active {
+							background: #00B8FF;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.pop_section_bg {
+		// HP.1-6-2 배경이미지 설정
+		width: 690px;
+
+		.pop_cont {
+			position: relative;
+
+			.wrap_img {
+				height             : 338px;
+				background-color   : #ddd;
+				background-image   : url(../images/icon_images.png);
+				background-size    : 93px 107px;
+				background-repeat  : no-repeat;
+				background-position: center;
+			}
+
+			.upload_contain {
+				position: absolute;
+				right   : 15px;
+				top     : 23px;
+				z-index : 2;
+				padding : 9px 15px;
+				@include upload_custom;
+				@include btn($pink);
+				font-size: $pop_cont_txt;
+
+				label {
+					color: #fff
+				}
+			}
+		}
+
+		.pop_bottom {
+			padding: 15px;
+
+			.check_opt_area {
+				display: flex;
+
+				.setting_mask {
+					@include check_custom1(21px, 21px, 0);
+
+					width        : auto;
+					padding-left : 28px;
+					margin-left  : 70px;
+					border-radius: 50%;
+					font-size    : $pop_cont_txt;
+					text-align   : left;
+
+					input~.checkmark {
+						background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+						top       : 3px
+					}
+
+					input:checked~.checkmark {
+						background: url(../images/check_custom1_on.svg) no-repeat center/18px
+					}
+
+
+					.tip_area {
+						@include custom_tt(-157px, $height: 157px)
+					}
+				}
+			}
+
+			.notice_btn_area {
+				display    : flex;
+				align-items: center;
+				margin-top : 15px;
+
+				.notice {
+					font-family   : $font_r;
+					font-size     : $pop_cont_txt;
+					letter-spacing: -0.9px;
+					color         : #757575;
+				}
+
+				.btn_pop_mv {
+					padding: 8px 40px;
+					@include btn($blue);
+					margin-left: auto;
+				}
+			}
+		}
+
+		.minicolors-theme-default .minicolors-swatch {
+			top          : -2px;
+			left         : auto;
+			right        : 0;
+			width        : 20px;
+			height       : 20px;
+			margin-left  : 5px;
+			border-radius: 20px;
+			position     : relative;
+		}
+
+		#bg_color.on {
+			position     : relative;
+			width        : 77px;
+			height       : 26px;
+			padding-left : 10px;
+			opacity      : 1;
+			border-bottom: 1px solid
+		}
+	}
+
+	&.pop_img_edit_sty2 {
+		//HP.1-6-3 요소 이미지 설정
+		width        : 690PX;
+		border       : 1px solid #ddd;
+		border-radius: 4px;
+
+		.wrap_pop_cont {
+			position: relative;
+
+			.upload_contain {
+				position: absolute;
+				right   : 15px;
+				top     : 23px;
+				z-index : 2;
+				padding : 9px 15px;
+				@include upload_custom;
+				@include btn($pink);
+				font-size: $pop_cont_txt;
+
+				label {
+					color: #fff
+				}
+			}
+
+			.wrap_img {
+				display                : flex;
+				justify-content        : center;
+				align-items            : center;
+				overflow               : auto;
+				height                 : 388px;
+				background-color       : #ddd;
+				background-image       : url(../images/icon_images.png);
+				background-position    : center;
+				-webkit-background-size: 93px 107px;
+				background-size        : 93px 107px;
+				background-repeat      : no-repeat;
+			}
+
+			.wrap_img img {
+				max-width: 100%;
+			}
+		}
+
+		.bottom_area {
+			display: block;
+			padding: 18px 15px 15px 69px;
+
+			label:first-of-type {
+				margin-right: 29px;
+				font-size   : 1.4rem;
+				font-family : $font_r;
+			}
+
+			.inp_box {
+				width        : 287px;
+				padding      : 4px 1px;
+				border-bottom: 1px solid #ddd;
+				background   : url('../images/select_custom1.svg') right 1px bottom 4px/12px no-repeat;
+
+				input {
+					font-size  : 1.4rem;
+					font-family: $font_r;
+					color      : #757575
+				}
+			}
+
+			.check_area {
+				margin-top: 10px;
+
+				.check_contain {
+					&.sty1 {
+						margin-left : 52px;
+						margin-right: 58px;
+					}
+
+					.tip_area {
+						@include custom_tt($height: 127px, $top: -127px);
+						vertical-align            : 1px;
+					}
+
+					@include check_custom1(21px, 21px, 0);
+					width        : auto;
+					padding-left : 28px;
+					border-radius: 50%;
+					font-size    : 14px;
+					text-align   : left;
+
+					input~.checkmark {
+						background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+					}
+
+					input:checked~.checkmark {
+						background: url(../images/check_custom1_on.svg) no-repeat center/18px
+					}
+
+					margin-left: 0;
+				}
+			}
+		}
+
+		.btn_area {
+			margin-top: 13px;
+			text-align: right;
+
+			.complete {
+				padding: 8px 40px;
+				@include btn(#29abe2);
+			}
+		}
+
+		.bottom_area {
+			padding: 14px 15px 15px 14px;
+
+			.notice_txt {
+				font-size  : $pop_sub_txt;
+				font-family: $font_r;
+				color      : #757575;
+			}
+
+			.wrap_effect_opt {
+				display     : flex;
+				padding-top : 23px;
+				padding-left: 68px;
+
+				.opt_tit {
+					font-size  : $pop_cont_txt;
+					font-family: $font_r;
+					color      : #242424;
+				}
+
+				.effect_box {
+					display: flex;
+
+					.check_contain {
+						@include check_custom1(21px, 21px, 0);
+						padding-left : 28px;
+						border-radius: 50%;
+						font-size    : $pop_cont_txt;
+
+						input~.checkmark {
+							background: url(../images/check_custom1_off.svg) no-repeat center/23px;
+						}
+
+						input:checked~.checkmark {
+							background: url(../images/check_custom1_on.svg) no-repeat center/18px
+						}
+
+						&.chk_fitimg .tip_area {
+							@include custom_tt($top: -107px, $height: 107px);
+						}
+
+						&.chk_lightbox {
+							margin-left : 29px;
+							margin-right: 55px;
+
+							.tip_area {
+								@include custom_tt($top: -167px, $height: 167px);
+							}
+						}
+					}
+
+				}
+			}
+
+			.wrap_link {
+				margin-top  : 32px;
+				padding-left: 68px;
+
+				.link_area {
+					display: flex;
+
+					input {
+						width: 90%;
+					}
+				}
+			}
+
+			.btn_box {
+				margin-top: 13px;
+				text-align: right;
+
+				.complete {
+					padding: 8px 40px;
+					@include btn($blue);
+				}
+			}
+		}
+	}
+
+
+	&.pop_btn_edit {
+		//HP.1-4-3 버튼 설정
+		width: 390px;
+
+		.cont_area .inp_box {
+			margin-bottom: 20px;
+
+			>label {
+				padding-right: 29px;
+				box-sizing   : content-box;
+			}
+		}
+
+		.cont_area {
+			.link_area {
+				margin-bottom: 10px;
+
+				.home_nav_url {
+					position  : absolute;
+					top       : 30px;
+					left      : 95px;
+					width     : 170px;
+					padding   : 0 10px;
+					box-sizing: border-box;
+					border    : 1px solid #ddd;
+					background: #fff;
+				}
+			}
+
+			.inp_area,
+			.select_area {
+				width: 200px;
+
+				input {
+					width: 200px
+				}
+			}
+		}
+
+		.check_area {
+			margin-left: 122px;
+		}
+
+		.bottom_area {
+			display        : flex;
+			justify-content: flex-end;
+			padding-top    : 23px;
+			padding-bottom : 15px;
+		}
+	}
+
+	.link_area,
+	.check_area {
+		display    : flex;
+		align-items: center;
+	}
+
+	.link_area {
+		.inp_area {
+			border-bottom: 1px solid #ddd;
+			background   : url('../images/select_custom1.svg') right 1px bottom 2px/12px no-repeat;
+
+			input {
+				padding: 2px 1px;
+			}
+		}
+	}
+
+	.head_area {
+		position     : relative;
+		width        : 100%;
+		height       : 50px;
+		color        : #29abe2;
+		font-size    : $pop_head_txt;
+		font-family  : $font_m;
+		font-weight  : bold;
+		text-align   : center;
+		line-height  : 50px;
+		border-bottom: 1px solid #ddd;
+
+		.btn_close {
+			position: absolute;
+			top     : 15px;
+			right   : 15px;
+			@include bg(21px, 21px, '../images/btn_close.svg');
+			-webkit-background-size: 20px;
+			background-size        : 20px;
+			cursor                 : pointer;
+		}
+	}
+
+	.menu_area {
+		overflow-y  : auto;
+		width       : 212px;
+		max-height  : 500px;
+		border-right: 1px solid #ddd;
+
+		li {
+			overflow: hidden;
+			display : block !important;
+			cursor  : pointer;
+		}
+
+		// .txt {
+		// 	float      : left;
+		// 	font-size  : 1.4rem;
+		// 	font-family: $font_r;
+		// }
+
+		.btn_add {
+			float     : right;
+			margin-top: 11px;
+			cursor    : pointer;
+			@include bg(21px, 21px, '../images/btn_add2.png');
+		}
+
+
+		.box_add_depth1 {
+			overflow   : hidden;
+			padding    : 0 11px 0 23px;
+			height     : 40px;
+			line-height: 40px;
+			font-size  : $pop_cont_txt;
+
+			&:hover,
+			&.on {
+				color     : #fff;
+				background: #29abe2;
+			}
+		}
+
+		// .list_depth1 .depth1_li {
+		// 	&.on .box_add_depth2 {
+		// 		color     : #fff;
+		// 		background: #29abe2;
+		// 	}
+		// }
+
+		.box_add_depth2 {
+			display    : block;
+			overflow   : hidden;
+			height     : 40px;
+			line-height: 40px;
+			font-size  : $pop_cont_txt;
+			padding    : 0 31px 0 43px;
+
+			&:hover {
+				color     : #fff;
+				background: rgba(41, 171, 226, 0.9)
+			}
+		}
+
+		.depth2_li {
+			overflow     : hidden;
+			padding-left : 53px;
+			padding-right: 30px;
+			height       : 40px;
+			line-height  : 40px;
+			font-size    : $pop_cont_txt;
+
+			&:hover {
+				color     : #fff;
+				background: rgba(41, 171, 226, 0.9)
+			}
+
+			&.on {
+				color     : #fff;
+				background: #29abe2
+			}
+
+			// .txt2 {
+			// 	padding-left: 53px;
+			// }
+		}
+	}
+
+
+	&.edit_all_menu {
+
+		.fixed_menu {
+			font-size: $pop_cont_txt;
+			color    : #242424;
+
+			.fix_txt {
+				display    : block;
+				height     : 40px;
+				line-height: 40px;
+				padding    : 0 23px;
+
+			}
+
+			.fixed_list {
+				li {
+					overflow   : hidden;
+					padding    : 0 31px 0 43px;
+					height     : 40px;
+					line-height: 40px;
+
+					.icon_fixedmenu {
+						display   : block;
+						float     : right;
+						margin-top: 10px;
+						width     : 21px;
+						height    : 21px;
+						background: url(/images/icon_fixed_menu.png) no-repeat center/21px;
+					}
+				}
+			}
+
+		}
+
+		.list_depth1 {
+
+			span .wrap_menu {
+				width: 100%;
+
+				.btn_add {
+					display: block !important;
+				}
+			}
+
+			// >.txt,
+			// >.txt2 {
+			// 	display    : flex;
+			// 	overflow   : hidden;
+			// 	width      : 100% !important;
+			// 	height     : 40px;
+			// 	line-height: 40px;
+			// 	font-size  : 1.4rem;
+			// 	padding    : 0 11px 0 23px;
+
+			// 	&:hover {
+			// 		color     : #fff;
+			// 		background: rgba(41, 171, 226, 0.9);
+			// 	}
+			// }
+
+			&.on {
+
+				>.txt,
+				>.txt2 {
+					display   : block;
+					color     : #fff;
+					background: #29abe2;
+				}
+			}
+		}
+
+
+		.cont_area {
+			width      : 467px;
+			padding-top: 53px;
+
+			.cont_tit_txt {
+				width       : 108px;
+				height      : 27px;
+				line-height : 27px;
+				margin-right: 29px;
+			}
+		}
+
+		.notice_box {
+			margin-bottom: 35px;
+			padding-left : 137px;
+		}
+
+		.bottom_area {
+			display    : flex;
+			align-items: center;
+			padding    : 15px 0;
+
+			.btn_save {
+				opacity : 0;
+				width   : 1px;
+				height  : 1px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	&.edit_one_menu {
+		.cont_area {
+			padding-top: 50px;
+
+			label {
+				width       : 108px;
+				margin-right: 29px;
+			}
+		}
+	}
+
+	&.edit_cmn_site .cont_area {
+		padding-top: 22px;
+
+		.inp_box {
+			margin-bottom: 20px;
+
+			&.mg_last {
+				margin-bottom: 0;
+			}
+
+			label {
+				margin-right: 30px;
+			}
+		}
+	}
+
+	.cont_area {
+		.sub_tit {
+			padding-left  : 22px;
+			padding-bottom: 28px;
+			font-size     : $pop_head_txt;
+			font-weight   : bold;
+			font-family   : $font_m;
+
+			&.sty2 {
+				margin-top    : 55px;
+				padding-bottom: 7px;
+			}
+		}
+
+		.depth_moveup_area {
+			overflow     : hidden;
+			padding-left : 45px;
+			margin-bottom: 20px;
+			font-size    : 0;
+
+			.btn_back {
+				display     : inline-block;
+				float       : left;
+				margin-right: 7px;
+				@include bg(21px, 21px, '../images/btn_back1.svg');
+				cursor: pointer;
+			}
+
+			.txt {
+				font-size     : $pop_cont_txt;
+				font-family   : $font_r;
+				vertical-align: middle;
+				cursor        : pointer;
+			}
+		}
+
+
+		.inp_box {
+			position     : relative;
+			margin-bottom: 38px;
+			font-size    : 0;
+
+			* {
+				font-size: $pop_cont_txt;
+			}
+
+			.select_page_link {
+				display      : none;
+				width        : 289px;
+				max-height   : 200px;
+				padding      : 10px 20px;
+				position     : absolute;
+				top          : 30px;
+				left         : 137px;
+				background   : #fff;
+				border-radius: 4px;
+				overflow-y   : auto;
+				z-index      : 1;
+				box-shadow   : 0 0 5px 0 #ddd;
+
+				li {
+					padding: 10px 5px;
+				}
+			}
+
+			&.inp_box2 {
+				margin-bottom: 0;
+			}
+
+			label {
+				display    : inline-block;
+				text-align : right;
+				font-size  : $pop_cont_txt;
+				font-family: $font_r;
+				color      : #242424
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.url_link {
+				font-size: 13px;
+				color    : #757575;
+			}
+
+			.check_contain {
+				@include check_custom1(21px, 21px, 0);
+				width        : auto;
+				margin-right : 46px;
+				border-radius: 50%;
+				font-size    : 14px;
+				text-align   : left;
+				line-height: 21px;
+
+				input~.checkmark {
+					background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+				}
+
+				input:checked~.checkmark {
+					background: url(../images/check_custom1_on.svg) no-repeat center/18px
+				}
+			}
+		}
+
+		.notice_box {
+			padding-top  : 6px;
+			padding-right: 57px;
+
+			.notice {
+				display       : block;
+				font-size     : $pop_sub_txt;
+				color         : #757575;
+				letter-spacing: -0.8px
+			}
+
+			.notice2 {
+				display    : block;
+				padding-top: 17px;
+				font-size  : $pop_sub_txt;
+				line-height: 1.54;
+				color      : #757575;
+			}
+
+			.help_txt {
+				margin-top : 26px;
+				line-height: 1.54;
+			}
+		}
+	}
+
+	&.edit_one_menu .bottom_area {
+		display    : flex;
+		align-items: center;
+		padding    : 37px 0 15px;
+	}
+
+	&.edit_cmn_site .bottom_area {
+		padding   : 34px 0 15px;
+		text-align: right;
+	}
+
+	&.pop_edit_footer {
+		//하단설정 HP.1-5
+		padding-bottom: 15px;
+
+		.wrap_pop_cont {
+			padding: 29px 15px 27px;
+
+			.cont_area {
+				.opt_tit {
+					margin-bottom: 14px;
+					padding-left : 6px;
+					font-size    : $cont_txt;
+					font-family  : $font_r;
+				}
+
+				.wrap_sty_img {
+					display  : flex;
+					flex-wrap: wrap;
+
+					.img_box {
+						width : 510px;
+						cursor: pointer;
+
+						&:nth-child(even) {
+							margin-left: auto;
+						}
+
+						&:nth-child(2),
+						&:first-child {
+							margin-bottom: 15px;
+						}
+					}
+				}
+
+				.style_opt_area {
+					.img_box {
+						border: 1px solid #ddd;
+					}
+				}
+
+				.sns_share_opt_area {
+					margin-top: 42px;
+
+					.btn_plus_sns {
+						display    : inline-block;
+						margin-left: 10px;
+						@include bg(21px, 21px, '../images/btn_add.svg');
+						vertical-align: middle;
+					}
+
+					.wrap_sns_opt {
+						display      : flex;
+						margin-bottom: 19px;
+
+						.area_sns_opt {
+							display     : flex;
+							align-items : start;
+							margin-right: 40px;
+
+
+							.select_contain {
+								position     : relative;
+								width        : 53px;
+								border-bottom: 1px solid #ddd;
+
+								.wSelect-arrow {
+									background-position: bottom 4px right;
+								}
+
+								.wSelect-option-icon {
+									height: 33px;
+								}
+
+								label {
+									display: block;
+									top    : 0;
+									left   : 0;
+
+									img {
+										width: 30px;
+									}
+								}
+
+								select {
+									position   : absolute;
+									left       : 0;
+									top        : 0;
+									width      : 100%;
+									height     : 34px;
+									line-height: 34px;
+									padding    : 0 1px;
+									opacity    : 0;
+									box-sizing : border-box;
+								}
+							}
+
+							.inp_area {
+								width : 126px;
+								margin: 0 6px 0 15px;
+
+								.inp_box {
+									height       : 34px;
+									margin-bottom: 10px;
+									border-bottom: 1px solid #ddd;
+
+									input {
+										padding: 4px 0;
+									}
+								}
+
+								.check_contain {
+									font-size  : $pop_cont_txt;
+									font-family: $font_r;
+									@include check_custom1(21px, 21px, 0);
+									padding-left: 28px;
+
+									input~.checkmark {
+										background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+									}
+
+									input:checked~.checkmark {
+										background: url(../images/check_custom1_on.svg) no-repeat center/18px
+									}
+								}
+							}
+
+							.del_area {
+								align-self: center;
+
+								.btn_del {
+									display: block;
+									@include bg(21px, 21px, '../images/btn_close.svg');
+									cursor: pointer;
+								}
+							}
+
+							&:first-of-type {
+								margin-left: 15px;
+							}
+
+							&:last-of-type {
+								margin-right: 0;
+							}
+						}
+					}
+
+					.txt {
+						padding-left: 17px;
+						font-size   : $pop_sub_txt;
+						font-family : $font_r;
+						color       : #757575;
+					}
+				}
+
+				.opt_add_area {
+					margin-top: 28px;
+
+					.opt_add_box {
+						padding-left: 15px;
+
+						.check_contain {
+							font-size  : $pop_cont_txt;
+							font-family: $font_r;
+							@include check_custom1(21px, 21px, 0);
+							padding-left: 28px;
+
+							&:last-child {
+								margin-left: 70px;
+							}
+
+							input~.checkmark {
+								background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+							}
+
+							input:checked~.checkmark {
+								background: url(../images/check_custom1_on.svg) no-repeat center/18px
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.bottom_area {
+			text-align: right;
+
+			.btn_apply {
+				margin-right  : 15px;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	&.add_section_pop {
+		//요소 설정 HP.1-6-1
+		width : 1080px;
+		border: 1px solid #ddd;
+
+		.cont_area {
+			padding-top   : 23px;
+			padding-bottom: 52px;
+
+			.add_sect_area {
+				margin-bottom: 10px;
+
+				.sub_tit {
+					display: inline-flex;
+					padding: 0 60px 0 53px;
+				}
+
+				.wrap_type_list {
+					display: inline-flex;
+
+					span {
+						display    : inline-flex;
+						padding    : 6px 3px;
+						font-size  : $pop_cont_txt;
+						font-family: $font_r;
+						color      : #242424;
+						cursor     : pointer;
+
+						&.on {
+							border-bottom: 1px solid $blue;
+							color        : $blue;
+						}
+
+						&:hover {
+							color: $blue
+						}
+
+						&:nth-child(2) {
+							margin: 0 37px;
+						}
+					}
+				}
+
+				.wrap_dsgn_list {
+					overflow-y      : auto;
+					height          : 335px;
+					margin-top      : 10px;
+					background-color: #ddd;
+
+					ul {
+						display : none;
+						overflow: hidden;
+
+						&.visual_dsgn {
+							li {
+								padding: 15px;
+
+								img {
+									width : 509px;
+									height: 305px;
+								}
+							}
+						}
+
+						&.content_dsgn {
+							padding: 15px 15px 0;
+
+							li {
+								padding-bottom: 15px;
+
+								&:nth-child(3n+2) {
+									padding-left : 15px;
+									padding-right: 15px;
+								}
+
+								img {
+									width: 339px;
+								}
+							}
+						}
+
+						&.footer_dsgn {
+							padding-top: 15px;
+
+							li {
+								padding: 0 15px 15px;
+
+								img {
+									width: 509px;
+								}
+							}
+						}
+
+						li {
+							position: relative;
+							float   : left;
+						}
+					}
+				}
+			}
+
+			.add_dsgn_area,
+			.add_db_area {
+				.sub_tit {
+					padding: 30px 0 11px 53px;
+				}
+
+				.wrap_dsgn_list,
+				.wrap_db_list {
+					display: flex;
+
+					dl {
+						margin-right: 40px;
+						cursor      : pointer;
+
+						&:first-child {
+							margin-left: 65px;
+						}
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						dt {
+							display            : block;
+							width              : 60px;
+							height             : 60px;
+							border             : 1px solid #ddd;
+							background-position: center;
+							background-repeat  : no-repeat;
+							background-color   : #fff;
+						}
+
+						dd {
+							padding-top: 4px;
+							font-size  : $pop_cont_txt;
+							font-family: $font_r;
+							text-align : center;
+						}
+					}
+				}
+
+				.wrap_dsgn_list {
+					.icon_images {
+						background-image: url(../images/icon_images.jpg);
+						background-size : 29px 33px;
+					}
+
+					.icon_text {
+						background-image: url(../images/icon_pencil.svg);
+						background-size : 22px 23px
+					}
+
+					.icon_movie {
+						background-image: url(../images/icon_movie.svg);
+						background-size : 32px 26px
+					}
+
+					.icon_map {
+						background-image: url(../images/icon_map.png);
+						background-size : 32px 32px;
+					}
+
+					.icon_padding {
+						background-image: url(../images/icon_padding.svg);
+						background-size : 44px 15px;
+					}
+				}
+
+				.wrap_db_list {
+					.icon_board {
+						background-image: url(../images/icon_board.svg);
+						background-size : 28px 24px
+					}
+
+					.icon_gallery {
+						background-image: url(../images/icon_gallery.svg);
+						background-size : 26px 22px
+					}
+
+					.icon_calander {
+						background-image: url(../images/icon_calander.svg);
+						background-size : 22px 24px
+					}
+				}
+			}
+		}
+
+		.add_db_area {
+			margin-top: 7px;
+		}
+	}
+
+	&.set_map {
+		//HP.1-6-3 지도설정
+		width: 690px;
+
+		.wrap_map_api {
+			@include bg(690px, 388px, '../images/bg_map.jpg');
+		}
+
+		.bottom_area {
+			padding: 22px 15px 12px 0;
+
+
+			.inp_box {
+				font-size: 0;
+
+				label {
+					display       : inline-block;
+					width         : 104px;
+					margin-right  : 30px;
+					font-size     : $pop_cont_txt;
+					font-family   : $font_r;
+					text-align    : right;
+					vertical-align: middle;
+					color         : #242424;
+				}
+
+				input {
+					width         : 337px;
+					padding       : 3px 2px;
+					box-sizing    : border-box;
+					border-bottom : 1px solid #ddd;
+					font-size     : $pop_cont_txt;
+					vertical-align: middle;
+				}
+			}
+
+			p {
+				padding-left: 133px;
+				padding-top : 14px;
+				font-size   : $pop_sub_txt;
+				font-family : $font_r;
+				line-height : 1;
+				color       : #757575;
+
+				a {
+					font-family    : $font_m;
+					color          : $blue;
+					text-decoration: underline;
+					vertical-align : top;
+				}
+			}
+
+			.wrap_adrs_inp {
+				margin-top: 40px;
+			}
+
+			.wrap_opt_chk {
+				margin-top  : 23px;
+				padding-left: 129px;
+
+				.check_contain {
+					@include check_custom1(21px, 21px, 0);
+					width        : auto;
+					padding-left : 28px;
+					border-radius: 50%;
+					font-size    : $pop_sub_txt;
+					font-family  : $font_r;
+					text-align   : left;
+
+					input~.checkmark {
+						background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+					}
+
+					input:checked~.checkmark {
+						background: url(../images/check_custom1_on.svg) no-repeat center/18px
+					}
+				}
+			}
+
+			.btn_box {
+				margin-top: 34px;
+				text-align: right;
+
+				.complete {
+					padding: 8px 40px;
+					@include btn($blue);
+					letter-spacing: 0;
+				}
+			}
+		}
+	}
+
+	&.set_movie,
+	&.main_set_movie {
+		//HP.1-6-3 동영상설정 , HP.1-6-1-2 메인비주얼 영상
+		width: 690px;
+
+		.cont_area {
+			padding: 15px 0 14px;
+
+			.wrap_upload {
+				display      : flex;
+				margin-bottom: 28px;
+
+				.inp_box {
+					padding-top  : 9px;
+					margin-bottom: 0;
+
+					label {
+						width         : 70px;
+						margin-right  : 29px;
+						vertical-align: bottom;
+					}
+
+					input {
+						width         : 287px;
+						padding       : 2px 0;
+						border-bottom : 1px solid #ddd;
+						line-height   : 1;
+						vertical-align: bottom;
+					}
+				}
+
+				.upload_btn_box {
+					margin-left : auto;
+					margin-right: 15px;
+					line-height : 1;
+
+					@include upload_custom;
+
+					label {
+						padding                        : 9px 18px;
+						@include btn(#e07272, $fontsize: 1.4rem);
+					}
+				}
+			}
+
+			.wrap_movie_api {
+				display        : flex;
+				justify-content: center;
+				align-content  : center;
+
+				#pop_previewarea_video {
+					display   : none;
+					max-height: 100%;
+				}
+
+				@include bg(690px, 388px, '../images/bg_movie.jpg');
+
+				.preview_video_init,
+				.preview_video {
+					max-width : 100%;
+					max-height: 100%;
+				}
+			}
+		}
+
+		&.main_set_movie {
+			//비주얼 영상 설정 hp.1-6-1-2
+			width: 1020px;
+
+			.cont_area {
+				.wrap_upload {
+					display: flex;
+
+					.inp_wrap {
+						display     : flex;
+						padding-left: 15px;
+
+						.label_txt {
+							height     : 28px;
+							line-height: 28px;
+							font-size  : $pop_cont_txt;
+							color      : #242424;
+						}
+					}
+
+					.inp_area {
+						padding-left: 29px;
+
+						.inp_url {
+							display      : block;
+							width        : 287px;
+							padding      : 3px 0;
+							border-bottom: 1px solid #ddd;
+							font-size    : $pop_cont_txt;
+							color        : #242424;
+						}
+
+						.note_txt {
+							padding-top   : 10px;
+							font-family   : $font_r;
+							font-size     : $pop_cont_txt;
+							letter-spacing: -0.9px;
+							color         : #242424;
+						}
+					}
+
+					.upload_contain {
+						margin-left : auto;
+						margin-right: 55px;
+
+						@include upload_custom;
+
+						label {
+							padding                      : 9px 15px;
+							@include btn($pink, $fontsize: $pop_cont_txt);
+							letter-spacing               : 0;
+						}
+					}
+				}
+			}
+
+			.note-editor {
+				width : 990px;
+				margin: 0 auto
+			}
+
+			.note-editing-area {
+				height: 556px;
+			}
+
+			.bottom_area {
+				padding   : 0 15px 15px 0;
+				text-align: right;
+
+				.complete {
+					padding: 8px 40px;
+					@include btn($blue);
+					letter-spacing: 0;
+				}
+			}
+		}
+
+		.bottom_area {
+			.notice_txt {
+				padding       : 0 0 13px 14px;
+				font-size     : $pop_sub_txt;
+				font-family   : $font_r;
+				color         : #757575;
+				letter-spacing: -0.8px;
+			}
+
+			.wrap_opt_chk {
+				display      : flex;
+				padding-left : 69px;
+				margin-bottom: 22px;
+
+				.check_contain {
+					@include check_custom1(21px, 21px, 0);
+					width        : auto;
+					padding-left : 28px;
+					border-radius: 50%;
+					font-size    : $pop_sub_txt;
+					font-family  : $font_r;
+					text-align   : left;
+
+					input~.checkmark {
+						background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+					}
+
+					input:checked~.checkmark {
+						background: url(../images/check_custom1_on.svg) no-repeat center/18px
+					}
+
+					&:nth-child(2) {
+						margin: 0 49px 0 46px;
+					}
+
+					&.chk_autoplay .tip_area {
+						@include custom_tt(-137px, $height: 137px)
+					}
+
+					&.chk_lightbox .tip_area {
+						@include custom_tt(-157px, $height: 157px)
+					}
+
+					&.chk_fitmov .tip_area {
+						@include custom_tt(-127px, $height: 127px)
+					}
+				}
+
+				.tip_area {
+					margin-left   : 2px;
+					vertical-align: 1px;
+
+					.tooltip_note {
+						padding-top: 22px;
+					}
+				}
+			}
+
+			.btn_box {
+				padding   : 0 15px 13px 0;
+				text-align: right;
+
+				.complete {
+					padding: 8px 40px;
+					@include btn($blue);
+				}
+			}
+		}
+	}
+}
+
+// ~ 레이어팝업 홈페이지 셋팅 끝
+
+
+.wrap_alert {
+	//알럿 전용 ~
+	margin-top: 10px;
+	box-sizing: border-box;
+
+	&.sty1 {
+		width: 310px;
+	}
+
+	padding: 24px 30px 15px 29px;
+
+	.alert_txt {
+		font-size     : $pop_cont_txt;
+		line-height   : 1.43;
+		letter-spacing: -0.8px
+	}
+
+	.btn_box {
+		margin-top: 44px;
+		font-size : 0;
+
+
+		.btn_cancle {
+			@include btn(#757575);
+		}
+
+		.btn_del {
+			@include btn($pink);
+			margin-left: 30px;
+		}
+	}
+}
+
+// ~ 알럿 전용 끝
+
+
+//라이트박스 ~
+#lightbox {
+	position : absolute;
+	left     : 50%;
+	z-index  : 1001;
+	display  : none;
+	transform: translateX(-50%);
+}
+
+#lightbox img {
+	width     : auto;
+	height    : auto;
+	max-height: 80vh
+}
+
+#lightbox-shadow {
+	position      : absolute;
+	top           : 0;
+	left          : 0;
+	width         : 100%;
+	height        : 100%;
+	background    : #000;
+	filter        : alpha(opacity=75);
+	-moz-opacity  : 0.75;
+	-khtml-opacity: 0.75;
+	opacity       : 0.75;
+	z-index       : 1000;
+	display       : none;
+
+	.btn_close {
+		display : block;
+		position: absolute;
+		right   : 60px;
+		top     : 60px;
+		@include bg(30px, 30px, '../images/btn_close2.svg');
+		cursor: pointer;
+	}
+}
+
+// ~ 라이트박스 끝
+
+
+// 설정 에디터 start ***********************************
+input[type="checkbox"],
+input[type="radio"] {
+	visibility: visible;
+}
+
+
+.note-close,
+.note-close2 {
+	button {
+		margin     : 1px 0 0 5px !important;
+		cursor     : pointer;
+		text-indent: -9999px;
+		outline    : none;
+		border     : none;
+		@include bg(21px, 21px, '../images/btn_close.svg');
+
+	}
+	&:active {
+		background-color: transparent !important;
+	}
+}
+
+.cr-boundary img {
+	width: auto;
+}
+
+#cke_editor1 {
+	margin-top: -800px;
+}
+
+
+.note-air-popover.popover {
+	display  : block !important;
+	left     : 10px !important;
+	top      : -62px !important;
+	min-width: 570px;
+	width    : 700px !important;
+	text-align: left !important;
+
+	.popover-content {
+		text-align: left !important;
+	}
+}
+
+.wrap_txt_area .note-editor {
+	padding       : 15px;
+	background    : rgba(41, 171, 226, 0.1);
+	outline       : 1px dotted #ddd;
+	outline-offset: -1px;
+
+	.note-editable {
+		font-size : 1.6rem;
+		padding   : 15px;
+		background: transparent !important;
+	}
+
+	.note-toolbar {
+		padding-bottom: 5px;
+	}
+}
+
+.note-editor.note-frame .note-editing-area .note-editable {
+	color: #000001;
+}
+
+.popover .arrow {
+	display: none;
+}
+
+
+.minicolors-theme-default {
+	.minicolors-swatch {
+		top          : 2px;
+		left         : auto;
+		right        : 0;
+		width        : 15px;
+		height       : 15px;
+		border-radius: 20px;
+
+		.minicolors-swatch-color {
+			border-radius: 20px;
+		}
+	}
+}
+
+//.note-toolbar .note-close2 {display: none;}
+
+.btn_only_setting.sty3 {
+
+	//뭘까요?
+	.cont_area {
+		padding-top: 0;
+	}
+
+	.body_comm,
+	.sub_tit {
+		display: none;
+	}
+}
+
+
+// 설정 에디터  *********************************** end
+
+
+
+/* ---------------------------------------------------------------- 
+쇼핑몰 에디터 설정 팝업
+-------------------------------------------------------------------*/
+.pop_product_option {
+	//상품 상세 설정
+	width: 510px;
+
+	.inp_wrap {
+		display  : flex;
+		flex-wrap: wrap;
+		padding  : 30px 35px 0 33px;
+
+		.check_contain {
+			@include check_custom1(21px, 21px, 0);
+
+			width        : 33%;
+			margin-bottom: 29px;
+			border-radius: 50%;
+			font-size    : $pop_cont_txt;
+			text-align   : left;
+
+			input~.checkmark {
+				background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+				top       : -2px
+			}
+
+			input:checked~.checkmark {
+				background: url(../images/check_custom1_on.svg) no-repeat center/18px
+			}
+		}
+	}
+
+	.bottom_area {
+		padding   : 27px 15px 15px;
+		text-align: right;
+	}
+}
+
+.pop_product_display {
+	////상품(상점) 진열 설정 SM.1, 특별전 설정 HP.1-6-1
+	width: 690px;
+
+	.cont_dp_type {
+		//진열 형태 선택
+		display   : flex;
+		flex-wrap : wrap;
+		padding   : 50px 49px 24px;
+		background: #ddd;
+
+		img {
+			width: 244px;
+		}
+
+		.dp_type_glry {
+			padding-right: 50px;
+			border-right : 1px solid #fff;
+		}
+
+		.dp_type_list {
+			padding-left: 49px;
+		}
+
+		.note {
+			width     : 100%;
+			margin-top: 32px;
+			font-size : $pop_cont_txt;
+			color     : #757575;
+			text-align: center;
+
+			.link_txt {
+				border-bottom : 1px solid $blue;
+				font-family   : $font_d;
+				color         : $blue;
+				vertical-align: top;
+				cursor        : pointer;
+			}
+		}
+
+		.inp_wrap {
+			padding-top: 32px;
+		}
+
+		.radio_contain {
+			@include check_custom1(21px, 21px, 1px solid #949494, 30px);
+			@include radiomark;
+			line-height: 21px;
+
+			input:checked+.checkmark:after {
+				width       : 11px;
+				height      : 11px;
+				border-color: $blue;
+			}
+
+			font-size: $pop_cont_txt;
+			color    :#757575;
+		}
+	}
+
+	.opt_tit_txt {
+		display       : inline-flex;
+		padding-right : 32px;
+		font-size     : $pop_cont_txt;
+		line-height   : 21px;
+		color         : #242424;
+		vertical-align: top;
+	}
+
+	.opt_wrap {
+		display: inline-flex;
+	}
+
+
+	.display_default {
+		//상품진열 설정
+		padding: 49px 80px 43px;
+
+		.opt_item {
+			margin-right: 29px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+
+		.select_contain {
+			position: relative;
+
+			width        : 97px;
+			padding      : 3px 1px;
+			border-bottom: 1px solid #ddd;
+			background   : url('../images/select_custom1.svg') right 0 bottom 9px/12px no-repeat;
+
+			label {
+				font-size: $pop_cont_txt;
+				color    : #242424
+			}
+
+			select {
+				position   : absolute;
+				left       : 0;
+				top        : 0;
+				width      : 100%;
+				height     : 20px;
+				line-height: 20px;
+				padding    : 0 1px;
+				font-size  : $pop_cont_txt;
+				opacity    : 0;
+				box-sizing : border-box;
+			}
+		}
+
+		.help_txt {
+			display    : block;
+			padding-top: 8px;
+			font-size  : $pop_sub_txt;
+			color      : #757575
+		}
+	}
+
+	.check_contain {
+		font-size  : $pop_cont_txt;
+		color      : #242424;
+		line-height: 21px;
+		@include check_custom1(21px, 21px, 0);
+
+		input~.checkmark {
+			background: url(../images/check_custom1_off.svg) no-repeat center/22px;
+		}
+
+		input:checked~.checkmark {
+			background: url(../images/check_custom1_on.svg) no-repeat center/18px
+		}
+	}
+
+	.display_option {
+		padding: 0 80px 5px;
+
+		&.sty2 {
+			padding: 0 64px 0;
+		}
+
+		.opt_wrap {
+			flex-wrap: wrap;
+		}
+
+		.check_contain {
+			width        : 25%;
+			margin-bottom: 19px;
+		}
+	}
+
+	.bottom_area {
+		padding   : 0 15px 12px;
+		text-align: right;
+	}
+
+
+	.special_default {
+		//특별전 설정 HP.1-6-1
+		padding: 50px 64px 63px;
+
+		.special_inp {
+			display      : inline-flex;
+			width        : 337px;
+			border-bottom: 1px solid #ddd;
+
+			input {
+				display  : block;
+				width    : 100%;
+				padding  : 5px 2px;
+				font-size: $pop_cont_txt;
+			}
+		}
+	}
+}
+
+.edit_category {
+	//CO.3-1 카테고리 설정
+	width: 680px;
+
+	.wrap_pop_cont {
+		display: flex;
+	}
+
+	.menu_area {
+		min-height: 350px;
+
+		.set_list_depth1 {
+			width: 100%;
+		}
+
+
+		.list_depth2 {
+			display: none;
+		}
+
+		.box_add_depth2 {
+			padding: 0 11px 0 25px;
+
+			&.on+.list_depth2 {
+				display: block;
+			}
+		}
+
+		.wrap_menu {
+			overflow: hidden;
+		}
+
+
+		.depth2_li {
+			background: url('/images/icon_nien.svg') no-repeat 36px 8px/12px;
+
+
+			&:hover {
+				background: rgba(41, 171, 226, 0.9) url('/images/icon_nien_on.svg') no-repeat 36px 8px/12px;
+			}
+
+			.wrap_menu {
+				display: block;
+			}
+		}
+	}
+
+	.cont_area {
+		width      : 467px;
+		padding-top: 54px;
+
+		.inp_box {
+			padding-left: 43px;
+			margin-bottom: 0;
+
+
+			.cont_tit_txt {
+				display       : inline-flex;
+				margin-right  : 30px;
+				font-size     : $pop_cont_txt;
+				line-height   : 31px;
+				color         : #242424;
+				vertical-align: top;
+
+			}
+
+			.category_name {
+				display      : inline-flex;
+				width        : 287px;
+				padding      : 5px 1px;
+				border-bottom: 1px solid #ddd;
+				font-size    : $pop_cont_txt;
+				color        : #242424;
+			}
+
+			.notice {
+				left       : 148px;
+				font-size  : $pop_sub_txt;
+				line-height: 1.54;
+				color      : #757575;
+			}
+		}
+
+		.notice_box {
+			padding-left: 147px;
+
+			.notice {
+				display: block;
+				line-height: 1.54;
+			}
+			.help_txt {
+				display   : inline-block;
+				width     : 288px;
+				margin-top: 86px;
+			}
+		}
+
+	}
+
+	.btn_del {
+		margin-left : 17px;
+		padding-left: 27px;
+		font-size   : $pop_cont_txt;
+		line-height : 32px;
+		background  : url(../images/btn_del.svg) no-repeat 0 center/20px;
+		cursor      : pointer;
+	}
+
+	.bottom_area {
+		overflow: hidden;
+		padding : 15px 15px 15px 0;
+
+		.notice {
+			padding-left: 25px;
+			font-size   : $pop_sub_txt;
+			color       : #757575;
+			line-height : 32px;
+		}
+
+		.btn_apply {
+			float: right;
+		}
+	}
+
+}
+
+.help_txt {
+	position    : relative;
+	padding-left: 16px;
+	font-size   : $pop_sub_txt;
+	color       : #757575;
+	line-height : 1.54;
+
+	&:before {
+		content : '※';
+		display : block;
+		left    : 0;
+		top     : 0;
+		position: absolute;
+	}
+
+	.link_txt {
+		display       : inline-block;
+		border-bottom : 1px solid $blue;
+		font-family   : $font_b;
+		color         : $blue;
+		vertical-align: top;
+		cursor        : pointer;
+	}
+}
+
+
+.wrap_menu:hover {
+	.arrow_category {
+		background-image: url(/images/icon_arrow4_1_hover.svg);
+	}
+
+}
+
+.mall_head_txt {
+	display    : block;
+	height     : 40px;
+	line-height: 40px;
+
+	&+.list_depth2 {
+		display: none;
+	}
+
+	&:hover {
+		.mall .name {
+			color: #fff
+		}
+	}
+
+	&.on {
+		background: rgba(41, 171, 226, 1);
+
+		.mall:after {
+			background-image: url(/images/icon_shop_on.png);
+		}
+
+		.arrow_category {
+
+			background-image: url(/images/icon_arrow4_2.svg);
+		}
+
+		.mall .name {
+			color: #fff
+		}
+
+
+		&+.list_depth2 {
+			display: block;
+		}
+	}
+
+
+	&:hover {
+		//shop카테고리
+		background: rgba(41, 171, 226, 0.9);
+
+		.mall:after {
+			background-image: url(/images/icon_shop_on.png);
+		}
+	}
+
+	.mall {
+		//shop카테고리
+		position: relative;
+		display : block;
+		padding : 0 32px 0 25px;
+
+		&:after {
+			display   : block;
+			content   : '';
+			width     : 20px;
+			height    : 20px;
+			position  : absolute;
+			right     : 32px;
+			top       : 9px;
+			background: url(/images/icon_shop_off.png) no-repeat;
+		}
+
+		.name {
+			font-size: $pop_cont_txt;
+			color    : #242424;
+		}
+	}
+
+
+
+}
+
+.arrow_category {
+	//메뉴설정,카테고리설정
+	display: inline-block;
+	@include bg(12px, 6px, '/images/icon_arrow4_1.svg');
+	margin-right: 6px;
+}
+
+.modal-backdrop.in {
+	display: none;
+}

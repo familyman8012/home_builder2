@@ -1,0 +1,226 @@
+@charset "utf-8";
+@import "_common";
+
+.pb_start_page { //플레이블록 메인
+	overflow: hidden;
+	height: 100%;
+	background: linear-gradient(176deg, rgba(251, 80, 99, 1) 0%, rgba(125, 135, 175, 1) 100%);
+	
+	main {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		padding-top: 184px;
+		box-sizing: border-box;
+	}
+	
+	.pb_header {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 80px;
+		padding: 0 56px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
+		z-index: 3;
+		
+		h1 {width: 131px;}
+		
+		.btn_guide {
+			@include btn(#fff, $radius: 17px);
+			width: 107px;
+			height: 33px;
+			line-height: 33px;
+			margin-left: 25px;
+			border: 1px solid #4d4d4d;
+			font-size: $cont_small_txt;
+			letter-spacing: 0;
+			color: #4d4d4d
+		}
+		
+		h2 {
+			width: 111px;
+			margin-left: auto;
+			margin-right: 27px;
+			font-size: 1.6rem;
+		}
+		
+		.my_profileimg {
+			width: 46px;
+			margin-right: 16px;
+			cursor: pointer;
+			
+			img {border-radius: 50%;}
+		}
+		
+		.pc_menu_area {
+			position: relative;
+			margin-right: 14px;
+			
+			.user_hello {
+				padding: 0 20px;
+				height: 33px;
+				line-height: 33px;
+				font-size: $cont_small_txt;
+				color: #4d4d4d;
+				background: #fff;
+				border: 1px solid #4d4d4d;
+				border-radius: 17px;
+				cursor: pointer;
+				
+				.name_txt {
+					vertical-align: top;
+					color: #1257f3
+				}
+				
+				.btn_arrow {
+					content: '';
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 0;
+					border-top: 9px solid #4d4d4d;
+					margin-left: 14px;
+					vertical-align: 1px;
+				}
+			}
+			
+			.pc_menu_cont {
+				display: none;
+				position: absolute;
+				width: 176px;
+				left: 50%;
+				border: 1px solid #4d4d4d;
+				box-shadow: 0 0 12.8px 2.3px rgba(234, 236, 243, 0.4);
+				background-color: #ffffff;
+				cursor: default;
+				transform: translate(-50%);
+			}
+			
+			&.on {
+				.pc_menu_cont {display: block;}
+				
+				.btn_arrow {
+					border-top: 0;
+					border-bottom: 10px solid #4d4d4d;
+				}
+			}
+		}
+		
+		.btn_logout {
+			@include btn(#fff, $radius: 17px);
+			width: 107px;
+			height: 33px;
+			line-height: 33px;
+			border: 1px solid #4d4d4d;
+			font-size: $cont_small_txt;
+			letter-spacing: 0;
+			color: #4d4d4d
+		}
+		
+		.btn_login {
+			@include btn(#fff, $radius: 17px);
+			margin-right: 14px;
+			width: 107px;
+			height: 33px;
+			line-height: 33px;
+			border: 1px solid #4d4d4d;
+			font-size: $cont_small_txt;
+			letter-spacing: 0;
+			color: #4d4d4d;
+		}
+		
+		.btn_join {
+			@include btn(#fff, $radius: 17px);
+			width: 107px;
+			height: 33px;
+			line-height: 33px;
+			border: 1px solid #4d4d4d;
+			font-size: $cont_small_txt;
+			letter-spacing: 0;
+			color: #4d4d4d
+		}
+	}
+	
+	.wrap_main_block {
+		height: 100%;
+		margin: 0 auto;
+		
+		.intro_area {
+			position: relative;
+			@include bg(1687px,898px,'../images/wrap_main_block.png');
+			width: 1699px;
+			height: 100%;
+			margin: 0 auto;
+		}
+		
+		.tit_pb_intro {
+			position: absolute;
+			left: 190px;
+			top: 111px;
+			
+			.wrap_intro {
+				line-height: 0;
+				
+				&:first-child {
+					margin-bottom: 21px;
+				}
+				
+				b {
+					font-family: $font_m;
+					font-size: $tit_big_txt2;
+					line-height: 1;
+					color: #fff;
+				}
+				
+				span {
+					font-family: $font_r;
+					font-size: $tit_txt;
+					color: #fff;
+					line-height: 1.5;
+					
+					&.enter {display: block;}
+				}
+			}
+		}
+		
+		.btn_make_site {
+			width: 361px;
+			height: 125px;
+			position: absolute;
+			top:598px;
+			left: 50%;
+			font-family: $font_r;
+			font-size: 4rem;
+			line-height: 170px;
+			color: #fff;
+			text-align: center;
+			transform: translateX(-50%);
+			cursor: pointer;
+		}
+	}
+	
+}
+
+
+.pop_area, .wrap_findac_pop, .wrap_logjn_pop {
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mask.on {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.4);
+}

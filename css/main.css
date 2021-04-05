@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.pb_start_page {
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(176deg, #fb5063 0%, #7d87af 100%); }
+  .pb_start_page main {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 184px;
+    box-sizing: border-box; }
+  .pb_start_page .pb_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 3; }
+    .pb_start_page .pb_header h1 {
+      width: 131px; }
+    .pb_start_page .pb_header .btn_guide {
+      display: inline-block;
+      border-radius: 17px;
+      background: #fff;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      width: 107px;
+      height: 33px;
+      line-height: 33px;
+      margin-left: 25px;
+      border: 1px solid #4d4d4d;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      color: #4d4d4d; }
+    .pb_start_page .pb_header h2 {
+      width: 111px;
+      margin-left: auto;
+      margin-right: 27px;
+      font-size: 1.6rem; }
+    .pb_start_page .pb_header .my_profileimg {
+      width: 46px;
+      margin-right: 16px;
+      cursor: pointer; }
+      .pb_start_page .pb_header .my_profileimg img {
+        border-radius: 50%; }
+    .pb_start_page .pb_header .pc_menu_area {
+      position: relative;
+      margin-right: 14px; }
+      .pb_start_page .pb_header .pc_menu_area .user_hello {
+        padding: 0 20px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 1.4rem;
+        color: #4d4d4d;
+        background: #fff;
+        border: 1px solid #4d4d4d;
+        border-radius: 17px;
+        cursor: pointer; }
+        .pb_start_page .pb_header .pc_menu_area .user_hello .name_txt {
+          vertical-align: top;
+          color: #1257f3; }
+        .pb_start_page .pb_header .pc_menu_area .user_hello .btn_arrow {
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 0;
+          border-top: 9px solid #4d4d4d;
+          margin-left: 14px;
+          vertical-align: 1px; }
+      .pb_start_page .pb_header .pc_menu_area .pc_menu_cont {
+        display: none;
+        position: absolute;
+        width: 176px;
+        left: 50%;
+        border: 1px solid #4d4d4d;
+        box-shadow: 0 0 12.8px 2.3px rgba(234, 236, 243, 0.4);
+        background-color: #ffffff;
+        cursor: default;
+        transform: translate(-50%); }
+      .pb_start_page .pb_header .pc_menu_area.on .pc_menu_cont {
+        display: block; }
+      .pb_start_page .pb_header .pc_menu_area.on .btn_arrow {
+        border-top: 0;
+        border-bottom: 10px solid #4d4d4d; }
+    .pb_start_page .pb_header .btn_logout {
+      display: inline-block;
+      border-radius: 17px;
+      background: #fff;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      width: 107px;
+      height: 33px;
+      line-height: 33px;
+      border: 1px solid #4d4d4d;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      color: #4d4d4d; }
+    .pb_start_page .pb_header .btn_login {
+      display: inline-block;
+      border-radius: 17px;
+      background: #fff;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      margin-right: 14px;
+      width: 107px;
+      height: 33px;
+      line-height: 33px;
+      border: 1px solid #4d4d4d;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      color: #4d4d4d; }
+    .pb_start_page .pb_header .btn_join {
+      display: inline-block;
+      border-radius: 17px;
+      background: #fff;
+      letter-spacing: -0.9px;
+      font-family: notoSans-M;
+      text-align: center;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      width: 107px;
+      height: 33px;
+      line-height: 33px;
+      border: 1px solid #4d4d4d;
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      color: #4d4d4d; }
+  .pb_start_page .wrap_main_block {
+    height: 100%;
+    margin: 0 auto; }
+    .pb_start_page .wrap_main_block .intro_area {
+      position: relative;
+      width: 1687px;
+      height: 898px;
+      background: url("../images/wrap_main_block.png") no-repeat left top;
+      background-size: 1687px 898px;
+      width: 1699px;
+      height: 100%;
+      margin: 0 auto; }
+    .pb_start_page .wrap_main_block .tit_pb_intro {
+      position: absolute;
+      left: 190px;
+      top: 111px; }
+      .pb_start_page .wrap_main_block .tit_pb_intro .wrap_intro {
+        line-height: 0; }
+        .pb_start_page .wrap_main_block .tit_pb_intro .wrap_intro:first-child {
+          margin-bottom: 21px; }
+        .pb_start_page .wrap_main_block .tit_pb_intro .wrap_intro b {
+          font-family: notoSans-M;
+          font-size: 4.8rem;
+          line-height: 1;
+          color: #fff; }
+        .pb_start_page .wrap_main_block .tit_pb_intro .wrap_intro span {
+          font-family: "본고딕";
+          font-size: 3rem;
+          color: #fff;
+          line-height: 1.5; }
+          .pb_start_page .wrap_main_block .tit_pb_intro .wrap_intro span.enter {
+            display: block; }
+    .pb_start_page .wrap_main_block .btn_make_site {
+      width: 361px;
+      height: 125px;
+      position: absolute;
+      top: 598px;
+      left: 50%;
+      font-family: "본고딕";
+      font-size: 4rem;
+      line-height: 170px;
+      color: #fff;
+      text-align: center;
+      transform: translateX(-50%);
+      cursor: pointer; }
+
+.pop_area, .wrap_findac_pop, .wrap_logjn_pop {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.mask.on {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=main.css.map */

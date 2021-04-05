@@ -1,0 +1,59 @@
+.make_site_idx { position: relative; width: 100vw; height: 100vh; }
+.make_site_idx .wrap_naming_site { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.make_site_idx h2 { position: relative; width: 1280px; font-size: 3rem; font-family: notoSans-R; text-align: center; color: #4d4d4d; }
+.make_site_idx h2 .btn_close { display: block; position: absolute; right: 15px; top: -24px; width: 25px; height: 25px; background: url("../images/btn_close2.svg") no-repeat left top; background-size: 25px 25px; }
+.make_site_idx .cont_make_site { width: 400px; margin: 102px auto 0; }
+.make_site_idx .cont_make_site .area_site_name, .make_site_idx .cont_make_site .area_site_url { display: flex; align-items: center; width: 400px; height: 60px; margin-bottom: 15px; padding: 20px 14px; border-radius: 4px; background-color: rgba(221, 221, 221, 0.5); box-sizing: border-box; }
+.make_site_idx .cont_make_site .area_site_name input, .make_site_idx .cont_make_site .area_site_url input { display: block; width: 100%; color: #4e4e4e; font-size: 2rem; font-family: notoSans-R; }
+.make_site_idx .cont_make_site .area_select { display: flex; justify-content: space-between; padding: 0 30px; }
+.make_site_idx .cont_make_site .area_select .check_box { height: 20px; line-height: 23px; display: inline-block; position: relative; padding-left: 28px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-family: notoSans-R; font-size: 2rem; color: #4e4e4e; }
+.make_site_idx .cont_make_site .area_select .check_box input { position: absolute; height: 0; width: 0; opacity: 0; cursor: pointer; }
+.make_site_idx .cont_make_site .area_select .check_box .checkmark { position: absolute; top: 0; left: 0; height: 20px; width: 20px; border: 1px solid #757575; }
+.make_site_idx .cont_make_site .area_select .check_box .checkmark { border-radius: 50%; background: #fff; box-sizing: border-box; }
+.make_site_idx .cont_make_site .area_select .check_box input:checked + .checkmark:after { display: block; width: 12px; height: 12px; position: absolute; left: 4px; top: 4px; background: #29abe2; border-radius: 50%; content: ''; }
+.make_site_idx .cont_make_site .area_btn_make_site { margin-top: 49px; margin-bottom: 30px; border-radius: 4px; background-color: #29abe2; }
+.make_site_idx .cont_make_site .area_btn_make_site span { display: block; width: 400px; height: 60px; line-height: 60px; color: #fff; font-size: 2.4rem; font-family: notoSans-M; text-align: center; cursor: pointer; }
+.make_site_idx .cont_make_site .add_notice { color: #757575; font-size: 1.4rem; font-family: notoSans-R; text-align: center; }
+
+.site_info_alt { width: 310px; padding: 30px 30px 15px; box-sizing: border-box; border-radius: 4px; background: #f7f7f7; }
+.site_info_alt .txt_alert { margin-bottom: 40px; font-size: 1.4rem; font-family: notoSans-R; line-height: 1.4; color: #242424; }
+.site_info_alt .btn_box { display: flex; }
+.site_info_alt .btn_box .btn_cnxl { margin-right: auto; display: inline-block; border-radius: 4px; background: #757575; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 110px; height: 32px; line-height: 32px; }
+.site_info_alt .btn_box .btn_cnfm { display: inline-block; border-radius: 4px; background: #29abe2; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 110px; height: 32px; line-height: 32px; margin-left: auto; }
+
+.my_site_list { padding-top: 80px; }
+.my_site_list .wrap_my_site { width: 1280px; margin: 0 auto; }
+.my_site_list .wrap_my_site h2 { padding-bottom: 49px; font-size: 3rem; font-family: notoSans-R; text-align: center; color: #4d4d4d; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list { display: flex; flex-wrap: wrap; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li { padding: 0 15px 15px 15px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_head { position: relative; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_head img { width: 396px; height: 230px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_head .btn_del { position: absolute; right: 13px; top: 13px; width: 21px; height: 21px; background: url("../images/btn_close.svg") no-repeat left top; background-size: 21px 21px; cursor: pointer; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main { padding-top: 29px; color: #4d4d4d; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit { padding-bottom: 15px; font-size: 2rem; font-family: notoSans-R; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_free, .my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_bronze, .my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_gold, .my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_silver { display: inline-block; padding-left: 5px; font-size: 1.4rem; vertical-align: 2px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_free { color: #ff4e60; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_bronze { color: #c05a36; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_gold { color: #8d7542; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .lv_silver { color: #4d4d4d; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .badge_bronze { display: inline-block; width: 21px; height: 21px; background: url("../images/badge_bronze.png") no-repeat left top; background-size: 21px 21px; margin-right: 4px; vertical-align: top; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .badge_silver { display: inline-block; width: 21px; height: 21px; background: url("../images/badge_silver.png") no-repeat left top; background-size: 21px 21px; margin-right: 4px; vertical-align: top; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_tit .badge_gold { display: inline-block; width: 21px; height: 21px; background: url("../images/badge_gold.png") no-repeat left top; background-size: 21px 21px; margin-right: 4px; vertical-align: top; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .site_url { padding-bottom: 8px; font-family: notoSans-R; font-size: 1.6rem; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_main .expire_area .btn_upgr { display: inline-block; border-radius: 4px; background: #e07272; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 140px; height: 30px; line-height: 30px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_ft { display: flex; margin-top: 15px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_ft span { cursor: pointer; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_ft span.btn_mng { display: inline-block; border-radius: 4px; background: #4e4e4e; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 90px; height: 30px; line-height: 30px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_ft span.btn_dsgn { margin: 0 13px; display: inline-block; border-radius: 4px; background: #29abe2; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 140px; height: 30px; line-height: 30px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li .list_ft span.btn_copy { display: inline-block; border-radius: 4px; background: #29abe2; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 140px; height: 30px; line-height: 30px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen { position: absolute; top: 0; left: 0; width: 100%; height: 230px; padding: 40px 40px 0; box-sizing: border-box; background-color: rgba(221, 221, 221, 0.8); text-align: center; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen .site_tit { padding-bottom: 22px; font-size: 2rem; font-family: notoSans-M; color: #ff4e60; text-align: left; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen dl { padding-bottom: 37px; color: #4e4e4e; text-align: left; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen dl dt { font-size: 1.4rem; font-family: notoSans-M; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen dl dd { padding-top: 9px; font-size: 1.6rem; font-family: notoSans-R; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_head .wrap_reopen .btn_reopen { display: inline-block; border-radius: 4px; background: #29abe2; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; width: 150px; height: 30px; line-height: 30px; }
+.my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_ft .btn_mng, .my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_ft .btn_dsgn, .my_site_list .wrap_my_site .cont_my_site .wrap_list li.deleted_site .list_ft .btn_copy { background-color: #ddd; cursor: default; }
+.my_site_list .wrap_my_site .cont_my_site .area_btn_make_site { margin-top: 49px; margin-bottom: 50px; text-align: center; }
+.my_site_list .wrap_my_site .cont_my_site .area_btn_make_site .btn_make_site { display: inline-block; border-radius: 10px; background: #fff; letter-spacing: -0.9px; font-family: notoSans-M; text-align: center; color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; border: 1px solid #29abe2; width: 250px; height: 70px; line-height: 70px; box-sizing: border-box; font-size: 2.2rem; color: #29abe2; }
+
+/*# sourceMappingURL=make_site.css.map */

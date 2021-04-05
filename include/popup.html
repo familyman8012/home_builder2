@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="/js/jquery-3.1.0.min.js"></script>
+    <!--플러그인 // -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/croppie.css">
+    <link rel="stylesheet" href="https://www.play-kok.com/css/owl.carousel.min.css">
+    <script src="/js/owl.carousel.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link href="https://www.play-kok.com/css/video-js.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <link rel="stylesheet" href="/css/jquery.minicolors.css">
+    <script src="./js/jquery.minicolors.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="/css/wSelect.css" />
+    <script type="text/javascript" src="/js/wSelect.min.js"></script>
+    <link rel="stylesheet" href="/css/calendar.css">
+    <script type="text/javascript" src="/js/calendar.js"></script>
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- // 플러그인-->
+    <link rel=" stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- <link rel="stylesheet" href="/css/builder.css"> -->
+    <!-- <link rel="stylesheet" href="/css/component.css"> -->
+    <!-- <link rel="stylesheet" href="/css/board.css"> -->
+    <!-- <link rel="stylesheet" href="/css/gallery.css"> -->
+    <link rel="stylesheet" href="/css/layer_setting_popup.css">
+    <link rel="stylesheet" href="/css/shop.css">
+
+    <style>
+        .wrap_pop {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 쇼핑몰 빌더 팝업 추가 { -->
+
+    <!-- CO.3-1 쇼핑몰 메뉴설정 -->
+    <div class="wrap_pop edit_all_menu">
+    <div class="head_area">
+        메뉴 설정
+        <i class="btn_close"><span class="blind">메뉴설정닫기</span></i>
+    </div>
+    <div class="wrap_pop_cont">
+        <div class="menu_area" data-mcs-theme="minimal-dark">
+            <div class="box_add_depth1">
+                <span class="txt">상단메뉴</span>
+                <i class="btn_add"><span class="blind">상단 메뉴추가 버튼</span></i>
+            </div>
+            <div class="set_list_depth1" id="set_menu">
+
+            </div>
+        </div>
+        <div class="cont_area">
+            <form action="" method="post" name="" autocomplete="off">
+                <fieldset>
+                    <legend class="screen_out">메뉴설정</legend>
+                    <div class="depth_moveup_area" style="display:none;">
+                        <i class="btn_back"><span class="blind">상위 메뉴 수정 버튼</span></i>
+                        <span class="txt">HOME</span>
+                    </div>
+                    <div class="inp_box">
+                        <label for="menu_name">메뉴명</label>
+                        <input type="text" id="menu_name" name="menu_name" value=""/>
+                    </div>
+                    <div class="inp_box" style="position:relative;">
+                        <label for="page_link">페이지연결</label>
+                        <input type="text" id="page_link" name="page_link" class="page_link" value=""/>
+                        <span class="notice">다른 URL이 없으면 해당 페이지로 자동 연결 됩니다.</span>
+                        <div class="select_page_link">
+                            <ul class="list"></ul>
+                        </div>
+                    </div>
+                    <div class="inp_box">
+                        <label for="url_link">외부링크</label>
+                        <input type="text" id="url_link" class="url_link" name="url_link"
+                               placeholder="예)www.neung-soft.com" value=""/>
+                    </div>
+                    <div class="inp_box">
+                        <label for="menu_name">옵션</label>
+                        <label class="check_contain">메뉴 숨김
+                            <input type="checkbox" value=" " class="displayis">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check_contain">새창 <input type="checkbox" value=" " class="newWindow">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="bottom_area">
+            <span class="btn_del">
+                메뉴삭제
+            </span>
+        <span class="notice">
+                ※ 상위메뉴 삭제시 하위메뉴 자동 삭제
+            </span>
+        <span class="btn_save">현메뉴저장</span>
+        <span class="btn_apply">적용</span>
+    </div>
+</div>
+
+
+
+    <!-- CO.3-1 카테고리 설정 -->
+    <div class="wrap_pop edit_category">
+        <div class="head_area">
+            카테고리 설정
+            <i class="btn_close"><span class="blind">카테고리설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="menu_area" data-mcs-theme="minimal-dark">
+                <div class="set_list_depth1" id="">
+                    <ul class="list list_depth1" id="menuDepth1">
+                        <li class="depth1_li">
+                            <span class="box_add_depth2">
+                                <span class="wrap_menu">
+                                    <em class="menu_name">1차 카테고리</em>
+                                    <i class="btn_add"><span class="blind">2차 카테고리 추가 버튼</span></i>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="depth1_li">
+                            <span class="box_add_depth2" onclick="$(this).toggleClass('on')">
+                                <span class="wrap_menu">
+                                    <i class="arrow_category"><span class="blind">하위 카테고리</span></i>
+                                    <em class="menu_name">1차 카테고리2</em>
+                                    <i class="btn_add"><span class="blind">2차 카테고리 추가 버튼</span></i>
+                                </span>
+                            </span>
+                            <ul class="list_depth2">
+                                <li class="depth2_li">
+                                    <span class="wrap_menu">
+                                        <em class="menu_name">2차 카테고리1</em>
+                                    </span>
+                                </li>
+                                <li class="depth2_li">
+                                    <span class="wrap_menu">
+                                        <em class="menu_name">2차 카테고리2</em>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont_area">
+                <form action="" method="post" name="" autocomplete="off">
+                    <fieldset>
+                        <legend class="screen_out">카테고리 이름 설정</legend>
+                        <div class="inp_box">
+                            <label class="cont_tit_txt" for="category_name">카테고리 명</label>
+                            <input type="text" id="" name="category_name" class="category_name" value=""
+                                placeholder="SHOP" />
+                        </div>
+                        <div class="notice_box">
+                            <span class="notice">카테고리에 포함된 하위 카테고리는 자동 생성됩니다.
+                                생성된 카테고리는 메뉴에 자동생성 되며 메뉴관리에서
+                                위치 조정 및 경로 변경이 가능 합니다.</span>
+                            <div class="help_txt">
+                                카테고리 메뉴의 생성 및 추가는 카테고리 관리 또는
+                                <span class="link_txt">관리자 상품관리</span>를 이용해 주세요.
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_del">카테고리 삭제</span>
+            <span class="notice">
+                ※ 상위 카테고리 삭제시 하위 카테고리 자동 삭제
+            </span>
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+    <!-- HP.1-6-1 특별전 설정 -->
+    <div id="shop_special_item" class="wrap_pop pop_product_display">
+        <div class="head_area">
+            특별전 설정
+            <i class="btn_close"><span class="blind">특별전 설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <form action="" method="post" name="" autocomplete="off">
+                <fieldset>
+                    <legend class="screen_out">진열 형태</legend>
+                    <div class="cont_dp_type">
+                        <dl>
+                            <dt class="dp_type_glry"><img src="/images/pd_display_thumb1.png" alt="" /></dt>
+                            <dd class="inp_wrap">
+                                <label class="radio_contain">상품 진열형
+                                    <input type="radio" id="dp_type1" checked="checked" name="dp_type" value="1" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="dp_type_list"><img src="/images/pd_display_thumb2.png" alt="" /></dt>
+                            <dd class="inp_wrap">
+                                <label class="radio_contain">리스트 정렬형
+                                    <input type="radio" id="dp_type2" name="dp_type" value="2" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </dd>
+                        </dl>
+                        <p class="note">상품등록 및 가격설정은 <span class="link_txt">관리자 상품관리</span>를 이용해 주세요.
+                        <p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="screen_out">특별전</legend>
+                    <div class="special_default">
+                        <div class="opt_tit_txt">특별전</div>
+                        <div class="special_inp">
+                            <input type="text" id="" name="" value="" placeholder="예 : MD추천" />
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="screen_out">옵션</legend>
+                    <div class="display_option sty2">
+                        <div class="opt_tit_txt">옵션</div>
+                        <div class="opt_wrap">
+                            <label class="check_contain">상품명
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">요약설명
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">뱃지
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">상품가격
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>                           
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+
+    <!-- 상품진열 설정 SM.1 -->
+    <div class="wrap_pop pop_product_display">
+        <div class="head_area">
+            상점 진열 설정
+            <i class="btn_close"><span class="blind">상점진열 설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <form action="" method="post" name="" autocomplete="off">
+                <fieldset>
+                    <legend class="screen_out">진열 형태</legend>
+                    <div class="cont_dp_type">
+                        <dl>
+                            <dt class="dp_type_glry"><img src="/images/pd_display_thumb1.png" alt="" /></dt>
+                            <dd class="inp_wrap">
+                                <label class="radio_contain">상품 진열형
+                                    <input type="radio" id="" name="dp_type" value="1" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="dp_type_list"><img src="/images/pd_display_thumb2.png" alt="" /></dt>
+                            <dd class="inp_wrap">
+                                <label class="radio_contain">리스트 정렬형
+                                    <input type="radio" id="" name="dp_type" value="2" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </dd>
+                        </dl>
+                        <p class="note">상품등록 및 가격설정은 <span class="link_txt">관리자 상품관리</span>를 이용해 주세요.
+                        <p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="screen_out">진열</legend>
+                    <div class="display_default">
+                        <div class="opt_tit_txt">진열</div>
+                        <div class="opt_wrap">
+                            <div class="opt_item">
+                                <div class="select_contain">
+                                    <label>인기순</label>
+                                    <select id="">
+                                        <option value="">인기순</option>
+                                        <option value="">등록순</option>
+                                        <option value="">높은가격</option>
+                                        <option value="">낮은가격</option>
+                                    </select>
+                                </div>
+                                <span class="help_txt">정렬</span>
+                            </div>
+                            <div class="opt_item">
+                                <div class="select_contain">
+                                    <label>16</label>
+                                    <select id="">
+                                        <option value="">8</option>
+                                        <option value="">16</option>
+                                        <option value="">20</option>
+                                        <option value="">40</option>
+                                        <option value="">80</option>
+                                    </select>
+                                </div>
+                                <span class="help_txt">진열수</span>
+                            </div>
+                            <div class="opt_item">
+                                <label class="check_contain">품절상품 맨 뒤로
+                                    <input type="checkbox" checked="checked" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="screen_out">옵션</legend>
+                    <div class="display_option">
+                        <div class="opt_tit_txt">옵션</div>
+                        <div class="opt_wrap">
+                            <label class="check_contain">상품명
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">요약설명
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">뱃지
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">상품가격
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">장바구니
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">구매버튼
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+    <!-- 상품 상세 설정 SM.1 -->
+    <div class="wrap_pop pop_product_option">
+        <div class="head_area">
+            상품상세 설정
+            <i class="btn_close"><span class="blind">상품상세 설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <form action="" method="post" name="" autocomplete="off">
+                <fieldset>
+                    <legend class="screen_out">상품상세설정</legend>
+                    <div class="inp_wrap">
+                        <label class="check_contain">상품 필수 정보
+                            <input type="checkbox" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check_contain">구매 후기
+                            <input type="checkbox" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check_contain">교환 / 반품안내
+                            <input type="checkbox" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check_contain">판매자 정보
+                            <input type="checkbox" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check_contain">상품 문의
+                            <input type="checkbox" checked="checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+
+
+
+    <!-- }  쇼핑몰 빌더 팝업 추가 -->
+
+    <!-- 에디터설정 layer popup 전체 메뉴설정 CO.3 -->
+    <!-- <div class="wrap_pop edit_all_menu">
+        <div class="head_area">
+            메뉴 설정
+            <i class="btn_close"><span class="blind">메뉴설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="menu_area" data-mcs-theme="minimal-dark">
+                <div class="box_add_depth1">
+                    <span class="txt">상단메뉴</span>
+                    <i class="btn_add"><span class="blind">상단 메뉴추가 버튼</span></i>
+                </div>
+                <div class="set_list_depth1" id="set_menu">
+
+                </div>
+            </div>
+            <div class="cont_area">
+                <form action="" method="post" name="" autocomplete="off">
+                    <fieldset>
+                        <legend class="screen_out">메뉴설정</legend>
+                        <div class="depth_moveup_area" style="display:none;">
+                            <i class="btn_back"><span class="blind">상위 메뉴 수정 버튼</span></i>
+                            <span class="txt">HOME</span>
+                        </div>
+                        <div class="inp_box">
+                            <label for="menu_name">메뉴명</label>
+                            <input type="text" id="menu_name" name="menu_name" value="" />
+                        </div>
+                        <div class="inp_box" style="position:relative;">
+                            <label for="page_link">페이지연결</label>
+                            <input type="text" id="page_link" name="page_link" class="page_link" value="" />
+                            <span class="notice">다른 URL이 없으면 해당 페이지로 자동 연결 됩니다.</span>
+                            <div class="select_page_link">
+                                <ul class="list"></ul>
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="url_link">외부링크</label>
+                            <input type="text" id="url_link" class="url_link" name="url_link"
+                                placeholder="예)www.neung-soft.com" value="" />
+                        </div>
+                        <div class="inp_box">
+                            <label for="menu_name">옵션</label>
+                            <label class="check_contain">메뉴 숨김
+                                <input type="checkbox" value=" " class="displayis">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">새창 <input type="checkbox" value=" " class="newWindow">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_del">
+                메뉴삭제
+            </span>
+            <span class="notice">
+                ※ 상위메뉴 삭제시 하위메뉴 자동 삭제
+            </span>
+            <span class="btn_save">현메뉴저장</span>
+            <span class="btn_apply">적용</span>
+        </div>
+    </div> -->
+
+    <!-- layer alert 메뉴설정 확인 취소 CO.3 -->
+    <div class="wrap_alert wrap_pop pop_menudel sty1">
+        <div class="alert_txt">
+            oooo 메뉴를 삭제 하시겠습니까?<br />
+            하위 메뉴가 전부 삭제됩니다.
+        </div>
+        <div class="btn_box">
+            <span class="btn_cancle">취소</span>
+            <span class="btn_del">삭제</span>
+        </div>
+    </div>
+
+    <!-- 에디터설정 CO.3 - layer popup 일반 메뉴설정 -->
+    <div class="wrap_pop edit_one_menu">
+
+        <div class="head_area">
+            메뉴 설정
+            <i class="btn_close"><span class="blind">메뉴설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="cont_area">
+                <form action="" method="post" name="" autocomplete="off">
+                    <fieldset>
+                        <legend class="screen_out">메뉴설정</legend>
+                        <div class="inp_box">
+                            <label for="menu_name">메뉴명</label>
+                            <input type="text" id="menu_name" name="menu_name" value="" />
+                        </div>
+                        <div class="inp_box">
+                            <label for="page_link">페이지연결</label>
+                            <input type="text" id="page_link" name="page_link" class="page_link" value="" />
+                            <span class="notice">다른 URL이 없으면 해당 페이지로 자동 연결 됩니다.</span>
+                            <div class="select_page_link">
+                                <ul class="list"></ul>
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="url_link">외부링크</label>
+                            <input type="text" id="url_link" class="url_link" name="url_link"
+                                placeholder="예)www.neung-soft.com" value="" />
+
+                        </div>
+                        <div class="inp_box">
+                            <label for="menu_name">옵션</label>
+                            <label class="check_contain">메뉴 숨김
+                                <input type="checkbox" name="displayis" class="displayis" val="">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_contain">새창
+                                <input type="checkbox" checked="checked" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_del">
+                메뉴삭제
+            </span>
+            <span class="notice">
+                ※ 상위메뉴 삭제시 하위메뉴 자동 삭제
+            </span>
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+
+    <!-- 에디터설정 CO.3 - layer popup 공통 설정-->
+    <div class="wrap_pop com_set common_edit edit_cmn_site" style="display:block;">
+        <div class="head_area">
+            공통 설정
+            <i class="btn_close"><span class="blind">공통설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="cont_area">
+                <form action="" method="post" name="" autocomplete=off>
+                    <fieldset>
+                        <legend class="screen_out">공통설정</legend>
+                        <div class="body_comm">
+                            <h3 class="sub_tit">본문</h3>
+                            <div class="inp_box">
+                                <label for="bg_color">배경색</label>
+                                <div class="inp_area">
+                                    <input type="text" name="bg_color" id="bg_color" class="com_bgc" value=" ">
+                                    <script>
+
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="inp_box mg_last">
+                                <label for="font_family">본문 글꼴</label>
+                                <div class="select_area select_contain">
+                                    <label>본고딕</label>
+                                    <select id="font_family">
+                                        <option value="font">본고딕</option>
+                                        <option value="nanum">나눔고딕</option>
+                                        <option value="square">나눔스퀘어</option>
+                                        <option value="tmon">티몬소리</option>
+                                        <option value="bamin">배달의민족</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="sub_tit sty2">버튼</h3>
+                        <div class="preview_btn_area">
+                            <span class="btn_click" style="border-radius: 30px;">BUTTON</span>
+                        </div>
+                        <div class="inp_box">
+                            <label>스타일</label>
+                            <div class="box_style">
+                                <label class="radio_contain1 square">
+                                    <input type="radio" class="btn_shape_edit" checked="checked" name="btn_sty1"
+                                        value="1" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio_contain1 round">
+                                    <input type="radio" class="btn_shape_edit" name="btn_sty2" value="2" />
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="radio_contain1 half_circle">
+                                    <input type="radio" class="btn_shape_edit" name="btn_sty3" value="3" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_color">텍스트</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_color" id="btn_color" value=" " class="inp_btntxt_color">
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_bgc">배경색</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_bgc" id="btn_bgc" value=" " class="inp_btnbg_color">
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_bd_color">선</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_bd_color" id="btn_bd_color" value=" "
+                                    class="inp_btnline_color">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+    <!--// 공통설정 팝업 -->
+
+    <!-- 상단설정 HP.1-1 -->
+    <div class="wrap_pop set_header">
+        <div class="head_area">
+            메뉴 스타일
+            <i class="btn_close"><span class="blind">메뉴 스타일 닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <div class="wrap_dsgn_list">
+                <ul class="header_dsgn">
+                    <li>
+                        <span class="btn">
+                            <img src="images/header_thumb1.jpg">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="btn">
+                            <img src="images/header_thumb2.jpg">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="btn">
+                            <img src="images/header_thumb3.jpg">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="complete btn_apply">적용</span>
+        </div>
+    </div>
+    <!--// 헤더스타일 팝업-->
+
+    <!-- 비주얼설정 팝업 HP.1-2 -->
+    <div class="wrap_pop pop_visual_setting">
+        <div class="head_area">
+            <span class="btn_add_slide">이미지 슬라이드 추가
+                <input type="file" id="input_imgs" multiple />
+            </span>
+            비주얼 이미지 설정
+            <i class="btn_close"><span class="blind">비주얼 선택 닫기</span></i>
+        </div>
+        <div class="pop_cont">
+            <div class="add_slide_area" id="grid_preview">
+
+            </div>
+            <div class="edit_area">
+
+            </div>
+        </div>
+        <div class="pop_bottom">
+            <div class="wrap_left_inner">
+                <div class="wrap_position">
+                    <div class="box_position_ui" style="display:flex">
+                        <div class="position_ui">
+                            <ul>
+                                <li class="_tl"></li>
+                                <li class="_tc"></li>
+                                <li class="_tr"></li>
+                                <li class="_ml"></li>
+                                <li class="_mc active"></li>
+                                <li class="_mr"></li>
+                                <li class="_bl"></li>
+                                <li class="_bc"></li>
+                                <li class="_br"></li>
+                            </ul>
+                        </div>
+                        <span class="txt">배경 위치</span>
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>업로드된 이미지의 선택한 부분을 중심으로<br /> 가로 1920px 사이즈로 자동 변환 됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position_ui_option">
+                        <div class="position_option">
+                            <ul class="select_container">
+                                <li class="select_item"><span class="position_tl"></span></li>
+                                <li class="select_item"><span class="position_tc"></span></li>
+                                <li class="select_item"><span class="position_tr"></span></li>
+                                <li class="select_item"><span class="position_ml"></span></li>
+                                <li class="select_item active"><span class="position_mc"></span></li>
+                                <li class="select_item"><span class="position_mr"></span></li>
+                                <li class="select_item"><span class="position_bl"></span></li>
+                                <li class="select_item"><span class="position_bc"></span></li>
+                                <li class="select_item"><span class="position_br"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting_mask">
+                    <label class="check_contain chk_lightbox">배경 어둡게
+                        <input type="checkbox" name="mvmask" id="mvmask">
+                        <span class="checkmark"></span>
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>업로드된 이미지 위에 텍스트 및 컨텐츠가 잘 보일 수 있게 배경이미지를 우둡게 조정 합니다.</p>
+                                <p>선택을 해제하시면 원래 밝기로 조정 됩니다.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="link_area">
+                    <label for="url">링크</label>
+                    <div class="inp_box">
+                        <input type="text" placeholder="url" id="url" />
+                    </div>
+                </div>
+
+                <label class="check_contain chk_newwdw">새창 <input type="checkbox" name="newWindow" id="newWindow">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="wrap_right_inner">
+                <p class="notice_txt">※이미지는 가로 1920px로 자동 변환 됩니다.</p>
+                <span class="btn_pop_mv">적용</span>
+            </div>
+        </div>
+    </div>
+    <!--// 비주얼설정 팝업 -->
+
+    <!-- 컨텐츠 이미지 설정 HP.1-4-1-->
+    <div class="wrap_pop pop_img_edit">
+        <div class="head_area">
+            이미지 설정
+            <i class="btn_close"><span class="blind">이미지설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <img class="changingimg" />
+            <div class="upload-image"></div>
+            <div class="upload_contain">
+                <label>이미지 업로드
+                    <input type="file" class="selimg">
+                </label>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <form>
+                <div class="link_area">
+                    <label for="url">링크</label>
+                    <div class="inp_box">
+                        <input type="text" placeholder="url" id="url" />
+                    </div>
+                </div>
+                <div class="check_area">
+                    <label class="check_contain sty1">새창 <input type="checkbox" name="newWindow" id="newWindow">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check_contain">라이트 박스
+                        <input type="checkbox" name="lightbox" id="lightboxchk">
+                        <span class="checkmark"></span>
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>이미지를 클릭하면 주변이 어두워지면서 확대된
+                                    크기로 이미지를 표시하며, 미리보기에서 확인
+                                    가능합니다.</p>
+                                <p>단, 링크 사용시 라이트박스 효과는 무시됩니다.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </form>
+            <div class="btn_box">
+                <span class="complete">적용</span>
+            </div>
+        </div>
+    </div>
+
+    <!--컨텐츠 버튼 설정 HP1-4-3 -->
+    <div class="btn_only pop_btn_edit com_set wrap_pop" style="display:block;">
+        <div class="head_area">
+            버튼 설정
+            <i class="btn_close"><span class="blind">버튼설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="cont_area">
+                <form action="" method="post" name="">
+                    <fieldset>
+                        <legend class="screen_out">버튼설정</legend>
+
+                        <div class="preview_btn_area">
+                            <span class="btn_click" style="border-radius: 30px;">BUTTON</span>
+                        </div>
+
+                        <div class="inp_box">
+                            <label>스타일</label>
+                            <div class="box_style">
+                                <label class="radio_contain1 square">
+                                    <input type="radio" class="btn_shape_edit" checked="checked" name="option_style"
+                                        value="1" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio_contain1 round">
+                                    <input type="radio" class="btn_shape_edit" name="option_style" value="2" />
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="radio_contain1 half_circle">
+                                    <input type="radio" class="btn_shape_edit" name="option_style" value="3" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_color">텍스트</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_txt" id="btn_txt" class="inp_btn_txt">
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_color">글자색</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_color" id="btn_color" class="inp_btntxt_color">
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_bgc">배경색</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_bgc" value=" " id="btn_bgc" class="inp_btnbg_color">
+                            </div>
+                        </div>
+                        <div class="inp_box">
+                            <label for="btn_bd_color">선</label>
+                            <div class="inp_area">
+                                <input type="text" name="btn_bd_color" value=" " id="btn_bd_color"
+                                    class="inp_btnline_color">
+                            </div>
+                        </div>
+                        <div class="inp_box link_area">
+                            <label for="btn_bd_color">링크</label>
+                            <div class="inp_area">
+                                <div><input type="text" name="btn_bd_url" id="btn_bd_url" value=" " placeholder="URL"
+                                        class="inp_btn_url" />
+                                </div>
+                            </div>
+                            <ul class="home_nav_url" style="display:none;">
+                                <li><a href="https://www.play-kok.com/h_builder/about">ABOUT</a></li>
+                                <li><a href="https://www.play-kok.com/h_builder/services">SERVICES</a></li>
+                                <li><a href="https://www.play-kok.com/h_builder/project">PROJECT</a></li>
+                                <li><a href="https://www.play-kok.com/h_builder/contact">CONTACT</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="inp_box check_area">
+                            <label class="check_contain sty1">새창 <input type="checkbox" name="newWindow" id="newWindow">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+    <!-- // 컨텐츠 버튼 설정 HP1-4-3 -->
+
+    <!-- HP1-5 하단 설정 팝업-->
+    <div class="wrap_pop popup pop_edit_footer" style="width:1080px;">
+
+        <div class="head_area">
+            하단 설정
+            <i class="btn_close"><span class="blind">하단설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="cont_area">
+                <form action="" method="post" name="">
+                    <fieldset>
+                        <legend class="screen_out">스타일설정</legend>
+
+                        <div class="style_opt_area">
+                            <p class="opt_tit">스타일</p>
+                            <div class="wrap_sty_img">
+                                <div class="img_box">
+                                    <img src="images/style_opt2.jpg">
+                                </div>
+                                <div class="img_box">
+                                    <img src="images/style_opt1.jpg">
+                                </div>
+                                <div class="img_box">
+                                    <img src="images/style_opt3.jpg">
+                                </div>
+                                <div class="img_box">
+                                    <img src="images/style_opt4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sns_share_opt_area">
+                            <p class="opt_tit"><label for="sel_sns">SNS 공유</label>
+                                <span class="btn_plus_sns">
+                                    <i class="blind">SNS 추가하기</i>
+                                </span>
+                            </p>
+                            <div class="wrap_sns_opt">
+                                <div class="area_sns_opt sns_opt1">
+                                    <div class="wrap_select_custom">
+                                        <div class="icon-sns1 select_sns">
+                                            <span class="blind">sns 아이콘</span>
+                                            <span class="select_arrow"><span class="blind">셀렉트 화살표 아이콘</span></span>
+                                        </div>
+                                        <ul class="option_area on" style="display:none;">
+                                            <li class="icon-sns1"><span class="blind">플레이콕</span></li>
+                                            <li class="icon-sns2"><span class="blind">페이스북</span></li>
+                                            <li class="icon-sns3"><span class="blind">네이버블로그</span></li>
+                                            <li class="icon-sns4"><span class="blind">유튜브</span></li>
+                                            <li class="icon-sns5"><span class="blind">인스타그램</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="inp_area">
+                                        <div class="inp_box">
+                                            <input type="text" class="link_sns" />
+                                        </div>
+                                        <label class="check_contain">새창 <input type="checkbox" checked="checked"
+                                                class="sns_window">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="del_area">
+                                        <i class="btn_del"><span class="blind">버튼설정닫기</span></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="txt">※ SNS는 최대 4개 까지 가능합니다.</span>
+                        </div>
+                        <div class="opt_add_area">
+                            <p class="opt_tit">추가 요소</p>
+                            <div class="opt_add_box">
+                                <label class="check_contain">개인정보 처리방침 ㅣ 이용약관
+                                    <input type="checkbox" class="inp_privacy" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="check_contain">저작권 문구 표시
+                                    <input type="checkbox" class="inp_copyright" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="btn_apply">적용</span>
+        </div>
+    </div>
+
+
+    <!-- 배경 이미지 설정 팝업 HP.1-6-2 -->
+    <div class="wrap_pop pop_section_bg">
+        <div class="head_area">
+            배경 이미지 설정
+            <i class="btn_close"><span class="blind">배경 이미지 설정 닫기</span></i>
+        </div>
+        <div class="pop_cont">
+            <div class="wrap_img"><img src="" class="wrap_img_el"></div>
+            <div class="upload_contain">
+                <label>이미지 업로드
+                    <input type="file" class="selimg" />
+                </label>
+            </div>
+        </div>
+        <div class="pop_bottom">
+            <div class="check_opt_area">
+                <div class="wrap_position">
+                    <div class="box_position_ui" style="display:flex">
+                        <div class="position_ui">
+                            <ul>
+                                <li class="_tl"></li>
+                                <li class="_tc"></li>
+                                <li class="_tr"></li>
+                                <li class="_ml"></li>
+                                <li class="_mc active"></li>
+                                <li class="_mr"></li>
+                                <li class="_bl"></li>
+                                <li class="_bc"></li>
+                                <li class="_br"></li>
+                            </ul>
+                        </div>
+                        <span class="txt">배경 위치</span>
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>업로드된 이미지의 선택한 부분을 중심으로<br> 가로 1920px 사이즈로 자동 변환 됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position_ui_option">
+                        <div class="position_option">
+                            <ul class="select_container">
+                                <li class="select_item"><span class="position_tl"></span></li>
+                                <li class="select_item"><span class="position_tc"></span></li>
+                                <li class="select_item"><span class="position_tr"></span></li>
+                                <li class="select_item"><span class="position_ml"></span></li>
+                                <li class="select_item active"><span class="position_mc"></span></li>
+                                <li class="select_item"><span class="position_mr"></span></li>
+                                <li class="select_item"><span class="position_bl"></span></li>
+                                <li class="select_item"><span class="position_bc"></span></li>
+                                <li class="select_item"><span class="position_br"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting_mask">
+                    <label class="check_contain chk_lightbox">배경 어둡게
+                        <input type="checkbox" name="mvmask" id="mvmask">
+                        <span class="checkmark"></span>
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>업로드된 이미지 위에 텍스트 및 컨텐츠가 잘 보일 수 있게 배경이미지를 어둡게 조정 합니다.</p>
+                                <p>선택을 해제하시면 원래 밝기로 조정 됩니다.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="setting_color setting_mask">
+                    <label class="check_contain chk_bgcolor">배경색 설정
+                        <input type="checkbox" name="chk_bgcolor" id="chk_bgcolor">
+                        <span class="checkmark"></span>
+                        <input type="text" name="bg_color" id="bg_color" class="section_bgc" value=" ">
+                        <div class="tip_area">
+                            <span class="mark_tooltip blind">?</span>
+                            <div class="tooltip_note">
+                                <p>배경색으로 지정할 시, 배경이미지는 제거됩니다.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="notice_btn_area">
+                <p class="notice">※이미지는 가로 1920px로 자동 변환 됩니다.</p>
+                <span class="btn_pop_mv">적용</span>
+            </div>
+        </div>
+    </div>
+    <!--// 배경이미지 설정 팝업 -->
+
+
+    <!-- 디자인요소추가 HP.1-6-2 동영상설정 -->
+    <div class="wrap_pop set_movie">
+        <div class="head_area">
+            동영상 설정
+            <i class="btn_close"><span class="blind">동영상설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <div class="wrap_upload">
+                <div class="inp_box">
+                    <label for="urlmovie">링크</label>
+                    <input type="text" id="urlmovie" name="urlmovie" value="" placeholder="플레이콕 또는 You tube 주소" />
+                </div>
+                <div class="upload_btn_box">
+                    <label>동영상 업로드
+                        <input type="file" name="file[]" class="file_multi_video" accept="video/*">
+                    </label>
+                </div>
+            </div>
+            <div class="wrap_movie_api">
+                <video class="video-js vjs-theme-sea" controls id="pop_previewarea_video">
+                    <source src="" id="video_here">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <p class="notice_txt">※ 동영상은 중앙 정렬 기준 1:1 사이즈로 업로드되며 가로 1250px 을 초과하는 동영상의 경우 자동 조절되어 업로드됩니다.</p>
+            <div class="wrap_opt_chk">
+                <label class="check_contain chk_autoplay">자동재생
+                    <input type="checkbox" name="autoplay" id="autoplay">
+                    <span class="checkmark"></span>
+                    <div class="tip_area">
+                        <span class="mark_tooltip blind">?</span>
+                        <div class="tooltip_note">
+                            <p>웹사이트가 로드되면서 음소거 상태로 동영상을
+                                자동으로 재생합니다.<br />
+                                모바일 브라우저에서는 자동재생 기능이 차단됩니다.</p>
+                        </div>
+                    </div>
+                </label>
+                <label class="check_contain chk_lightbox">라이트 박스
+                    <input type="checkbox" name="lightbox" id="lightboxchk">
+                    <span class="checkmark"></span>
+                    <div class="tip_area">
+                        <span class="mark_tooltip blind">?</span>
+                        <div class="tooltip_note">
+                            <p>이미지를 클릭하면 주변이 어두워지면서 확대된
+                                크기로 이미지를 표시하며, 미리보기에서 확인
+                                가능합니다.</p>
+                            <p>단, 링크 사용시 라이트박스 효과는 무시됩니다.</p>
+                        </div>
+                    </div>
+                </label>
+                <label class="check_contain chk_fitmov">동영상 채우기
+                    <input type="checkbox" name="fitmovie" id="fitmovie">
+                    <span class="checkmark"></span>
+                    <div class="tip_area">
+                        <span class="mark_tooltip blind">?</span>
+                        <div class="tooltip_note">
+                            <p>가로1920px 사이즈 1:1 비율로 업로드됩니다.</p>
+                            <p>1920px 이의 동영상일 경우 해상도가 낮아집니다.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="btn_box">
+                <span class="complete">적용</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HP.1-6-1-2 메인비주얼 영상섹션 설정 -->
+    <div class="wrap_pop main_set_movie">
+        <div class="head_area">
+            비주얼 영상 설정
+            <i class="btn_close"><span class="blind">동영상설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <div class="wrap_upload">
+                <div class="inp_wrap">
+                    <label for="urlmovie" class="label_txt">링크</label>
+                    <div class="inp_area">
+                        <input type="text" class="inp_url" id="urlmovie" name="urlmovie" value=" "
+                            placeholder="플레이콕 또는 You tube 주소" />
+                        <p class="note_txt">배경동영상 PC전용</p>
+                    </div>
+                </div>
+                <div class="upload_contain">
+                    <label>동영상 업로드
+                        <input type="file" name="file[]" class="file_multi_video" accept="video/*">
+                    </label>
+                </div>
+            </div>
+            <div class="edit_area">
+            </div>
+        </div>
+        <div class="bottom_area">
+            <span class="complete">적용</span>
+        </div>
+    </div>
+
+
+    <!-- 디자인요소추가 HP.1-6-3 지도설정 & HP.1-6-2 -->
+    <div class="wrap_pop set_map">
+        <div class="head_area">
+            지도 설정
+            <i class="btn_close"><span class="blind">지도설정닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <div class="wrap_map_api">
+
+            </div>
+        </div>
+        <div class="bottom_area">
+            <div class="wrap_api_inp">
+                <div class="inp_box">
+                    <label for="api_key">API 키</label>
+                    <input type="text" id="api_key" name="api_key" value=""
+                        placeholder="예 : AIzaSyBBjXFvErCvawd25F92gFa8J" />
+                </div>
+                <p>지도API 설정 대해 <a href="#">자세히 알아보기</a></p>
+            </div>
+            <div class="wrap_adrs_inp">
+                <div class="inp_box">
+                    <label for="menu_name">주소</label>
+                    <input type="text" id="api_adrs" name="api_adrs" value="" />
+                </div>
+                <p>예)서울 금천구 가산디지털1로 17</p>
+            </div>
+            <div class="wrap_opt_chk">
+                <label class="check_contain">가로 영역 확장
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="btn_box">
+                <span class="complete">적용</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrap_pop add_section_pop">
+        <div class="head_area">
+            요소 선택
+            <i class="btn_close"><span class="blind">요소 선택 닫기</span></i>
+        </div>
+        <div class="cont_area">
+            <form action="" method="post" name="">
+                <fieldset>
+                    <legend class="screen_out">요소 선택</legend>
+                    <div class="add_sect_area">
+                        <h3 class="sub_tit">섹션 추가</h3>
+                        <div class="wrap_type_list">
+                            <span class="on">비주얼</span>
+                            <span>컨텐츠</span>
+                        </div>
+                        <div class="wrap_dsgn_list mCustomScrollbar" data-mcs-theme="minimal-dark">
+                            <ul class="visual_dsgn" style="display: block;">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/visual_sample3.jpg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/thumb_visual2.png">
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="content_dsgn pop_component_add">
+                                <li>
+                                    <img src="images/cont_thumb1.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb2.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb3.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb4.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb11.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb5.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb6.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb13.png">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb7.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb12.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb8.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb9.jpg">
+                                </li>
+                                <li>
+                                    <img src="images/cont_thumb10.jpg">
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add_dsgn_area">
+                        <h3 class="sub_tit">디자인 요소</h3>
+                        <div class="wrap_dsgn_list">
+                            <dl>
+                                <dt class="icon_images"></dt>
+                                <dd>이미지</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_text"></dt>
+                                <dd>텍스트</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_movie"></dt>
+                                <dd>동영상</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_map"></dt>
+                                <dd>지도</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_padding"></dt>
+                                <dd>여백</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="add_db_area">
+                        <h3 class="sub_tit">DB 요소</h3>
+                        <div class="wrap_db_list">
+                            <dl>
+                                <dt class="icon_board"></dt>
+                                <dd>게시판</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_gallery"></dt>
+                                <dd>갤러리</dd>
+                            </dl>
+                            <dl>
+                                <dt class="icon_calander"></dt>
+                                <dd>캘린더</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- 요소 이미지 설정 HP.1-6-3-->
+    <div class="wrap_pop pop_img_edit_sty2">
+        <div class="head_area">
+            이미지 설정
+            <i class="btn_close"><span class="blind">이미지설정닫기</span></i>
+        </div>
+        <div class="wrap_pop_cont">
+            <div class="upload_contain">
+                <label>이미지 업로드
+                    <input type="file" class="selimg3">
+                </label>
+            </div>
+            <div class="wrap_img"><img src="" class="wrap_img_el" /></div>
+        </div>
+        <div class="bottom_area">
+            <p class="notice_txt">※ 이미지는 중앙 정렬 기준 1:1 사이즈로 업로드되며 가로 1250px 을 초과하는 이미지의 경우 자동조절되어 업로드 됩니다.</p>
+            <form>
+                <div class="wrap_effect_opt">
+                    <p class="opt_tit">효과</p>
+                    <div class="effect_box">
+                        <label class="check_contain chk_lightbox">라이트 박스
+                            <input type="checkbox" name="lightbox" id="lightboxchk">
+                            <span class="checkmark"></span>
+                            <div class="tip_area">
+                                <span class="mark_tooltip blind">?</span>
+                                <div class="tooltip_note">
+                                    <p>이미지를 클릭하면 주변이 어두워지면서 확대된 크기로 이미지를 표시하며, 미리보기에서 확인 가능합니다.</p>
+                                    <p>단, 링크 사용시 라이트박스 효과는 무시됩니다.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="check_contain chk_fitimg">이미지 채우기
+                            <input type="checkbox" name="fitimg" id="fitimg">
+                            <span class="checkmark"></span>
+                            <div class="tip_area">
+                                <span class="mark_tooltip blind">?</span>
+                                <div class="tooltip_note">
+                                    <p>가로1920px 사이즈 1:1 비율로 업로드됩니다.<br>1920px 의 이미지일 경우 해상도가 낮아집니다.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="wrap_link">
+                    <div class="link_area">
+                        <label for="url">링크</label>
+                        <div class="inp_box">
+                            <input type="text" id="url" placeholder="URL">
+                        </div>
+                    </div>
+                    <div class="check_area">
+                        <label class="check_contain sty1">새창 <input type="checkbox" name="newWindow" id="newWindow">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="btn_box">
+                <span class="complete">적용</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--동영상설정 & HP.1-6-2 -->
+    <!-- div class="wrap_pop set_movie">
+    <div class="head_area">
+        동영상 설정
+        <i class="btn_close"><span class="blind">동영상설정닫기</span></i>
+    </div>
+    <div class="cont_area">
+        <div class="wrap_upload">
+            <div class="inp_box">
+                <label for="urlmovie">링크</label>
+                <input type="text" id="urlmovie" name="urlmovie" value="" placeholder="플레이콕 또는 You tube 주소" />
+            </div>
+            <div class="upload_btn_box">
+                <span>동영상 업로드</span>
+            </div>
+        </div>
+        <div class="wrap_movie_api">
+
+        </div>
+    </div>
+    <div class="bottom_area">
+        <div class="wrap_opt_chk">
+            <label class="check_contain chk_autoplay">자동재생
+                <input type="checkbox" name="autoplay" id="autoplay">
+                <span class="checkmark"></span>
+                <div class="tip_area">
+                    <span class="mark_tooltip blind">?</span>
+                    <div class="tooltip_note">
+                        <p>웹사이트가 로드되면서 음소거 상태로 동영상을
+                            자동으로 재생합니다.<br />
+                            모바일 브라우저에서는 자동재생 기능이 차단됩니다.</p>
+                    </div>
+                </div>
+            </label>
+            <label class="check_contain chk_lightbox">라이트 박스
+                <input type="checkbox" name="lightbox" id="lightboxchk">
+                <span class="checkmark"></span>
+                <div class="tip_area">
+                    <span class="mark_tooltip blind">?</span>
+                    <div class="tooltip_note">
+                        <p>이미지를 클릭하면 주변이 어두워지면서 확대된
+                            크기로 이미지를 표시하며, 미리보기에서 확인
+                            가능합니다.</p>
+                        <p>단, 링크 사용시 라이트박스 효과는 무시됩니다.</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="btn_area">
+            <span class="complete">적용</span>
+        </div>
+    </div>
+</div -->
+
+    <!-- 갤러리설정 팝업 HP.1-6-4-2-1 -->
+    <div class="wrap_pop pop_gallery">
+        <div class="head_area">
+            <span class="btn_add_imgs"><i class="icon_plus"><span class="blind">더하기 아이콘</span></i>이미지, 동영상 추가
+                <input type="file" id="input_imgs" multiple />
+            </span>
+            갤러리 설정
+            <i class="btn_close"><span class="blind">갤러리 설정 닫기</span></i>
+        </div>
+        <div class="pop_cont mCustomScrollbar">
+            <ul class="add_imgs_area" id="grid_preview">
+
+            </ul>
+        </div>
+        <div class="pop_bottom">
+            <div class="wrap_opt">
+                <div class="wrap_opt_tit">
+                    <p class="opt_tit_txt"><label for="gallery_tit">제목</label></p>
+                    <div class="wrap_inp_box">
+                        <input type="text" name="gallery_desc" id="gallery_tit" class="opt_tit" value=" "
+                            placeholder="URL" />
+                        <label class="check_contain chk_lightbox">라이트 박스
+                            <input type="checkbox" name="lightbox" id="lightboxchk" />
+                            <span class="checkmark"></span>
+                            <div class="tip_area">
+                                <span class="mark_tooltip blind">?</span>
+                                <div class="tooltip_note">
+                                    <p>이미지를 클릭하면 주변이 어두워지면서 확대된 크기로 이미지를 표시하며, 미리보기에서 확인 가능합니다.</p>
+                                    <p>단, 링크 사용시 라이트박스 효과는 무시됩니다.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="wrap_opt_memo">
+                    <label class="opt_tit_txt" for="gallery_desc">내용</label>
+                    <input type="text" name="gallery_desc" id="gallery_desc" value=" " class="opt_memo" />
+                </div>
+
+                <div class="wrap_opt_url">
+                    <label class="opt_tit_txt" for="inp_btn_url">링크</label>
+                    <div class="inp_container">
+                        <div class="inp_area">
+                            <input type="text" name="inp_btn_url" id="inp_btn_url" value=" " placeholder="URL"
+                                class="inp_btn_url" />
+                        </div>
+                        <ul class="home_nav_url" style="display:none;">
+                            <li><a href="https://www.play-kok.com/h_builder/about">ABOUT</a></li>
+                            <li><a href="https://www.play-kok.com/h_builder/services">SERVICES</a></li>
+                            <li><a href="https://www.play-kok.com/h_builder/project">PROJECT</a></li>
+                            <li><a href="https://www.play-kok.com/h_builder/contact">CONTACT</a></li>
+                        </ul>
+                        <div class="inp_box check_area">
+                            <label class="check_contain">새창 <input type="checkbox" name="newWindow" id="newWindow">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_box">
+                <span class="btn_pop_mv">적용</span>
+            </div>
+        </div>
+
+    </div>
+    <!--// 비주얼설정 팝업 -->
+
+
+    <!-- 검색 팝업 -->
+    <div class="search_container">
+        <div class="inp_box">
+            <input class="inp_sch_txt" type="text" placeholder="검색" />
+            <i class="btn_search"><span class="blind">검색 아이콘</span></i>
+        </div>
+        <div class="result_sch_area mCustomScrollbar">
+            <ul class="result_list">
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+                <li>검색 결과가 없습니다.</li>
+            </ul>
+        </div>
+        <i class="btn_close_schbox"><span class="blind">전체 메뉴 닫기</span></i>
+    </div>
+
+</body>
+
+</html>

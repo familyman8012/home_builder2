@@ -1,0 +1,59 @@
+<main role="main">
+    <div class="container_bbs write_post">
+        <div class="head_area">
+            <h2 class="bbs_tit"><span class="blind">자유게시판 글쓰기</span></h2>
+            <div class="post_head">
+                <label for="notice_yn" class="notice_check check_contain">공지
+                    <input type="checkbox" id="notice_yn" name="notice_yn"/>
+                    <span class="checkmark"></span>
+                </label>
+                <div class="post_tit_box">
+                    <input type="text" placeholder="제목"/>
+                </div>
+            </div>
+        </div>
+        <div class="cont_area">
+            <div class="bbs_post_area" style="background:#ddd; height: 100px;">
+에디터영역
+            </div>
+
+            <div class="post_ft_area">
+                <div class="wrap_url_upload">
+                    <div class="inp_box link_box">
+                        <i class="icon_link"><span class="blind">링크 아이콘</span></i>
+                        <input type="url"/>
+                    </div>
+                    <div class="inp_box upload_box">
+                        <i class="icon_fileup"><span class="blind">업로드 아이콘</span>
+                        </i>
+                        <span class="file_txt">올린 파일 이름</span>
+                        <div class="upload_custom">
+                            <label for="fileup">파일선택</label>
+                            <input type="file" id="fileup" name="fileup"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_url_upload">
+                    <div class="inp_box link_box">
+                        <i class="icon_link"><span class="blind">링크 아이콘</span></i>
+                        <input type="url"/>
+                    </div>
+                    <div class="inp_box upload_box">
+                        <i class="icon_fileup"><span class="blind">업로드 아이콘</span>
+                        </i>
+                        <span class="file_txt">올린 파일 이름</span>
+                        <div class="upload_custom">
+                            <label for="fileup">파일선택</label>
+                            <input type="file" id="fileup" name="fileup"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tail_area">
+            <span class="btn_list_back" onclick="window.location.href='list.html'">목록</span>
+            <span class="btn_cnxl_posting" onclick="window.location.href='list.html'">취소</span>
+            <span class="btn_complete" onclick="window.location.href='modify_bbs.html'">작성완료</span>
+        </div>
+    </div>
+</main>

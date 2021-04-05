@@ -1,0 +1,666 @@
+@charset "utf-8";
+@import "_common";
+
+
+.wrap_logjn_pop {
+	border-radius: 4px; background: #f7f7f7;
+	margin-top: 10px;
+}
+
+.wrap_logjn_pop {
+	padding: 15px 15px 0;
+	
+	.head_area { //로그인 팝 공통 헤드
+		.btn_box {
+			text-align: right;
+			
+			.btn_close {
+				display: inline-block;
+				@include bg(21px, 21px, '../images/btn_close.svg');
+				background-size: 20px;
+				cursor: pointer;
+			}
+		}
+		
+		.logo_area {
+			padding-bottom: 20px;
+			line-height: 1;
+			text-align: center;
+			
+			.site_logo {
+				font-family: $font_b;
+				font-size: 2rem;
+				color: #242424;
+			}
+			
+			.icon_cross {
+				display: inline-block;
+				margin: 0 10px;
+				@include bg(18px, 18px, '../images/icon_cross.svg');
+			}
+			
+			.logo_playkok {
+				display: inline-block;
+				@include bg(101px, 22px, '../images/playblock_logo1.png');
+			}
+		}
+		
+		.pop_tit {
+			padding-bottom: 20px;
+			font-family: $font_r;
+			font-size: $tit_txt;
+			text-align: center;
+			color: #4e4e4e
+		}
+	}
+	
+	.cont_area {
+		.wrap_mailpw {
+			.inp_box {
+				height: 60px;
+				border: 1px solid #ddd;
+				line-height: 60px;
+				box-sizing: border-box;
+				background-color: #fff;
+				
+				&:first-child {margin-bottom: 15px;}
+				
+				input {
+					width: 100%;
+					height: 100%;
+					padding: 0 40px;
+					box-sizing: border-box;
+					font-family: $font_r;
+					font-size: $component_sub_txt;
+					color: #242424;
+				}
+			}
+		}
+	}
+	
+	&.login { //로그인1
+		width: 480px;
+		
+		.bottom_area {
+			padding-top: 20px;
+			
+			.wrap_atlogin .check_contain {
+				
+				@include check_custom1(21px, 21px, 0);
+				padding-left: 28px;
+				margin-left: 0;
+				height: 21px;
+				line-height: 21px;
+				font-size: $pop_cont_txt;
+				font-family: $font_r;
+				
+				input ~ .checkmark {background: url(../images/check_custom1_off.svg) no-repeat top center/22px;}
+				
+				input:checked ~ .checkmark {background: url(../images/check_custom1_on.svg) no-repeat top center/18px}
+				
+			}
+			
+			.btn_login_box {
+				margin-top: 20px;
+				margin-bottom: 19px;
+				
+				span {
+					@include btn($blue, $btn_txt);
+					padding: 22px 0 19px;
+					width: 100%;
+				}
+			}
+			
+			.btn_oth_act {
+				display: flex;
+				padding-bottom: 23px;
+				font-family: $font_r;
+				font-size: 1.5rem;
+				line-height: 1;
+				
+				[class^='btn_'] {
+					cursor: pointer;
+				}
+				
+				.btn_find_id {
+					margin-left: auto;
+					margin-right: 29px;
+				}
+			}
+		}
+	}
+	
+	&.login2 { //로그인2
+		width: 480px;
+		
+		.cont_area {
+			.wrap_btn {
+				.pk_mb_yes {
+					width: 100%;
+					margin-bottom: 14px;
+					padding: 21px 0 20px;
+					@include btn($blue, $fontsize: 2rem);
+				}
+				
+				.pk_mb_no {
+					width: 100%;
+					margin-bottom: 18px;
+					padding: 21px 0 20px;
+					@include btn($pink, $fontsize: 2rem);
+				}
+			}
+		}
+	}
+	
+	&.pk_mb_join { //플레이콕 회원가입
+		width: 480px;
+		
+		.wrap_mailpw {
+			.inp_box input {padding: 0 15px;}
+			
+			p {
+				padding: 13px 3px 12px;
+				font-family: $font_r;
+				font-size: 1.5rem;
+				color: #757575
+			}
+		}
+		
+		.wrap_terms {
+			margin-bottom: 15px;
+			padding: 0 15px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			font-family: $font_r;
+			font-size: 1.5rem;
+			color: #242424;
+			background-color: #fff;
+			
+			.check_contain {
+				position: relative;
+				@include check_custom2(21px, 21px, 0);
+				display: block;
+				padding-top: 19px;
+				padding-bottom: 16px;
+				
+				input ~ .checkmark {background: url(../images/check_custom1_off.svg) no-repeat center/25px;}
+				
+				input:checked ~ .checkmark {background: url(../images/check_custom1_on.svg) no-repeat center/20px}
+				
+				.checkmark {top: 15px;
+					width: 26px;
+									height: 26px;
+				}
+			}
+			
+			.all_check {
+				border-bottom: 1px solid #ddd;
+			}
+			
+			.term_box {
+				position: relative;
+				border-bottom: 1px solid #ddd;
+				
+				.label_txt {
+					display: block;
+					padding-left: 10px;
+					font-size: 1.5rem;
+					font-family: $font_r;
+					line-height: 1;
+					letter-spacing: -0.9px;
+					color: #242424;
+					
+					&:before {
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 23px;
+						width: 6px; height: 6px;
+						border-radius: 50%;
+						content: '';
+						background: #ff0000;
+					}
+				}
+				
+				.checkmark {
+					position: absolute;
+					right: 0; top: 14px;
+					width: 26px;
+					height: 26px;
+					background: url(../images/check_custom1_off.svg) no-repeat center/25px;
+					cursor: pointer;
+					
+					&.on {
+						background: url(../images/check_custom1_on.svg) no-repeat center/20px;
+					}
+				}
+				
+				.btn_view_term {
+					position: absolute;
+					left: 177px;
+					top: 14px;
+					padding: 5px 13px;
+					@include btn(#ddd, $fontsize: $pop_sub_txt);
+					color: #242424;
+				}
+				
+				&:last-of-type {
+					border-bottom: 0;
+				}
+			}
+		}
+		
+		.bottom_area {
+			padding-bottom: 16px;
+			
+			.complete {
+				@include btn(#ddd, $fontsize: $btn_txt);
+				padding: 22px 0 19px;
+				width: 100%;
+				
+				&.on {background: $blue;}
+			}
+		}
+		
+		&.sty2 { //플레이콕 SNS 비회원 가입 완료
+			.wrap_mailpw {
+				margin-bottom: 40px;
+				
+				.inp_box {margin-bottom: 15px;}
+			}
+			
+			.bottom_area {
+				margin-top: 15px;
+				
+				span {
+					@include btn($blue, $fontsize: $btn_txt);
+				}
+			}
+		}
+	}
+	
+	&.pk_join { //플레이콕 sns 회원가입1, 회원가입2
+		width: 480px;
+		box-sizing: border-box;
+		
+		.pop_tit {padding-bottom: 38px;}
+		
+		.wrap_join_step {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 23px;
+			
+			.step_box {
+				position: relative;
+				
+				&:first-child {
+					dd {color: $blue;}
+					
+					&:after {
+						display: block;
+						width: 118px;
+						height: 2px;
+						position: absolute;
+						top: 25px;
+						left: 55px;
+						background: #828282;
+						content: '';
+					}
+				}
+				
+				&:last-child {
+					margin-left: 106px;
+					
+					dt {border: 2px solid #828282;
+						
+						em {background: #828282;}
+					}
+					
+					dd {color: #828282}
+				}
+				
+				dt {
+					width: 50px;
+					height: 50px;
+					margin-left: 5px;
+					padding: 3px;
+					border: 2px solid $blue;
+					border-radius: 50%;
+					background-color: #f7f7f7;
+					box-sizing: border-box;
+					
+					em {
+						display: block;
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+						font-family: $font_m;
+						font-size: $component_sub_txt;
+						line-height: 40px;
+						color: #fff;
+						text-align: center;
+						background: $blue;
+					}
+				}
+				
+				dd {
+					padding-top: 6px;
+					font-family: $font_r;
+					font-size: 1.5rem;
+					text-align: center;
+					line-height: 1;
+					letter-spacing: -0.7px;
+				}
+				
+				&.on {
+					dt {
+						border: 2px solid $watermelon;
+						
+						em {background: $watermelon;}
+					}
+					
+					dd {
+						color: $watermelon;
+					}
+				}
+			}
+		}
+		
+		.cont_area {
+			.link_area {
+				margin-bottom: 15px;
+				
+				.aldy_pkmb {
+					font-family: $font_r;
+					font-size: 1.5rem;
+					text-decoration: underline;
+					line-height: 1;
+					color: $blue;
+				}
+			}
+			
+			.join_inp_box {
+				padding: 16px 0 13px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				background-color: #fff;
+				
+				b {
+					font-family: $font_m;
+					font-size: $component_sub_txt;
+					color: #4e4e4e;
+				}
+				
+				.btn_api_phnath, .btn_dup_chk {
+					@include btn(#4e4e4e);
+					padding: 7px 19px;
+				}
+				
+				.api_submit {margin-right: 10px;}
+				
+				.wrap_phn_auth {
+					display: flex;
+					align-items: center;
+					padding: 7px 19px 7px 9px;
+					margin-bottom: 40px;
+					
+					b {margin-right: 10px;}
+					
+					.complete_api {
+						font-family: $font_r;
+						font-size: $pop_sub_txt;
+						color: $blue
+					}
+				}
+				
+				.wrap_make_ac {
+					display: flex;
+					align-items: center;
+					position: relative;
+					
+					b {
+						padding-left: 9px;
+						padding-bottom: 6px;
+						margin-right: 15px;
+					}
+					
+					.inp_box {
+						position: relative;
+						width: 319px;
+						margin-bottom: 9px;
+						padding-bottom: 1px;
+						border-bottom: 1px solid #ddd;
+						
+						input {
+							width: 210px;
+							padding: 7px 0;
+							font-family: $font_r;
+							font-size: 1.5rem;
+							color: #242424;
+						}
+						
+						.btn_dup_chk {
+							position: absolute;
+							right: 0;bottom: 1px;
+						}
+					}
+				}
+				
+				.wrap_dup_info {
+					padding-left: 116px;
+					font-family: $font_r;
+					font-size: $pop_sub_txt;
+					
+					.true {color: $blue}
+					
+					.false {color: $watermelon;}
+				}
+				
+				//회원가입2 - 정보입력
+				.join_tbl {
+					
+					tr:last-child td {
+						padding-bottom: 0;
+					}
+					
+					th {
+						padding-right: 15px;
+						padding-top: 9px;
+						text-align: right;
+						vertical-align: top;
+						
+						label {
+							position: relative;
+							padding-left: 11px;
+							font-family: $font_r;
+							font-size: $cont_txt;
+							line-height: normal;
+							color: #4e4e4e;
+							
+							&:before {
+								display: inline-block;
+								width: 6px;
+								height: 7px;
+								position: absolute;
+								left: 0;
+								top: 12px;
+								border-radius: 50%;
+								background: #ff0000;
+								content: '';
+							}
+						}
+					}
+					
+					td {
+						vertical-align: top;
+						padding-bottom: 24px;
+						
+						.inp_box {
+							position: relative;
+							width: 307px;
+							height: 31px;
+							padding-bottom: 1px;
+							border-bottom: 1px solid #ddd;
+							box-sizing: border-box;
+							
+							input {
+								width: 205px;
+								padding: 3px 0;
+								font-size: $cont_txt;
+							}
+							
+							.btn_dup_chk {
+								position: absolute;
+								right: 0; top: 0;
+								@include btn(#4e4e4e, $fontsize: $pop_sub_txt);
+								font-family: $font_r;
+							}
+						}
+						
+						.inf_rule {
+							padding-top: 9px;
+							font-family: $font_r;
+							font-size: $pop_sub_txt;
+							color: #757575;
+						}
+					}
+				}
+			}
+			
+			.recom_box {
+				margin-top: 14px;
+				padding: 15px 0;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				background: #fff;
+				
+				.notice_rule {
+					padding-left: 13px;
+					
+					li {
+						padding-bottom: 11px;
+						font-size: $pop_sub_txt;
+						letter-spacing: -0.9px;
+						color: #757575;
+						
+						&.impt_note {
+							padding-bottom: 27px;
+							color: $watermelon;
+						}
+					}
+				}
+				
+				.recom_inp_area {
+					display: flex;
+					align-items: center;
+					padding: 0 15px 15px 19px;
+					
+					label {
+						padding-right: 15px;
+						font-family: $font_r;
+						font-size: $cont_txt;
+						color: #4e4e4e
+					}
+					
+					.inp_box {
+						position: relative;
+						width: 307px;
+						padding-bottom: 1px;
+						border-bottom: 1px solid #ddd;
+						
+						input {
+							width: 205px;
+							padding: 3px 0;
+							font-size: $cont_txt;
+						}
+						
+						.btn_user_chk {
+							position: absolute;
+							right: 0; bottom: 1px;
+							@include btn(#4e4e4e);
+							padding: 7px 12px;
+						}
+					}
+				}
+			}
+		}
+		
+		.bottom_area .btn_next {
+			display: block;
+			margin-top: 15px;
+			margin-bottom: 16px;
+			padding: 22px 0 19px;
+			@include btn($blue, $fontsize: $btn_txt);
+			width: 100%;
+			
+			&.pk_join2 {
+				margin-bottom: 36px;
+			}
+		}
+	}
+	
+}
+
+.wrap_login_tool { //로그인 상태 정보
+	position: relative;
+	width: 280px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 3.7px 0.3px rgba(0, 0, 0, 0.21);
+	background: #fff;
+	
+	&:before {
+		display: block;
+		content: '';
+		@include bg(10px, 9px, '../images/bg_cmtdel1.png');
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	.user_info_box {
+		margin-top: 20px;
+		
+		.login_user_prfl_img {
+			display: block;
+			width: 46px;
+			height: 46px;
+			margin: 0 auto;
+			border-radius: 50%;
+		}
+		
+		.account_email {
+			display: block;
+			padding-top: 21px;
+			margin: 0 auto;
+			font-size: $pop_head_txt;
+			color: #242424;
+			text-align: center;
+		}
+	}
+	
+	.bottom_area {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25px;
+		margin-bottom: 15px;
+		
+		.name_txt {
+			@include btn(#4d4d4d);
+			padding: 7px 28px;
+			margin-right: 30px;
+		}
+		
+		.btn_logout {
+			@include btn($pink);
+			padding: 7px 18px;
+		}
+		
+		
+	}
+	
+}
+	
+
